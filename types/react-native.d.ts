@@ -1,5 +1,5 @@
 declare module '@ice/react-native' {
-  export interface ViewMeasurementsResult {
+  interface ViewMeasurementsResult {
     pageX: number;
     pageY: number;
     width: number;
