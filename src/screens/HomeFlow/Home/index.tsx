@@ -2,13 +2,17 @@
 
 import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {COLORS} from '@constants/colors';
-import {isLiteTeam} from '@constants/featureFlags';
+import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {BscAddress} from '@screens/HomeFlow/Home/components/BscAddress';
 import {HomeHeader} from '@screens/HomeFlow/Home/components/Header';
+import {JoinMainnet} from '@screens/HomeFlow/Home/components/JoinMainnet';
 import {Overview} from '@screens/HomeFlow/Home/components/Overview';
 import {PAGE_HEIGHT, Pager} from '@screens/HomeFlow/Home/components/Pager';
+import {Quiz} from '@screens/HomeFlow/Home/components/Quiz';
+import {Roadmap} from '@screens/HomeFlow/Home/components/Roadmap';
 import {SocialLinks} from '@screens/HomeFlow/Home/components/SocialLinks';
 import {Tasks} from '@screens/HomeFlow/Home/components/Tasks';
 import {Team} from '@screens/HomeFlow/Home/components/Team';
@@ -20,6 +24,7 @@ import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated, {useSharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
+import {rem} from 'rn-units';
 
 export const Home = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
@@ -32,7 +37,7 @@ export const Home = memo(() => {
   const {elementRef, onElementLayout} = useAchievementsWalkthrough();
   const isAchievementsEnabled = useSelector(isAchievementsEnabledSelector);
 
-  const showTasks = !isLiteTeam || isAchievementsEnabled;
+  const showTasks = !isLightDesign || isAchievementsEnabled;
 
   return (
     <View style={styles.container}>
@@ -50,7 +55,13 @@ export const Home = memo(() => {
           <Pager />
           <View style={commonStyles.baseSubScreen}>
             <Overview translateY={translateY} topOffset={PAGE_HEIGHT} />
-            <Team showEmptyTeamView={!showTasks} />
+            <View style={isLightDesign ? styles.section : undefined}>
+              <Team />
+            </View>
+            <Quiz />
+            <BscAddress />
+            <Roadmap />
+            <JoinMainnet />
             <View ref={elementRef} onLayout={onElementLayout}>
               {showTasks ? <Tasks /> : null}
             </View>
@@ -66,5 +77,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
+  },
+  section: {
+    marginTop: -rem(24),
   },
 });

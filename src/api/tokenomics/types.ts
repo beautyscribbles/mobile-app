@@ -43,6 +43,8 @@ export type BalanceSummary = {
   t2: string;
   total: string;
   totalReferrals: string;
+  totalMiningBlockchain: string;
+  totalMainnetRewardPoolContribution: string;
 };
 
 export type ResurrectRequiredData = {
@@ -72,6 +74,35 @@ export type BalanceHistoryPoint = {
   timeSeries?: BalanceHistoryPoint[];
 };
 
-export type SELFIE_KYC_STEP = 1;
-export type EMOTIONS_KYC_STEP = 2;
-export type FaceAuthKycNumber = SELFIE_KYC_STEP | EMOTIONS_KYC_STEP;
+export type SelfieKycStep = 1;
+export type EmotionsKycStep = 2;
+export type VerifySocialAccountKycStep = 3;
+export type QuizKycStep = 4;
+export type DistributionKycStep = 5;
+
+export type FaceAuthKycNumber = SelfieKycStep | EmotionsKycStep;
+
+export type KycStep =
+  | SelfieKycStep
+  | EmotionsKycStep
+  | VerifySocialAccountKycStep
+  | QuizKycStep
+  | DistributionKycStep;
+
+export type SocialKycStepNumber = number;
+
+export type TotalCoins = {
+  blockchain: number;
+  preStaking: number;
+  standard: number;
+  total: number;
+  timeSeries: TotalCoinsTimeSeries[];
+};
+
+export type TotalCoinsTimeSeries = {
+  date: string; // "2022-11-30T16:35:02.996090946Z",
+  blockchain: number;
+  preStaking: number;
+  standard: number;
+  total: number;
+};

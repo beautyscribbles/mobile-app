@@ -68,7 +68,13 @@
     "learn_more": "Află mai multe",
     "back_to_login": "Înapoi la Conectare",
     "follow_us": "Urmărește-ne",
-    "subscribe": "Abonează-te"
+    "subscribe": "Abonează-te",
+    "not_sure": "Nesigur",
+    "confirm_address": "Confirmă adresa",
+    "remove_address": "Șterge adresa",
+    "start": "Începe",
+    "faq": "Întrebări frecvente",
+    "knowledge_base": "Baza de cunoștințe"
   },
   "team": {
     "contacts_tab": "Contacte",
@@ -190,7 +196,12 @@
     "weak_password": "Parolă slabă.",
     "wrong_password": "Parolă greșită.",
     "no_camera_permissions": "Nu sunt acordate permisiunile de acces la camera foto.",
-    "no_library_permissions": "Nu sunt acordate permisiunile de acces la bibliotecă."
+    "no_library_permissions": "Nu sunt acordate permisiunile de acces la bibliotecă.",
+    "blockchain_address_already_taken": "Adresa deja folosită",
+    "invalid_blockchain_address": "Adresă blockchain invalidă",
+    "address_not_eoa": "Adresa nu este EOA",
+    "same_phone_error": "Nu poți folosi același număr.",
+    "unable_to_validate_bsc_addr_eoa": "Imposibil de validat adresa EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Pentru fiecare 6 zile consecutive primești o zi liberă.",
       "streak": "SERIE NEÎNTRERUPTĂ",
       "days_off": "ZILE LIBERE"
+    },
+    "roadmap": {
+      "title": "VIZIUNEA NOASTRĂ",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Aflați mai multe despre viziunea noastră la Ice."
+    },
+    "join_mainnet": {
+      "title": "Alătură-te Viitorului Decentralizat",
+      "subtitle": "Obține o previzualizare a aplicației noastre Mainnet viitoare și a caracteristicilor sale unice."
+    },
+    "bsc_address": {
+      "title": "Adresa BNB Smart Chain",
+      "subtitle": "Vă rugăm să introduceți adresa BSC aici."
+    },
+    "verified_tooltip": {
+      "title": "KYC Verificat"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Mizează anticipat acum!",
     "balance_label": "Sold mizat",
     "confirm_title": "Confirmă mizarea anticipată",
-    "confirm_subtitle": "Sigur vrei să îți mizezi anticipat monedele? Această acțiune nu poate fi anulată odată ce confirmi."
+    "confirm_subtitle": "Sigur vrei să îți mizezi anticipat monedele? Această acțiune nu poate fi anulată odată ce confirmi.",
+    "remove_pre_staking": "Eliminați Pre-Staking"
   },
   "stats": {
     "header_title": "Statistici",
@@ -532,7 +560,14 @@
     "top_miners": "Top utilizatori",
     "top_countries": "Top țări",
     "online_miners": "Utilizatori online",
-    "detailed_information": "Informații detaliate"
+    "detailed_information": "Informații detaliate",
+    "total_coins": "Total monede",
+    "filter": {
+      "total": "Total",
+      "on_app": "Disponibil în aplicație",
+      "pre_staked": "Pre-staked",
+      "on_blockchain": "Blockchain"
+    }
   },
   "update_required": {
     "title": "Te rugăm să actualizezi",
@@ -579,9 +614,11 @@
     "wallet": "Portofel",
     "blockchain": "Blockchain",
     "wallet_update_interval": "actualizat o dată pe oră",
-    "blockchain_update_interval": "actualizat o dată la 24 de ore",
+    "blockchain_update_interval": "actualizat la fiecare 28 de zile",
     "list_end_label": "aceasta este ultima înregistrare din istoricul soldului.",
-    "no_data": "Nu există date de afișat pentru perioada specificată."
+    "no_data": "Nu există date de afișat pentru perioada specificată.",
+    "you": "tu",
+    "contribution": "contribuție"
   },
   "pop_up": {
     "update_now": "Actualizează acum",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Îți vei pierde cele [[:amount]] monede pentru totdeauna. Sigur vrei să continui?",
     "resurrection_yes_confirm_message": "Te poți regenera o singură dată! Sigur vrei să continui? Cele [[:amount]] monede vor reveni în soldul tău în următoarea oră.",
     "delete_account_confirmation_title": "Confirmă ștergerea",
-    "delete_account_confirmation_text": "Prin ștergerea contului tău, toate datele tale, inclusiv soldul tău Ice, vor fi șterse definitiv. Vrei să continui?"
+    "delete_account_confirmation_text": "Prin ștergerea contului tău, toate datele tale, inclusiv soldul tău Ice, vor fi șterse definitiv. Vrei să continui?",
+    "registration_update_title": "Actualizare Înregistrare",
+    "registration_update_text": "Am suspendat temporar crearea de conturi noi folosind numărul de telefon. Pentru a continua, va trebui să alegeți fie o adresă de e-mail, fie să vă autentificați prin intermediul rețelelor sociale.",
+    "link_email_title": "Legați adresa dvs. de e-mail",
+    "link_email_text": "Am suspendat temporar autentificarea folosind numărul de telefon. Vă rugăm să atribuiți adresa dvs. de e-mail și să o confirmați pentru a putea să vă autentificați.",
+    "account_error_title": "Eroare de cont",
+    "account_error_text": "Am suspendat temporar autentificarea folosind numărul de telefon. Din păcate, contul dvs. nu a trecut de KYC și nu este eligibil pentru recuperare.",
+    "login_via_email_title": "Vă rugăm să vă autentificați prin e-mail",
+    "login_via_email_text": "Am suspendat temporar autentificarea folosind numărul de telefon. Vă rugăm să utilizați adresa de e-mail asociată contului dvs. pentru a vă autentifica.",
+    "email_in_use_title": "Adresa de e-mail este deja în uz",
+    "email_in_use_text_part1": "Adresa de e-mail pe care încercați să o legați este deja în uz.",
+    "email_in_use_text_part2": "Dacă aceasta este adresa dvs. de e-mail, vă rugăm să vă autentificați mai întâi cu ea, finalizați procesul de înregistrare și ștergeți acel cont pentru a elibera adresa de e-mail, apoi reveniți la autentificarea cu numărul de telefon pentru a finaliza procesul de legare.",
+    "successfully_linked_title": "Atribuit cu succes!",
+    "successfully_linked_text": "Adresa dvs. de e-mail a fost atribuită cu succes de contul dvs."
   },
   "periods": {
     "3_days": "3 zile",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Confirmă telefonul",
     "modify_description": "Te rugăm să îți confirmi codul de țară și să introduci numărul tău de telefon.",
-    "button": "Confirmă țara și telefonul",
-    "same_phone_error": "Nu poți folosi același număr."
+    "button": "Confirmă țara și telefonul"
   },
   "date_select": {
     "title": "Alege data"
@@ -919,6 +968,19 @@
       "title": "Vino alături de noi pe Instagram",
       "description_part1": "Urmărirea noastră pe Instagram este o modalitate excelentă de a rămâne informat și de a te conecta cu alți utilizatori care sunt, de asemenea, pasionați de Ice",
       "description_part2": "În plus, vei afla primul despre orice noi caracteristici sau promoții pe care le lansăm."
+    },
+    "reddit": {
+      "title": "Alătură-te nouă pe Reddit",
+      "description": "Descoperă comunitatea Ice pe Reddit, unde indivizii cu gânduri similare se adună pentru a-și împărtăși ideile.\n\nAlătură-te conversației, pune întrebări și explorează discuții captivante despre mineritul Ice, funcționalități și multe altele."
+    },
+    "discord": {
+      "title": "Alătură-te nouă pe Discord",
+      "description": "Alătură-te comunității noastre active pe Discord și adânciți-vă în discuții și perspective exclusive despre Ice.\n\nParticipați la conversații vii, mențineți-vă informat despre știrile legate de Ice și faceți parte dintr-o comunitate care împărtășește pasiunea dumneavoastră."
+    },
+    "ice_founder_twitter": {
+      "title": "Urmăriți-l pe Zeus pe X",
+      "description": "Urmăriți-l pe Zeus, fondatorul nostru vizionar, pe X, unde împărtășește idei, actualizări și gânduri despre misiunea noastră. Alăturați-vă conversației, puneți întrebări și rămâneți conectat cu liderul nostru inspirator pe măsură ce pornim în această călătorie captivantă împreună.",
+      "button": "Urmăriți-l pe Zeus"
     }
   },
   "ping_referrals_pop_up": {
@@ -971,7 +1033,7 @@
       },
       "spread": {
         "title": "Răspândiți vestea",
-        "description": "Alăturați-vă conversației și prezentați rețeaua Ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu Ice.\n\nFii un om de zăpadă ☃\uFE0F și declanșează o discuție despre potențialul acestei monede globale."
+        "description": "Alăturați-vă conversației și prezentați rețeaua Ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu Ice.\n\nFii un om de zăpadă ☃️ și declanșează o discuție despre potențialul acestei monede globale."
       },
       "bring": {
         "title": "Aduceți-vă prietenii la bord",
@@ -1086,20 +1148,46 @@
       "title": "Permisiune cameră",
       "description": "Pentru a continua, vă rugăm să permiteți accesul la cameră.",
       "action": "Permiteți accesul"
+    },
+    "selfie_guidelines": {
+      "title": "Ghiduri Selfie",
+      "instruction": "Înainte de a continua, vă rugăm să urmați aceste ghiduri pentru o autentificare facială KYC de succes:",
+      "check_1": "✅ Asigurați-vă că aveți o fotografie de înaltă calitate.",
+      "check_2": "✅ Asigurați-vă că aveți o iluminare bună.",
+      "check_3": "✅ Asigurați-vă că aveți un fundal curat.",
+      "check_4": "✅ Fără fotografii întunecate.",
+      "check_5": "✅ Fără fotografii neclare sau încețoșate.",
+      "check_6": "✅ Curățați lentila camerei.",
+      "warning": "Dacă nu urmați ghidurile de mai sus, puteți pierde accesul la contul dvs.",
+      "confirmation": "Confirm că voi urma criteriile.",
+      "popup_title": "Confirmare",
+      "popup_body": "Confirmați că ați urmat toate ghidurile pentru selfie?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect."
+      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect.",
+      "description": "Introduceți numele de utilizator al prietenului care v-a invitat."
     },
     "home": {
       "pioneer": {
-        "description": "Urmăriți progresul dumneavoastră și starea globală"
+        "description": "Urmăriți progresul dumneavoastră și starea globală",
+        "referrals": "PRIETENI"
       },
       "tasks": {
         "invite_friends": {
           "description": "Creșteți-vă echipa și construiți o comunitate"
         }
+      },
+      "team": {
+        "title": "Prieteni",
+        "view_team": "vezi prietenii"
+      },
+      "roadmap": {
+        "button_subtitle": "Aflați mai multe despre viziunea noastră de viitor la Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Obțineți o privire de ansamblu asupra aplicației noastre Mainnet viitoare și a caracteristicilor sale unice, care vor fi lansate la sfârșitul anului 2024."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Soldul dvs. actual este actualizat în fiecare oră și este afișat aici. Acesta include câștigurile dvs. directe și blocate."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Prietenii tăi trebuie să folosească acest nume de utilizator când se alătură la [[:ice]]."
+    },
+    "users": {
+      "team": "Prieteni"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentan nu aveți niciun prieten!"
+      },
+      "contacts": {
+        "empty_description": "Sincronizați contactele și vedeți cine este deja pe [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "Adresa BNB Smart Chain",
+    "enter_address_title": "Introduceți adresa\nBNB Smart Chain",
+    "enter_address_description": "În timpul Fazei Unu, tokenurile ICE vor fi lansate pe blockchainul BNB Smart Chain. După lansarea Mainnet, tokenurile pot fi schimbate de pe BNB Smart Chain pe blockchainul Ice Open Network (ION).",
+    "enter_address_confirmation": "Sunteți sigur că adresa dvs. BNB Smart Chain este corectă?",
+    "validators_warning_title": "Confirmă Adresa",
+    "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă BNB Smart Chain la contul lor nu sunt eligibile pentru a deveni unul dintre cei 300 de validatori principali, conform specificațiilor din whitepaper pentru lansarea mainnet-ului.",
+    "walletDescription": "Recomandăm utilizarea unui portofel auto custodial cum ar fi [[:bold]]Metamask[[/:bold]] sau [[:bold]]Trust Wallet[[/:bold]].\n\nVă rugăm să vă asigurați că verificați de două ori adresa portofelului pentru a vă asigura că veți primi distribuția."
+  },
+  "social_kyc": {
+    "header": "Verificare",
+    "verify_with_title": "Verifică cu {{method}}",
+    "select_method_step": {
+      "title": "Pasul KYC #2",
+      "description": "Verifică-ți contul cu ușurință folosind profilul X existent."
+    },
+    "instructions_step": {
+      "show_example": "Arată exemplu",
+      "example_title": "Exemplu de repostare",
+      "x": {
+        "1": "Deschide X și caută contul [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Găsește postarea fixată, care este prima postare în profil.",
+        "3": "❤️ Dă like și 🔄 Repostează cu [[:bold]]Citat[[/:bold]] folosind textul [[:bold]]EXACT[[/:bold]] de mai jos.",
+        "pop_up": {
+          "title": "Confirmare",
+          "description": "Ai dat like la postarea fixată și ai repostat-o cu un citat folosind textul exact furnizat, conform exemplului?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Atinge pentru a copia textul",
+        "copied": "Copiat"
+      }
+    },
+    "verification_step": {
+      "title": "Confirmare",
+      "description": "Pentru a finaliza verificarea, lipește link-ul postării unde ai finalizat pașii anteriori. Asigură-te că link-ul este corect.",
+      "placeholder": "Lipește link-ul",
+      "instructions_step": {
+        "4": "Lipește link-ul postării tale mai jos. 👇"
+      },
+      "action": {
+        "verify": "Verifică",
+        "wait": "Te rugăm să aștepți",
+        "countdown": "{{countdown}} secunde rămase"
+      },
+      "pop_up": {
+        "title": "Link Nevalid",
+        "description": "Asigurați-vă că ați copiat link-ul corect.\n\n[[:bold]]Exemplu:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Număr de încercări rămase: {{count}}",
+      "success": {
+        "title": "Verificare Finalizată",
+        "description": "Felicitări, ai finalizat cu succes Pasul KYC #2. Ești acum verificat."
+      },
+      "error_try_again": {
+        "title": "Eroare de Verificare",
+        "description": "Asigură-te că ai repostat postarea corectă, folosind textul furnizat, și că postarea este public disponibilă."
+      },
+      "error_try_later": {
+        "title": "Eroare de Verificare",
+        "description": "Nu am putut finaliza verificarea. Poți încerca din nou peste 7 zile."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribuția BNB Smart Chain",
+      "description": "Primiți monedele ICE BNB Smart Chain verificând contul dvs. în mod ușor folosind profilul X existent."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Faceți clic pe linkul [[:bold]]aici[[/:bold]] pentru a deschide direct postarea noastră X.",
+        "pop_up": {
+          "description": "Urmați instrucțiunile și asigurați-vă că ați făcut clic pe link în primul pas pentru a deschide direct postarea noastră X.",
+          "description2": "Ați apreciat postarea corectă și ați repostat-o cu o citare folosind textul exact furnizat, așa cum este în exemplu?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Felicitări, ați finalizat cu succes verificarea. Acum sunteți eligibil pentru distribuția BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Confirmarea contului",
+    "description": "Pentru a vă verifica identitatea contului și pentru a vă lega în siguranță adresa de e-mail, asigurați-vă că treceți cu succes testul de emoții în timpul procesului de autentificare.",
+    "description2": "Acest pas ne ajută să asigurăm securitatea și autenticitatea contului dvs. Vă mulțumim pentru colaborare!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "La Ice, credem în promovarea unei comunități de membri activi și informați. Misiunea noastră este să asigurăm distribuirea monedelor Ice către cei cu adevărat angajați și aliniați cu viziunea noastră.",
+      "community_engagement": {
+        "title": "🙌 Angajament Activ în Comunitate",
+        "description": "Angajamentul dvs. în Ecosistemul Ice influențează direct capacitățile dvs. de minerit:",
+        "point1": "Rămâneți Actualizați: Angajați-vă cu articolele noastre de știri și videoclipuri.",
+        "point2": "Participați Activ: Alăturați-vă Programului de Dezvoltare Personală și sesiunilor live pe YouTube sau Twitter Space.",
+        "point3": "Interacțiuni Sociale: Creșteți prezența dvs. printr-un like, share, follow sau postare despre Ice.",
+        "bottom_description": "Cu cât sunteți mai implicați, cu atât scorul dvs. de interacțiune pozitivă este mai mare, permițându-vă să treceți prin procesul KYC."
+      },
+      "terms_privacy": "Înțeleg și sunt de acord cu [[:link]]Termenii și Condițiile[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Verificarea Cunoștințelor",
+        "point2": "Pentru a trece testul, trebuie să răspundeți corect la cel puțin 18 întrebări.",
+        "point3": "Un test eșuat indică necesitatea unei mai mari implicări cu materialele noastre.",
+        "point4": "Există o limită de timp pentru a trece testul. Puteți vedea câte zile vă mai rămân până la data de expirare pe pagina de start în secțiunea de quiz.",
+        "point5": "Aveți la dispoziție 3 încercări înainte de data de expirare. Dacă nu treceți testul de 3 ori sau dacă data de expirare a trecut, nu veți mai putea să mineritul și contul dvs. va fi penalizat.",
+        "point6": "📚 Toate informațiile pentru acest quiz pot fi citite [[:link]]aici[[/:link]].",
+        "description": "Pentru a ne asigura că comunitatea noastră este bine informată și aliniată cu viziunea noastră:",
+        "point1": "Veți fi prezentat cu 21 de întrebări derivate din resursele noastre cuprinzătoare."
+      },
+      "why_quiz": {
+        "title": "💡 De Ce Quiz-ul?",
+        "description": "Angajamentul nostru față de cunoaștere și înțelegere se află în fruntea comunității noastre. Cu ajutorul acestui quiz, ne propunem să ne asigurăm că Ice ajunge în mâinile potrivite, ale celor care înțeleg cu adevărat și se aliniază cu viziunea proiectului nostru."
+      }
+    },
+    "quiz_failure": {
+      "title": "Quiz Eșuat",
+      "description": "Nu ai răspuns corect la mai mult de 18 întrebări sau timpul a expirat, deci nu poți trece testul.",
+      "check_faq": "Pentru a răspunde corect data viitoare, vă sugerăm să vă familiarizați cu Baza noastră de Cunoștințe și Întrebările Frecvente."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Întrebarea {{current}} din {{total}}",
+      "time_over": "⌛️ Timpul s-a terminat",
+      "correct_answers": "Răspunsuri Corecte",
+      "wrong_answers": "Răspunsuri Greșite"
+    },
+    "confirmation_popup": {
+      "title": "Confirmare",
+      "start_description": "Sunteți sigur că doriți să începeți quiz-ul?",
+      "cancel_description": "Sărind peste quiz, veți folosi una dintre cele 3 încercări disponibile. Sunteți sigur că doriți să săriți peste quiz acum?"
+    },
+    "quiz_success": {
+      "title": "Verificare Completă",
+      "description": "Felicitări, ați finalizat cu succes KYC-ul dvs. Răspunsurile dvs. corecte și constante au dovedit dedicația și cunoștințele dvs. Acum sunteți verificat."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Minerit Dezactivat",
+      "description": "Accesul dvs. la minerit a fost dezactivat din cauza a trei eșecuri consecutive la quiz sau a expirării timpului alocat, conform cerințelor procesului nostru KYC."
+    },
+    "action": "Completați quiz-ul",
+    "reminder": "Vă rugăm să rețineți că trebuie să completați chestionarul pentru a fi eligibil pentru a continua mineritul și pentru a evita tăierea.",
+    "days_left": "Zile rămase: {{days}}",
+    "retries_left": "Încercări rămase: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Distribuția BNB Smart Chain",
+      "description": "Mențineți-vă eligibilitatea pentru distribuția lunară a monedelor ICE BNB Smart Chain prin susținerea activă a celor mai recente anunțuri de la Exchange pe X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Felicitări, ați finalizat cu succes verificarea dumneavoastră. Acum sunteți eligibil pentru a vă menține statutul de distribuție lunară a BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Sari peste"
   }
 }

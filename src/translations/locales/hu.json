@@ -68,7 +68,13 @@
     "learn_more": "Tudj meg többet",
     "back_to_login": "Vissza a bejelentkezéshez",
     "follow_us": "Kövess minket",
-    "subscribe": "Feliratkozás"
+    "subscribe": "Feliratkozás",
+    "not_sure": "Nem vagyok biztos",
+    "confirm_address": "Cím megerősítése",
+    "remove_address": "Cím eltávolítása",
+    "start": "Kezdés",
+    "faq": "GYIK",
+    "knowledge_base": "Tudásbázis"
   },
   "team": {
     "contacts_tab": "Kapcsolatok",
@@ -190,7 +196,12 @@
     "weak_password": "Gyenge jelszó.",
     "wrong_password": "Rossz jelszó.",
     "no_camera_permissions": "A kamerához való hozzáférés nincs engedélyezve.",
-    "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve."
+    "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve.",
+    "blockchain_address_already_taken": "Cím már foglalt",
+    "invalid_blockchain_address": "Érvénytelen cím",
+    "address_not_eoa": "A cím nem EOA",
+    "same_phone_error": "Nem használhatod ugyanazt a számot.",
+    "unable_to_validate_bsc_addr_eoa": "Az EOA cím ellenőrzése nem lehetséges"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Minden 6 egymást követő nap után egy nap felmentést kapsz",
       "streak": "SOROZAT",
       "days_off": "SZABAD NAPOK"
+    },
+    "roadmap": {
+      "title": "LÁTÁSUNK",
+      "button_title": "Fehér könyv",
+      "button_subtitle": "Tudj meg többet a látnoki képünkről az Ice-nál."
+    },
+    "join_mainnet": {
+      "title": "Csatlakozz a Decentralizált Jövőhöz",
+      "subtitle": "Tekints be a közelgő Mainnet alkalmazásunkba és annak egyedi funkcióiba."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain cím",
+      "subtitle": "Kérjük, adja meg BSC címét itt."
+    },
+    "verified_tooltip": {
+      "title": "KYC Hitelesítve"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Előzetes letétbe helyezés most!",
     "balance_label": "Letétbe helyezett egyenleg",
     "confirm_title": "Előzetes letétbe helyezés megerősítése",
-    "confirm_subtitle": "Biztosan előzetes letétbe szeretnéd helyezne a coinjaidat? Ez a megerősítés után nem vonható vissza."
+    "confirm_subtitle": "Biztosan előzetes letétbe szeretnéd helyezne a coinjaidat? Ez a megerősítés után nem vonható vissza.",
+    "remove_pre_staking": "Előzetes Staking Eltávolítása"
   },
   "stats": {
     "header_title": "Statisztikák",
@@ -532,7 +560,14 @@
     "top_miners": "Top felhasználók",
     "top_countries": "Top országok",
     "online_miners": "Online felhasználók",
-    "detailed_information": "Részletes információ"
+    "detailed_information": "Részletes információ",
+    "total_coins": "Összes érme",
+    "filter": {
+      "total": "Összesen",
+      "on_app": "Elérhető az alkalmazásban",
+      "pre_staked": "Előre lerakott",
+      "on_blockchain": "A blokkláncban"
+    }
   },
   "update_required": {
     "title": "Kérjük, frissítsd",
@@ -579,9 +614,11 @@
     "wallet": "Tárca",
     "blockchain": "Blokklánc",
     "wallet_update_interval": "frissítve óránként",
-    "blockchain_update_interval": "frissítve 24 óránként",
+    "blockchain_update_interval": "28 naponta frissítve",
     "list_end_label": "ez az egyenlegelőzmények utolsó bejegyzése.",
-    "no_data": "A meghatározott időszakra nincs megjeleníthető adat."
+    "no_data": "A meghatározott időszakra nincs megjeleníthető adat.",
+    "you": "te",
+    "contribution": "hozzájárulás"
   },
   "pop_up": {
     "update_now": "Frissítsd most",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Örökre el fogod [[:amount]] veszíteni a coinokat. Biztosan tovább szeretnél lépni?",
     "resurrection_yes_confirm_message": "A feltámasztás csak egyszer lehetséges! Biztosan tovább szeretnél lépni? A [[:amount]] coinok a következő egy órában fognak visszakerülni az egyenlegedre.",
     "delete_account_confirmation_title": "Törlés megerősítése",
-    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az Ice egyenleged is. Szeretnéd folytatni?"
+    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az Ice egyenleged is. Szeretnéd folytatni?",
+    "registration_update_title": "Regisztrációs frissítés",
+    "registration_update_text": "A telefonos szám használatával történő új fiókok létrehozását felfüggesztettük. A folytatáshoz válasszon e-mail címet vagy bejelentkezést a közösségi hálózaton keresztül.",
+    "link_email_title": "Kapcsolja össze az e-mail címét",
+    "link_email_text": "A telefonos szám használatával történő bejelentkezést felfüggesztettük. Kérjük, kapcsolja össze e-mail címét és erősítse meg, hogy be tudjon jelentkezni.",
+    "account_error_title": "Fiók hiba",
+    "account_error_text": "A telefonos szám használatával történő bejelentkezést felfüggesztettük. Sajnálattal közöljük, hogy a fiókja nem megy át a KYC ellenőrzésen, és nem állítható helyre.",
+    "login_via_email_title": "Kérjük, jelentkezzen be e-mail címmel",
+    "login_via_email_text": "A telefonos szám használatával történő bejelentkezést felfüggesztettük. Kérjük, használja a fiókjához kapcsolt e-mail címet a bejelentkezéshez.",
+    "email_in_use_title": "Az e-mail cím már használatban van",
+    "email_in_use_text_part1": "Az e-mail címet, amelyet megpróbál csatlakoztatni, már használják.",
+    "email_in_use_text_part2": "Ha ez az Ön e-mail címe, először jelentkezzen be vele, fejezze be a regisztrációs folyamatot, és törölje azt a fiókot, hogy az e-mail cím elérhető legyen, majd térjen vissza a telefonos szám használatával történő bejelentkezéshez a csatlakoztatási folyamat befejezéséhez.",
+    "successfully_linked_title": "Sikeresen csatlakoztatva!",
+    "successfully_linked_text": "Az e-mail címe sikeresen csatlakoztatva a fiókjához."
   },
   "periods": {
     "3_days": "3 nap",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Telefon megerősítése",
     "modify_description": "Kérjük, erősítsd meg az országhívódat és add meg a telefonszámodat.",
-    "button": "Ország és telefon megerősítése",
-    "same_phone_error": "Nem használhatod ugyanazt a számot."
+    "button": "Ország és telefon megerősítése"
   },
   "date_select": {
     "title": "Dátum kiválasztása"
@@ -919,6 +968,19 @@
       "title": "Csatlakozz hozzánk Instagramon",
       "description_part1": "Az Instagramon történő követés nagyszerű módja annak, hogy képben maradj és kapcsolatba lépj más felhasználókkal, akiket szintén szenvedélyesen érdekel az Ice.",
       "description_part2": "Emellett te fogsz elsőként értesülni az összes újonnan bevezetett funkcióról és promócióról."
+    },
+    "reddit": {
+      "title": "Csatlakozz hozzánk a Redditen",
+      "description": "Fedezd fel az Ice közösséget a Redditen, ahol az azonos gondolkodású emberek összegyűlnek, hogy megosszák gondolataikat.\n\nCsatlakozz a beszélgetéshez, tedd fel kérdéseidet, és fedezd fel a beszélgetéseket az Ice bányászatról, funkciókról és még sok másról."
+    },
+    "discord": {
+      "title": "Csatlakozz hozzánk a Discordon",
+      "description": "Csatlakozz a vibráló Discord közösségünkhöz és merülj el a beszélgetésekben és exkluzív betekintésekben az Ice-ról.\n\nMerülj el élénk csevegésekben, maradj tájékoztatva az Ice-cel kapcsolatos hírekről, és légy része egy közösségnek, amely megosztja a szenvedélyedet."
+    },
+    "ice_founder_twitter": {
+      "title": "Kövesse Zeust az X-en",
+      "description": "Kövesse Zeust, a látomásos alapítónkat az X-en, ahol megosztja az ötleteket, frissítéseket és gondolatokat a küldetésünkről. Csatlakozzon a beszélgetéshez, tegyen fel kérdéseket és maradjon kapcsolatban az inspiráló vezetőnkkel, ahogy együtt indulunk ennek izgalmas utazásnak a nyomában.",
+      "button": "Kövesse Zeust"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Kamera engedély",
       "description": "Folytatáshoz engedélyezze a kamera hozzáférését.",
       "action": "Hozzáférés engedélyezése"
+    },
+    "selfie_guidelines": {
+      "title": "Szelfi útmutató",
+      "instruction": "Mielőtt folytatnád, kövesd az alábbi útmutatást a sikeres KYC arcazonosításhoz:",
+      "check_1": "✅ Győződj meg róla, hogy magas minőségű fotód van.",
+      "check_2": "✅ Legyen jó fényviszony.",
+      "check_3": "✅ Tiszta háttér legyen.",
+      "check_4": "✅ Ne legyenek sötét fotók.",
+      "check_5": "✅ Ne legyenek homályos vagy ködös fotók.",
+      "check_6": "✅ Tisztítsd meg a kamera lencséjét.",
+      "warning": "Ha nem követed az fentieket, elveszítheted a hozzáférést a fiókodhoz.",
+      "confirmation": "Megerősítem, hogy követni fogom a kritériumokat.",
+      "popup_title": "Megerősítés",
+      "popup_body": "Megerősíted, hogy követted az összes szelfi útmutatót?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg."
+      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg.",
+      "description": "Add meg azt a barátod becenévét, aki meghívott téged."
     },
     "home": {
       "pioneer": {
-        "description": "Kövesse nyomon haladását és globális helyzetét"
+        "description": "Kövesse nyomon haladását és globális helyzetét",
+        "referrals": "BARÁTOK"
       },
       "tasks": {
         "invite_friends": {
           "description": "Növelje csapatát és építsen közösséget"
         }
+      },
+      "team": {
+        "title": "Barátok",
+        "view_team": "barátok megtekintése"
+      },
+      "roadmap": {
+        "button_subtitle": "Tudj meg többet a jövőbeli víziónkról az Ice-nál."
+      },
+      "join_mainnet": {
+        "subtitle": "Láss betekintést a jövőbeli Mainnet alkalmazásunkba és annak egyedi funkcióiba, amelyeket 2024 végén fogunk kiadni."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Jelenlegi egyenlegét minden órában frissítik és itt jelenítik meg. Tartalmazza közvetlen és befektetett keresetét."
         }
       }
+    },
+    "claimUsername": {
+      "description": "A barátaidnak ezt a becenévet kell használniuk, amikor csatlakoznak a [[:ice]]-hez."
+    },
+    "users": {
+      "team": "Barátok"
+    },
+    "team": {
+      "empty": {
+        "team": "Jelenleg nincsenek barátaid!"
+      },
+      "contacts": {
+        "empty_description": "Szinkronizáld a kapcsolataidat, és nézd meg, ki van már [[:ice]]-on."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain cím",
+    "enter_address_title": "Adja meg\nBNB Smart Chain címét",
+    "enter_address_description": "Az Első Fázis során az ICE érméket a BNB Smart Chain blokkláncán bocsátják ki. Miután a Mainnet elindult, az érméket BNB Smart Chain-ről Ice Open Network (ION) blokkláncre cserélheti.",
+    "enter_address_confirmation": "Biztos benne, hogy a BNB Smart Chain cím helyes?",
+    "validators_warning_title": "Cím megerősítése",
+    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy BNB Smart Chain címet a fiókjukhoz, nem jogosultak arra, hogy a whitepaperünk szerint a Mainnet indulásához tartozó top 300 validátor egyike legyenek.",
+    "walletDescription": "A [[:bold]]Metamask[[/:bold]] vagy [[:bold]]Trust Wallet[[/:bold]] használatát ajánljuk. Kérjük, ellenőrizze kétszer a pénztárcacímét, hogy biztos legyen benne, hogy megkapja a kiosztást."
+  },
+  "social_kyc": {
+    "header": "Ellenőrzés",
+    "verify_with_title": "Ellenőrizd a {{method}} segítségével",
+    "select_method_step": {
+      "title": "KYC 2. lépés",
+      "description": "Ellenőrizd fiókodat könnyedén az X profilod felhasználásával."
+    },
+    "instructions_step": {
+      "show_example": "Példa mutatása",
+      "example_title": "A megosztás példája",
+      "x": {
+        "1": "Nyisd meg az X-et, és keress rá a [[:bold]]@ice_blockchain[[/:bold]] fiókra.",
+        "2": "Keresd meg a rögzített bejegyzést, ami az első bejegyzés a profilban.",
+        "3": "❤️ Like-olj és 🔄 Oszd meg újra [[:bold]]Idézet[[/:bold]] használatával a lentebb található [[:bold]]PONTOS[[/:bold]] szöveggel.",
+        "pop_up": {
+          "title": "Megerősítés",
+          "description": "Lájkoltad a rögzített bejegyzést és megosztottad újra idézettel a pontosan megadott szöveggel, mint a példában?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kattints a szöveg másolásához",
+        "copied": "Másolva"
+      }
+    },
+    "verification_step": {
+      "title": "Megerősítés",
+      "description": "A megerősítés befejezéséhez kérjük, illeszd be a linket a bejegyzéshez, ahol az előző lépéseket végrehajtottad. Győződj meg róla, hogy a link helyes.",
+      "placeholder": "Illeszd be a linket",
+      "instructions_step": {
+        "4": "Illeszd be a bejegyzésed linkjét alább. 👇"
+      },
+      "action": {
+        "verify": "Megerősítés",
+        "wait": "Kérlek, várj",
+        "countdown": "{{countdown}} másodperc van hátra"
+      },
+      "pop_up": {
+        "title": "Érvénytelen Hivatkozás",
+        "description": "Győződjön meg arról, hogy a helyes hivatkozást másolta.\n\n[[:bold]]Példa:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Hátralévő próbálkozások száma: {{count}}",
+      "success": {
+        "title": "Megerősítés kész",
+        "description": "Gratulálunk, sikeresen befejezted a KYC 2. lépését. Most már megerősített vagy."
+      },
+      "error_try_again": {
+        "title": "Megerősítési hiba",
+        "description": "Győződj meg róla, hogy a megfelelő bejegyzést osztottad meg újra, a megadott szöveggel, és hogy a bejegyzés nyilvánosan elérhető."
+      },
+      "error_try_later": {
+        "title": "Megerősítési hiba",
+        "description": "Nem sikerült befejezni a megerősítést. 7 nap múlva újra próbálkozhatsz."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain elosztás",
+      "description": "Vegye át BNB Smart Chain ICE érmeit könnyedén a meglévő X profiljának használatával történő fiókja ellenőrzésével."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kattints a [[:bold]]itt[[/:bold]] található hivatkozásra az X posztunk közvetlen megnyitásához.",
+        "pop_up": {
+          "description": "Kérjük, kövesse az utasításokat, és győződjön meg róla, hogy az első lépésben kattintott a hivatkozásra az X posztunk közvetlen megnyitásához.",
+          "description2": "Tetszett a megfelelő bejegyzés és újraközölted az idézet használatával a pontos szöveggel, mint a példában?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulálunk, sikeresen befejezte az ellenőrzését. Most jogosult a BNB Smart Chain elosztásra."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Fiók megerősítése",
+    "description": "Az Ön fiókjának azonosításához és e-mail címének biztonságos csatlakoztatásához kérjük, győződjön meg róla, hogy sikeresen átmegy érzelmi ellenőrzésünkön az azonosítási folyamat során.",
+    "description2": "Ez a lépés segít nekünk biztosítani fiókja biztonságát és hitelességét. Köszönjük együttműködését!"
+  },
+  "quiz": {
+    "title": "Kvíz",
+    "intro": {
+      "description": "Az Ice-nál hiszünk abban, hogy elősegítjük a aktív és tájékozott tagok közösségét. A missziónk, hogy a Ice coinokat azokhoz juttassuk el, akik valóban elkötelezettek és együttérzők a víziónkkal.",
+      "community_engagement": {
+        "title": "🙌 Aktív Közösségi Részvétel",
+        "description": "Az Ice Együttműködés közvetlenül befolyásolja a bányászati képességeidet:",
+        "point1": "Tartsd magad naprakészen: Lépj kapcsolatba híreinkkel és videóinkkal.",
+        "point2": "Aktívan vegyél részt: Csatlakozz személyes fejlesztési programunkhoz és élő előadásokhoz a YouTube-on vagy a Twitter Space-en.",
+        "point3": "Közösségi interakciók: Növeld jelenlétedet, kedveléssel, megosztással, követéssel vagy posztolással az Ice-ról.",
+        "bottom_description": "Minél aktívabb vagy, annál magasabb a pozitív interakció pontszámod, ami lehetővé teszi a KYC folyamat elvégzését."
+      },
+      "terms_privacy": "Értem és elfogadom a [[:link]]Felhasználási Feltételeket[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Tudásvizsgálat",
+        "point2": "A kvíz teljesítéséhez legalább 18 kérdésre kell helyes választ adnod.",
+        "point3": "Egy sikertelen kvíz arra utal, hogy szükség van a mi anyagaink további megértésére.",
+        "point4": "A kvíz teljesítésére határidő van. A kezdőlapodon a kvíz szakaszban láthatod, hány napod van még a lejáratig.",
+        "point5": "Három újrapróbálkozási lehetőséged van a lejárat előtt. Ha háromszor bukik meg a kvíz, vagy lejár a határidő, nem leszel képes tovább bányászni, és a fiókod megbüntetésre kerül.",
+        "point6": "📚 Az összes információ a kvízről [[:link]]itt[[/:link]] olvasható.",
+        "description": "Annak érdekében, hogy közösségünk jól informált és összhangban legyen a víziónkkal:",
+        "point1": "21 kérdést fogunk feltenni, amelyeket teljes körű forrásainkból származtatunk."
+      },
+      "why_quiz": {
+        "title": "💡 Miért a Kvíz?",
+        "description": "Elkötelezettségünk a tudás és megértés iránt közösségünk középpontjában áll. A kvízzel azt szeretnénk biztosítani, hogy az Ice a megfelelő kezekbe kerüljön, azokhoz, akik valóban megértik és azonosulnak a projektünk víziójával."
+      }
+    },
+    "quiz_failure": {
+      "title": "Sikertelen Kvíz",
+      "description": "Nem válaszoltál több mint 18 kérdésre helyesen, vagy lejárt az idő, így nem tudod teljesíteni a kvízt.",
+      "check_faq": "Hogy legközelebb helyesen válaszolj, javasoljuk, hogy ismerkedj meg tudásbázisunkkal és gyakran ismételt kérdéseinkkel."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Kérdés {{current}} / {{total}}",
+      "time_over": "⌛️ Az idő lejárt",
+      "correct_answers": "Helyes Válaszok",
+      "wrong_answers": "Hibás Válaszok"
+    },
+    "confirmation_popup": {
+      "title": "Megerősítés",
+      "start_description": "Biztos vagy benne, hogy el szeretnéd kezdeni a kvízt?",
+      "cancel_description": "Ha kihagyod a kvízt, felhasználsz egy rendelkezésre álló újrapróbálkozási lehetőséget. Biztos vagy benne, hogy most kihagyni szeretnéd a kvízt?"
+    },
+    "quiz_success": {
+      "title": "Sikeres Megerősítés",
+      "description": "Gratulálunk, sikeresen teljesítetted a KYC folyamatot. Állandóan helyes válaszaid alátámasztották elkötelezettségedet és tudásodat. Most már megerősítettél."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Bányászat letiltva",
+      "description": "A bányászati hozzáférésedet három egymást követő kvíz bukás vagy a megszabott idő lejárta miatt letiltottuk, amint azt a KYC folyamatunk megköveteli."
+    },
+    "action": "Végezze el a kvízt",
+    "reminder": "Kérjük, vegye figyelembe, hogy a bányászat folytatásához és az elvágás elkerüléséhez be kell fejeznie a kvízt.",
+    "days_left": "Hátralévő napok: {{days}}",
+    "retries_left": "Hátralévő próbálkozások: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Osztás",
+      "description": "Tartsd fenn a havi BNB Smart Chain ICE érmék osztási jogosultságodat a legfrissebb Csere-hirdetések aktív támogatásával az X-en."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulálunk, sikeresen befejezted az azonosításodat. Most jogosult vagy fenntartani a havi BNB Smart Chain osztási státuszodat."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Kihagyás"
   }
 }

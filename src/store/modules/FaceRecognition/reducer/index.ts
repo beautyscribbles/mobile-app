@@ -20,7 +20,6 @@ export interface State {
   emotions: AuthEmotion[];
   nextEmotionIndex: number;
   activeRequests: number;
-
   cameraRatio: CameraRatio;
 }
 
@@ -63,7 +62,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.faceAuthStatus = 'LOADING';
         break;
       case FaceRecognitionActions.FACE_AUTH.SUCCESS.type:
-        draft.faceAuthStatus = 'SUCCESS';
+        draft.faceAuthStatus = action.payload.skipEmotions
+          ? 'SUCCESS_BUT_SKIP_EMOTIONS'
+          : 'SUCCESS';
         break;
       case FaceRecognitionActions.FACE_AUTH.FAILURE.type:
         draft.faceAuthStatus = action.payload.status;

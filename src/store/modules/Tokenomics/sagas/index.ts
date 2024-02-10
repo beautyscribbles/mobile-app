@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isLightDesign} from '@constants/featureFlags';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
@@ -8,6 +9,7 @@ import {getBalanceSummarySaga} from '@store/modules/Tokenomics/sagas/getBalanceS
 import {getMiningSummarySaga} from '@store/modules/Tokenomics/sagas/getMiningSummary';
 import {getPreStakingSummarySaga} from '@store/modules/Tokenomics/sagas/getPreStakingSummary';
 import {getRankingSummarySaga} from '@store/modules/Tokenomics/sagas/getRankingSummary';
+import {getTotalCoinsStatsSaga} from '@store/modules/Tokenomics/sagas/getTotalCoinsStats';
 import {handleExtraBonusSaga} from '@store/modules/Tokenomics/sagas/handleExtraBonus';
 import {startMiningSessionSaga} from '@store/modules/Tokenomics/sagas/startMiningSession';
 import {startOrUpdatePreStakingSaga} from '@store/modules/Tokenomics/sagas/startPreStaking';
@@ -62,14 +64,16 @@ export const tokenomicsWatchers = [
     getBalanceHistorySaga,
   ),
   takeLeading(
-    TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
+    isLightDesign
+      ? []
+      : [
+          TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
+          TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
+        ],
     handleExtraBonusSaga,
   ),
-  /**
-   * Separate flow to get rid of messing with the mining summary success action
-   */
   takeLatest(
-    TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
-    handleExtraBonusSaga,
+    TokenomicsActions.GET_TOTAL_COINS_STATS.START.type,
+    getTotalCoinsStatsSaga,
   ),
 ];

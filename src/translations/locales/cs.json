@@ -68,7 +68,13 @@
     "learn_more": "Zjistit více",
     "back_to_login": "Zpět na přihlášení",
     "follow_us": "Sledujte nás",
-    "subscribe": "Odebírat"
+    "subscribe": "Odebírat",
+    "not_sure": "Nejsem si jistý/á",
+    "confirm_address": "Potvrdit adresu",
+    "remove_address": "Odstranit adresu",
+    "start": "Začít",
+    "faq": "FAQ",
+    "knowledge_base": "Základní znalosti"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -190,7 +196,12 @@
     "weak_password": "Slabé heslo.",
     "wrong_password": "Špatné heslo.",
     "no_camera_permissions": "Nejsou udělena oprávnění k fotoaparátu.",
-    "no_library_permissions": "Nejsou udělena oprávnění ke knihovně."
+    "no_library_permissions": "Nejsou udělena oprávnění ke knihovně.",
+    "blockchain_address_already_taken": "Adresa je již obsazena",
+    "invalid_blockchain_address": "Neplatná adresa",
+    "address_not_eoa": "Adresa není EOA",
+    "same_phone_error": "Nemůžete použít stejné číslo.",
+    "unable_to_validate_bsc_addr_eoa": "Nelze ověřit EOA adresu"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Za každých 6 po sobě jdoucích dní dostanete jeden den volna.",
       "streak": "ŘADA",
       "days_off": "VOLNÉ DNY"
+    },
+    "roadmap": {
+      "title": "NAŠE VIZE",
+      "button_title": "Bílá kniha",
+      "button_subtitle": "Dozvědět se více o naší vizi v Ice."
+    },
+    "join_mainnet": {
+      "title": "Připojte se k Decentralizované budoucnosti",
+      "subtitle": "Získejte náhled na naši nadcházející aplikaci pro hlavní síť a její jedinečné funkce."
+    },
+    "bsc_address": {
+      "title": "Adresa BNB Smart Chain",
+      "subtitle": "Prosím, zadejte zde svou adresu BSC."
+    },
+    "verified_tooltip": {
+      "title": "KYC ověřeno"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Pre-stakujte právě teď!",
     "balance_label": "Stakovaný zůstatek",
     "confirm_title": "Potvrdit pre-staking",
-    "confirm_subtitle": "Opravdu chcete své coiny pre-stakovat? Tuto akci po potvrzení již nebudete moci odvolat."
+    "confirm_subtitle": "Opravdu chcete své coiny pre-stakovat? Tuto akci po potvrzení již nebudete moci odvolat.",
+    "remove_pre_staking": "Odstranit představování sázek"
   },
   "stats": {
     "header_title": "Statistiky",
@@ -532,7 +560,14 @@
     "top_miners": "Top uživatelé",
     "top_countries": "Top země",
     "online_miners": "Online uživatelé",
-    "detailed_information": "Podrobné informace"
+    "detailed_information": "Podrobné informace",
+    "total_coins": "Celkový počet mincí",
+    "filter": {
+      "total": "Celkem",
+      "on_app": "K dispozici v aplikaci",
+      "pre_staked": "Před-uloženo",
+      "on_blockchain": "Na blockchainu"
+    }
   },
   "update_required": {
     "title": "Aktualizujte prosím",
@@ -579,9 +614,11 @@
     "wallet": "Peněženka",
     "blockchain": "Blockchain",
     "wallet_update_interval": "aktualizováno každou hodinu",
-    "blockchain_update_interval": "aktualizováno každých 24 hodin",
+    "blockchain_update_interval": "aktualizováno každých 28 dnů",
     "list_end_label": "toto je poslední položka v historii zůstatku.",
-    "no_data": "Pro zvolené období nejsou k dispozici žádné údaje."
+    "no_data": "Pro zvolené období nejsou k dispozici žádné údaje.",
+    "you": "ty",
+    "contribution": "příspěvek"
   },
   "pop_up": {
     "update_now": "Aktualizovat nyní",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Navždy přijdete o [[:amount]] coinů. Opravdu chcete pokračovat?",
     "resurrection_yes_confirm_message": "Vzkřísit se můžete nechat pouze jednou! Opravdu chcete pokračovat? [[:amount]] coinů se během nadcházející hodiny připíše zpět k vašemu zůstatku.",
     "delete_account_confirmation_title": "Potvrďte smazání",
-    "delete_account_confirmation_text": "Odstraněním účtu dojde k trvalému smazání všech vašich dat včetně zůstatku Ice. Chcete pokračovat?"
+    "delete_account_confirmation_text": "Odstraněním účtu dojde k trvalému smazání všech vašich dat včetně zůstatku Ice. Chcete pokračovat?",
+    "registration_update_title": "Aktualizace registrace",
+    "registration_update_text": "Přestali jsme vytvářet nové účty pomocí telefonního čísla. Pro pokračování budete muset vybrat buď e-mailovou adresu nebo přihlášení pomocí sociální sítě.",
+    "link_email_title": "Propojte svůj e-mail",
+    "link_email_text": "Přestali jsme přihlašování pomocí telefonního čísla. Prosím, propojte svou e-mailovou adresu a potvrďte ji, abyste mohli provádět přihlášení.",
+    "account_error_title": "Chyba účtu",
+    "account_error_text": "Přestali jsme přihlašování pomocí telefonního čísla. Bohužel Váš účet neprošel ověřením KYC a nelze jej obnovit.",
+    "login_via_email_title": "Prosím, přihlašte se pomocí e-mailu",
+    "login_via_email_text": "Přestali jsme přihlašování pomocí telefonního čísla. Prosím, použijte e-mailovou adresu připojenou k Vašemu účtu pro přihlášení.",
+    "email_in_use_title": "E-mail již používán",
+    "email_in_use_text_part1": "E-mailová adresa, kterou se snažíte propojit, je již používána.",
+    "email_in_use_text_part2": "Pokud je toto Vaše e-mailová adresa, přihlašte se nejprve pomocí ní, dokončete proces registrace a smažte tento účet, aby byla e-mailová adresa k dispozici, a poté se vraťte a přihlaste se pomocí telefonního čísla pro dokončení procesu propojení.",
+    "successfully_linked_title": "Úspěšně propojeno!",
+    "successfully_linked_text": "E-mail byl úspěšně propojen s Vaším účtem."
   },
   "periods": {
     "3_days": "3 dny",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Potvrzení telefonu",
     "modify_description": "Potvrďte kód vaší země a zadejte telefonní číslo.",
-    "button": "Potvrdit zemi a telefon",
-    "same_phone_error": "Nemůžete použít stejné číslo."
+    "button": "Potvrdit zemi a telefon"
   },
   "date_select": {
     "title": "Výběr data"
@@ -919,6 +968,19 @@
       "title": "Přidejte se k nám na Instagramu",
       "description_part1": "Sledování našeho Instagramu je ideální způsob, jak si udržet přehled o dění a propojit se s dalšími lidmi, co mají pro Ice stejný zápal.",
       "description_part2": "Navíc budete první, kdo se dozví o nových funkcích a promo akcích, které hodláme spustit."
+    },
+    "reddit": {
+      "title": "Připojte se k nám na Redditu",
+      "description": "Objevte komunitu Ice na Redditu, kde se stejně smýšlející jednotlivci sdružují, aby sdíleli své myšlenky.\n\nPřipojte se k rozhovoru, kladejte otázky a prozkoumejte zajímavé diskuse o těžbě Ice, funkcích a mnohem více."
+    },
+    "discord": {
+      "title": "Připojte se k nám na Discordu",
+      "description": "Připojte se k naší živé komunitě na Discordu a ponořte se do diskuzí a exkluzivních poznatků o Ice.\n\nZapojte se do živých chatů, buďte informováni o novinkách souvisejících s Ice a buďte součástí komunity, která sdílí vaši vášeň."
+    },
+    "ice_founder_twitter": {
+      "title": "Sledujte Zeuse na X",
+      "description": "Sledujte Zeuse, našeho vizionářského zakladatele, na X, kde sdílí pohledy, aktualizace a myšlenky ohledně naší mise. Připojte se k diskusi, kladejte otázky a zůstaňte ve spojení s naším inspirujícím lídrem, když společně vyrazíme na tuto vzrušující cestu.",
+      "button": "Sledovat Zeuse"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Oprávnění k fotoaparátu",
       "description": "Pro pokračování povolte přístup k fotoaparátu.",
       "action": "Povolit přístup"
+    },
+    "selfie_guidelines": {
+      "title": "Pokyny pro selfie",
+      "instruction": "Před pokračováním postupujte podle těchto pokynů pro úspěšnou KYC ověření obličeje:",
+      "check_1": "✅ Ujistěte se, že máte fotografii vysoké kvality.",
+      "check_2": "✅ Mějte dobré osvětlení.",
+      "check_3": "✅ Mějte čisté pozadí.",
+      "check_4": "✅ Žádné tmavé fotografie.",
+      "check_5": "✅ Žádné rozmazané nebo mlžné fotografie.",
+      "check_6": "✅ Čistý objektiv kamery.",
+      "warning": "Pokud nepostupujete podle uvedených pokynů, můžete přijít o přístup ke svému účtu.",
+      "confirmation": "Potvrzuji, že budu dodržovat kritéria.",
+      "popup_title": "Potvrzení",
+      "popup_body": "Potvrzujete, že jste dodrželi všechny pokyny pro selfie?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Prosím, ujistěte se, že zadáváte správný přezdívku."
+      "dontHaveInvitationCode": "Prosím, ujistěte se, že zadáváte správný přezdívku.",
+      "description": "Zadejte přezdívku přítele, který vás pozval."
     },
     "home": {
       "pioneer": {
-        "description": "Sledujte svůj pokrok a globální stav"
+        "description": "Sledujte svůj pokrok a globální stav",
+        "referrals": "PŘÁTELÉ"
       },
       "tasks": {
         "invite_friends": {
           "description": "Roste vašeho týmu a vytvářejte komunitu"
         }
+      },
+      "team": {
+        "title": "Přátelé",
+        "view_team": "zobrazit přátele"
+      },
+      "roadmap": {
+        "button_subtitle": "Dozvědět se více o naší budoucí vizi v Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Podívejte se na náš budoucí Mainnetovou aplikaci a její unikátní funkce, které budou uvedeny na konci roku 2024."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Váš aktuální zůstatek se aktualizuje každou hodinu a zobrazuje se zde. Zahrnuje vaše přímé a vložené výdělky."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Vaši přátelé budou muset použít tuto přezdívku při připojení k [[:ice]]."
+    },
+    "users": {
+      "team": "Přátelé"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentálně nemáte žádné přátele!"
+      },
+      "contacts": {
+        "empty_description": "Synchronizujte své kontakty a zjistěte, kdo je již na [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "Adresa BNB Smart Chain",
+    "enter_address_title": "Zadejte svou\nadresu BNB Smart Chain",
+    "enter_address_description": "Během fáze jedna budou tokeny ICE vydány na blockchainu BNB Smart Chain. Jakmile bude spuštěna hlavní síť, bude možné tokeny směnit z BNB Smart Chain na blockchain Ice Open Network (ION).",
+    "enter_address_confirmation": "Jste si jisti, že adresa BNB Smart Chain je správná?",
+    "validators_warning_title": "Potvrďte Adresu",
+    "validators_warning_text": "Upozorňujeme, že osoby, které přidaly adresu BNB Smart Chain do svého účtu, nemají nárok stát se jedním z prvních 300 validátorů podle naší bílé knihy pro spuštění hlavní sítě.",
+    "walletDescription": "Doporučujeme používat samostatnou peněženku, jako je [[:bold]]Metamask[[/:bold]] nebo [[:bold]]Trust Wallet[[/:bold]].\n\nProsím, ujistěte se, že dvakrát zkontrolujete svoji peněženku, abyste byli jisti, že dostanete distribuci."
+  },
+  "social_kyc": {
+    "header": "Ověření",
+    "verify_with_title": "Ověřte s pomocí {{method}}",
+    "select_method_step": {
+      "title": "KYC Krok #2",
+      "description": "Snadno ověřte svůj účet pomocí vašeho stávajícího profilu X."
+    },
+    "instructions_step": {
+      "show_example": "Zobrazit příklad",
+      "example_title": "Příklad opětovného sdílení",
+      "x": {
+        "1": "Otevřete X a vyhledejte profil [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Najděte připnutý příspěvek, což je první příspěvek na profilu.",
+        "3": "❤️ Lajkněte a 🔄 sdílejte ho s [[:bold]]Citací[[/:bold]] s použitím [[:bold]]PŘESNÉHO[[/:bold]] textu níže.",
+        "pop_up": {
+          "title": "Potvrzení",
+          "description": "Lajkli jste připnutý příspěvek a sdíleli jste ho s citací, používajíce přesný text, jak je uvedeno v příkladu?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kopírovat text klepnutím",
+        "copied": "Zkopírováno"
+      }
+    },
+    "verification_step": {
+      "title": "Potvrzení",
+      "description": "Pro dokončení ověření vložte odkaz na příspěvek, kde jste provedli předchozí kroky. Ujistěte se, že je odkaz správný.",
+      "placeholder": "Vložte odkaz",
+      "instructions_step": {
+        "4": "Vložte odkaz na váš příspěvek níže. 👇"
+      },
+      "action": {
+        "verify": "Ověřit",
+        "wait": "Počkejte prosím",
+        "countdown": "Zbývá {{countdown}} sekund"
+      },
+      "pop_up": {
+        "title": "Neplatný odkaz",
+        "description": "Ujistěte se, že jste zkopírovali správný odkaz.\n\n[[:bold]]Příklad:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Počet zbývajících pokusů: {{count}}",
+      "success": {
+        "title": "Ověření dokončeno",
+        "description": "Gratulujeme, úspěšně jste dokončili KYC Krok #2. Jste nyní ověřeni."
+      },
+      "error_try_again": {
+        "title": "Chyba ověření",
+        "description": "Ujistěte se, prosím, že jste sdíleli správný příspěvek, použili poskytnutý text a že je příspěvek veřejně dostupný."
+      },
+      "error_try_later": {
+        "title": "Chyba ověření",
+        "description": "Nepodařilo se nám dokončit ověření. Můžete to zkusit znovu za 7 dní."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribuce BNB Smart Chain",
+      "description": "Získejte své mince BNB Smart Chain ICE tím, že ověříte svůj účet pomocí vašeho stávajícího profilu X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klikněte na odkaz [[:bold]]zde[[/:bold]] pro přímé otevření naší X pošty.",
+        "pop_up": {
+          "description": "Prosím, postupujte podle pokynů a ujistěte se, že jste v prvním kroku klikli na odkaz pro přímé otevření naší X pošty.",
+          "description2": "Označili jste správný příspěvek a sdíleli jste ho s citátem, používajíce přesný text uvedený v příkladu?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulujeme, úspěšně jste dokončili ověření. Nyní máte nárok na distribuci BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Potvrzení účtu",
+    "description": "Pro ověření identity Vašeho účtu a bezpečné propojení e-mailu si ujistěte, že během procesu ověření úspěšně projdete testem emocí.",
+    "description2": "Tento krok nám pomáhá zajistit bezpečnost a autentičnost Vašeho účtu. Děkujeme za spolupráci!"
+  },
+  "quiz": {
+    "title": "Kvíz",
+    "intro": {
+      "description": "V Ice věříme v podporu aktivního a informovaného společenství. Naším cílem je zajistit, že mince Ice jsou distribuovány těm, kteří jsou opravdu angažovaní a sdílejí naši vizi.",
+      "community_engagement": {
+        "title": "🙌 Aktivní zapojení do komunity",
+        "description": "Vaše zapojení v rámci ekosystému Ice přímo ovlivňuje vaše těžební schopnosti:",
+        "point1": "Buďte v obraze: Zapojte se do našich zpravodajských článků a videí.",
+        "point2": "Aktivně se zapojujte: Připojte se k našemu Programu osobního rozvoje a živým relacím na YouTube nebo Twitter Space.",
+        "point3": "Sociální interakce: Zvyšte svou přítomnost tím, že budete líbit, sdílet, sledovat nebo přispívat o Ice.",
+        "bottom_description": "Čím více se angažujete, tím vyšší je vaše skóre pozitivní interakce, což vám umožní projít KYC procesem."
+      },
+      "terms_privacy": "Rozumím a souhlasím s [[:link]]Podmínkami a pravidly[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Test znalostí",
+        "point2": "Pro úspěšné absolvování kvízu musíte správně zodpovědět alespoň 18 otázek.",
+        "point3": "Neúspěch v kvízu naznačuje potřebu dalšího seznámení se s naším materiálem.",
+        "point4": "Pro úspěšné absolvování kvízu existuje časový limit. Můžete si zjistit, kolik dnů vám zbývá do data uzávěrky na domovské stránce v sekci kvíz.",
+        "point5": "Před vypršením časového limitu máte k dispozici 3 pokusy. Pokud nezvládnete kvíz 3krát nebo dojde ke dni uzávěrky, nebudete moci těžit a váš účet bude označen jako nesprávný.",
+        "point6": "📚 Veškeré informace o tomto kvízu můžete přečíst [[:link]]zde[[/:link]].",
+        "description": "Pro zajištění toho, že naše společenství je dobře informované a sdílí naši vizi:",
+        "point1": "Budete vystaveni 21 otázkám odvozeným z našich komplexních zdrojů."
+      },
+      "why_quiz": {
+        "title": "💡 Proč kvíz?",
+        "description": "Naše oddanost znalostem a porozumění je naším hlavním cílem v komunitě. Kvízem chceme zajistit, že Ice najde cestu ke správným rukám těm, kteří opravdu rozumí a souzní s vizi našeho projektu."
+      }
+    },
+    "quiz_failure": {
+      "title": "Selhal kvíz",
+      "description": "Nedokázal jsi odpovědět správně na více než 18 otázek nebo čas vypršel, takže nemůžeš projít testem.",
+      "check_faq": "Abyste příště odpovídali správně, doporučujeme se seznámit s našimi základními znalostmi a FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Otázka {{current}} z {{total}}",
+      "time_over": "⌛️ Vypršel čas",
+      "correct_answers": "Správné odpovědi",
+      "wrong_answers": "Nesprávné odpovědi"
+    },
+    "confirmation_popup": {
+      "title": "Potvrzení",
+      "start_description": "Jste si jisti, že chcete začít kvíz?",
+      "cancel_description": "Přeskočením kvízu použijete jeden ze svých dostupných pokusů. Opravdu chcete kvíz nyní přeskočit?"
+    },
+    "quiz_success": {
+      "title": "Ověření dokončeno",
+      "description": "Gratulujeme, úspěšně jste dokončili svůj KYC. Vaše stále správné odpovědi potvrdily vaše odhodlání a znalosti. Jste nyní ověřeni."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Těžba zakázána",
+      "description": "Váš přístup k těžbě byl zakázán kvůli třem po sobě jdoucím neúspěšným pokusům v kvízu nebo vypršení stanoveného časového limitu, jak je vyžadováno naším procesem KYC."
+    },
+    "action": "Dokončit kvíz",
+    "reminder": "Vezměte na vědomí, že abyste mohli pokračovat v těžbě a vyhnout se snižování, musíte dokončit kvíz.",
+    "days_left": "Zbývající dny: {{days}}",
+    "retries_left": "Zbývající pokusy: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Distribuce BNB Smart Chain",
+      "description": "Udržujte svou oprávněnost k měsíční distribuci mincí BNB Smart Chain aktivní podporou nejnovějších oznámení burz na X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulujeme, úspěšně jste dokončili svou verifikaci. Nyní máte nárok na udržování svého měsíčního statusu distribuce BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Přeskočit"
   }
 }

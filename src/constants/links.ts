@@ -10,7 +10,6 @@ export const LINKS = {
   PRIVACY: t('links.privacy'),
   TERMS: t('links.terms'),
   MAIN: t('links.main'),
-  BLOCK_EXPLORER: ENV.BLOCK_EXPLORER_URL,
   FIREBASE_NOTICE: 'https://ice.io/firebase-notice',
   KNOWLEDGE_BASE: 'https://ice.io/knowledge-base',
   BONUSES: 'https://ice.io/bonuses',
@@ -33,6 +32,12 @@ export const LINKS = {
   YOUTUBE_APP: `vnd.youtube://channel/${ENV.YOUTUBE_CHANNEL_ID}`,
   YOUTUBE_WEB: 'https://youtube.com/@ice.blockchain',
   TIKTOK_WEB: 'https://www.tiktok.com/@ice.blockchain',
+  REDDIT_APP: 'reddit://r/iceblockchain',
+  REDDIT_WEB: 'https://www.reddit.com/r/iceblockchain',
+  // DISCORD_APP: '',
+  // DISCORD_WEB: '',
+  TWITTER_ICE_FOUNDER_APP_URL: 'twitter://user?screen_name=ice_z3us',
+  TWITTER_ICE_FOUNDER_WEB_URL: 'https://twitter.com/ice_z3us',
   APP_UPDATE: 'https://ice.io/app-update',
   GITHUB_WEB: 'https://github.com/ice-blockchain',
   HOW_TO_BOOTS_EARNINGS: 'https://ice.io/how-to-boost-your-earnings',
@@ -46,4 +51,11 @@ export const LINKS = {
     'https://www.figma.com/community/file/1256148399031329897/ice-Community-Assets',
   ICE_VIDEOS:
     'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
+  WHITEPAPER: 'https://ice.io/whitepaper',
+  JOIN_DECENTRALIZED_FUTURE: 'https://www.youtube.com/watch?v=h1Kkn4EjSV4',
+  X_REPOST_EXAMPLE: 'https://ice-production.b-cdn.net/assets/x-post.jpg',
+  DIST_REPOST_EXAMPLE: 'https://ice-production.b-cdn.net/assets/dist-post.jpg',
+  X_REPOST_LINK_EXAMPLE:
+    'https://twitter.com/ice_z3us/status/1732445405806477625?t=HgtbOUEVIxMENcUuRKIsQQ&s=19',
+  BSCSCAN: 'https://bscscan.com/address',
 };

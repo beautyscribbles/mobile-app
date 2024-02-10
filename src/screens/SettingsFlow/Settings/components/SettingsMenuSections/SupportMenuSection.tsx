@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {MenuItem} from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -41,18 +42,20 @@ export const SupportMenuSection = () => {
           });
         }}
       />
-      <MenuItem
-        title={t('settings.invite_title')}
-        description={t('settings.invite_description')}
-        renderIcon={() => (
-          <InviteIcon
-            fill={COLORS.primaryLight}
-            width={rem(24)}
-            height={rem(24)}
-          />
-        )}
-        onPress={() => navigation.navigate('InviteShare')}
-      />
+      {isLightDesign ? null : (
+        <MenuItem
+          title={t('settings.invite_title')}
+          description={t('settings.invite_description')}
+          renderIcon={() => (
+            <InviteIcon
+              fill={COLORS.primaryLight}
+              width={rem(24)}
+              height={rem(24)}
+            />
+          )}
+          onPress={() => navigation.navigate('InviteShare')}
+        />
+      )}
       <MenuItem
         title={t('settings.delete_title')}
         description={t('settings.delete_description')}
@@ -60,6 +63,7 @@ export const SupportMenuSection = () => {
         onPress={() => {
           navigation.navigate({
             name: 'PopUp',
+            key: 'delete-account-confirmation-popup',
             params: {
               title: t('pop_up.delete_account_confirmation_title'),
               message: t('pop_up.delete_account_confirmation_text'),

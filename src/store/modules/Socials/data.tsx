@@ -14,19 +14,27 @@ export interface SocialData {
   linkApp: string;
   linkWeb: string;
 }
-const facebookDescription = () => {
-  return `${t('social_media.facebook.description_part1')}\n\n${t(
-    'social_media.facebook.description_part2',
-  )}`;
-};
 
-const instagramDescription = () => {
-  return `${t('social_media.instagram.description_part1')}\n\n${t(
-    'social_media.instagram.description_part2',
-  )}`;
-};
+export const socialTypesOrder = [
+  'iceFounderTwitter',
+  'tiktok',
+  'youtube',
+  'linkedin',
+  'facebook',
+  'instagram',
+  'reddit',
+  // 'discord',
+] as const;
 
 export const socialData: Record<SocialType, SocialData> = {
+  iceFounderTwitter: {
+    image: Images.social.twitter,
+    title: t('social_media.ice_founder_twitter.title'),
+    description: t('social_media.ice_founder_twitter.description'),
+    buttonTitle: t('social_media.ice_founder_twitter.button'),
+    linkApp: LINKS.TWITTER_ICE_FOUNDER_APP_URL,
+    linkWeb: LINKS.TWITTER_ICE_FOUNDER_WEB_URL,
+  },
   tiktok: {
     image: Images.social.tiktok,
     title: t('social_media.tiktok.title'),
@@ -54,7 +62,9 @@ export const socialData: Record<SocialType, SocialData> = {
   facebook: {
     image: Images.social.facebook,
     title: t('social_media.facebook.title'),
-    description: facebookDescription(),
+    description: `${t('social_media.facebook.description_part1')}\n\n${t(
+      'social_media.facebook.description_part2',
+    )}`,
     buttonTitle: t('button.follow_us'),
     linkApp: LINKS.FACEBOOK_APP,
     linkWeb: LINKS.FACEBOOK_WEB,
@@ -62,9 +72,27 @@ export const socialData: Record<SocialType, SocialData> = {
   instagram: {
     image: Images.social.instagram,
     title: t('social_media.instagram.title'),
-    description: instagramDescription(),
+    description: `${t('social_media.instagram.description_part1')}\n\n${t(
+      'social_media.instagram.description_part2',
+    )}`,
     buttonTitle: t('button.follow_us'),
     linkApp: LINKS.INSTAGRAM_APP,
     linkWeb: LINKS.INSTAGRAM_WEB,
   },
+  reddit: {
+    image: Images.social.reddit,
+    title: t('social_media.reddit.title'),
+    description: t('social_media.reddit.description'),
+    buttonTitle: t('button.follow_us'),
+    linkApp: LINKS.REDDIT_APP,
+    linkWeb: LINKS.REDDIT_WEB,
+  },
+  // discord: {
+  //   image: Images.social.discord,
+  //   title: t('social_media.discord.title'),
+  //   description: t('social_media.discord.description'),
+  //   buttonTitle: t('button.follow_us'),
+  //   linkApp: LINKS.DISCORD_APP,
+  //   linkWeb: LINKS.DISCORD_WEB,
+  // },
 };

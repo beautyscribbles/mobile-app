@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AuthConfig} from '@api/auth/types';
+import {FeatureToggleConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import {
   SignInUserInfo,
@@ -55,6 +55,7 @@ const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
     phoneNumber,
     isoCode,
   }),
+  SET_MIGRATION_DATA: (params: {userId: string; phoneNumber: string}) => params,
   RESEND: true,
   RESEND_SUCCESS: true,
   CONFIRM_TEMP_PHONE: (code: string) => ({code}),
@@ -63,6 +64,19 @@ const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
   CLEAR_ERROR: true,
   RESET: true,
 });
+
+const MIGRATE_PHONE_NUMBER_TO_EMAIL = createAction(
+  'MIGRATE_PHONE_NUMBER_TO_EMAIL',
+  {
+    START: (email: string) => ({email}),
+    SET_SESSION: (loginSession: string) => ({loginSession}),
+    SUCCESS: true,
+    FAILED: (errorMessage: string) => ({errorMessage}),
+    RESET: true,
+    EDIT_EMAIL: true,
+    CLEAR: true,
+  },
+);
 
 const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
   START: (provider: SocialSignInProvider) => ({
@@ -141,12 +155,27 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
 });
 
 const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
-  SUCCESS: (config: AuthConfig | null) => ({config}),
+  SUCCESS: (config: FeatureToggleConfig | null) => ({config}),
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
 const SET_INSTALL_REFERRER = createAction('SET_INSTALL_REFERRER', {
   STATE: (payload: {installReferrer: string}) => payload,
+});
+
+const SET_BSC_ADDR_WARNING_CONFIRMED = createAction(
+  'SET_BSC_ADDR_WARNING_CONFIRMED',
+  {
+    STATE: true,
+  },
+);
+
+const MIGRATE_EMAIL_WITH_CODE = createAction('MIGRATE_EMAIL_WITH_CODE', {
+  START: true,
+  SET_CODE: (code: string) => ({code}),
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+  RESET: true,
 });
 
 export const AccountActions = Object.freeze({
@@ -168,4 +197,7 @@ export const AccountActions = Object.freeze({
   SET_PRIVACY_INFO_SHOW,
   GET_AUTH_CONFIG,
   SET_INSTALL_REFERRER,
+  SET_BSC_ADDR_WARNING_CONFIRMED,
+  MIGRATE_PHONE_NUMBER_TO_EMAIL,
+  MIGRATE_EMAIL_WITH_CODE,
 });

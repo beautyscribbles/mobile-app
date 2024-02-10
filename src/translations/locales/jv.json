@@ -64,7 +64,13 @@
     "close": "Close",
     "try_again": "Try Again",
     "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "disable": "Disable",
+    "not_sure": "Aja ora yakin",
+    "confirm_address": "Konfirmasi alamat",
+    "remove_address": "Mbuwuh alamat",
+    "start": "Mulai",
+    "faq": "FAQ",
+    "knowledge_base": "Basis Pengetahuan"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -186,7 +192,12 @@
     "email_already_in_use": "The email address is already in use by another account.",
     "user_token_expired": "Your credentials is no longer valid. Please sign in again",
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "same_email": "You can’t use the same e-mail",
+    "blockchain_address_already_taken": "Alamat wis didol",
+    "invalid_blockchain_address": "Alamat blockchain ora sah",
+    "address_not_eoa": "Alamat ora EOA",
+    "same_phone_error": "You can’t use the same number",
+    "unable_to_validate_bsc_addr_eoa": "Ora bisa ngrusakna alamat EOA"
   },
   "profile": {
     "my_roles": {
@@ -336,6 +347,22 @@
       "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
       "streak": "STREAK",
       "days_off": "DAYS OFF"
+    },
+    "roadmap": {
+      "title": "VISI KITA",
+      "button_title": "Kertas putih",
+      "button_subtitle": "Uwuh mithil tentang visi kita ing Ice."
+    },
+    "join_mainnet": {
+      "title": "Gabung Karo Masa Depan Desentralisasi",
+      "subtitle": "Dapetake saka pratinjau aplikasi Mainnet kita sing bakal datang lan fitur-fitur unik e."
+    },
+    "bsc_address": {
+      "title": "Alamat BNB Smart Chain",
+      "subtitle": "Tolong masukkan alamat BSC Anda di sini."
+    },
+    "verified_tooltip": {
+      "title": "KYC Terferifikasi"
     }
   },
   "settings": {
@@ -511,7 +538,8 @@
     "stake_now": "Pre-Stake Now!",
     "balance_label": "Staked balance",
     "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm",
+    "remove_pre_staking": "Lèpaskan Staking Awal"
   },
   "stats": {
     "header_title": "Stats",
@@ -521,7 +549,14 @@
     "top_miners": "Top users",
     "top_countries": "Top countries",
     "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "detailed_information": "Detailed information",
+    "total_coins": "Jumlah Koin",
+    "filter": {
+      "total": "Total",
+      "on_app": "Tersedia di Aplikasi",
+      "pre_staked": "Pre-Staked",
+      "on_blockchain": "Di Blockchain"
+    }
   },
   "update_required": {
     "title": "Please Update",
@@ -566,9 +601,11 @@
     "wallet": "Wallet",
     "blockchain": "Blockchain",
     "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
+    "blockchain_update_interval": "diperbarui saben 28 dino",
     "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "no_data": "There is no data to display \nfor the specified period",
+    "you": "sampeyan",
+    "contribution": "sumbangan"
   },
   "pop_up": {
     "update_now": "Update Now",
@@ -581,7 +618,20 @@
     "resurrection_warning": "You can only resurrect one time!",
     "please_confirm": "Please confirm",
     "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour.",
+    "registration_update_title": "Pembaruan Pendaftaran",
+    "registration_update_text": "Kami nangguhake pembuatan akun anyar nganggo nomer telpon. Kanggo ngarepake, sampeyan perlu milih antara alamat email utawa login menyang jaringan sosial.",
+    "link_email_title": "Tautke alamat email sampeyan",
+    "link_email_text": "Kami nangguhake login nganggo nomer telpon. Mangga tautke alamat email sampeyan lan konfirmasi supaya bisa login.",
+    "account_error_title": "Kesalahan Akun",
+    "account_error_text": "Kami nangguhake login nganggo nomer telpon. Sayang, akun sampeyan ora lulus verifikasi KYC lan ora bisa dipulihake.",
+    "login_via_email_title": "Mangga login menyang alamat email",
+    "login_via_email_text": "Kami nangguhake login nganggo nomer telpon. Mangga gumantung alamat email sing terkoneksi karo akun sampeyan kanggo login.",
+    "email_in_use_title": "Email wis digunakake",
+    "email_in_use_text_part1": "Alamat email sing sampeyan nyoba tautake wis digunakake.",
+    "email_in_use_text_part2": "Yen iki alamat email sampeyan, mangga login nanggung ana, rampungake proses registrasi, lan hapus akun iku supaya email wis tersedia, terus balik menyang login nganggo nomer telpon kanggo rampungake proses tautan.",
+    "successfully_linked_title": "Sukses ditautake!",
+    "successfully_linked_text": "Alamat email wis ditautake sukses menyang akun sampeyan."
   },
   "periods": {
     "3_days": "3 days",
@@ -673,8 +723,7 @@
   "confirm_phone": {
     "modify_title": "Confirm Phone",
     "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
+    "button": "Confirm country and phone"
   },
   "tasks": {
     "completed": {
@@ -999,20 +1048,46 @@
       "title": "Izin Kamera",
       "description": "Supaya tetep terus, monggo restuiakses menyang kamera.",
       "action": "Restuiakses dianjurake"
+    },
+    "selfie_guidelines": {
+      "title": "Panduan Selfie",
+      "instruction": "Pra lanjut, palupi panduan iki kanggo autentikasi wajah KYC sing sukses:",
+      "check_1": "✅ Pastikan sampeyan duwe gambar sing kualitasé apik.",
+      "check_2": "✅ Duwe panggonan sing apik.",
+      "check_3": "✅ Duwe latar belakang sing apik.",
+      "check_4": "✅ Durung ana gambar sing gelap.",
+      "check_5": "✅ Durung ana gambar sing sambrama utawa mbledhek.",
+      "check_6": "✅ Bersihake lensa kamera.",
+      "warning": "Yen sampeyan ora nggandhengi panduan ing sajeroning, sampeyan bisa kehilangan akses menyang akun sampeyan.",
+      "confirmation": "Aku ngonfirmasi sing aku bakal nggandhengi kriteria.",
+      "popup_title": "Konfirmasi",
+      "popup_body": "Apakah sampeyan ngonfirmasi sing sampeyan wis nggandhengi kabeh panduan selfie?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Monggo pastikan sampeyan nglebokna jeneng panggonan sing bener."
+      "dontHaveInvitationCode": "Monggo pastikan sampeyan nglebokna jeneng panggonan sing bener.",
+      "description": "Tulis jeneng teman sing ngundang sampeyan."
     },
     "home": {
       "pioneer": {
-        "description": "Gawé jejak kemajuan lan status global sampeyan"
+        "description": "Gawé jejak kemajuan lan status global sampeyan",
+        "referrals": "TEMAN"
       },
       "tasks": {
         "invite_friends": {
           "description": "Miturutake tim sampeyan lan mbangun komunitas"
         }
+      },
+      "team": {
+        "title": "Teman",
+        "view_team": "tampilke teman"
+      },
+      "roadmap": {
+        "button_subtitle": "Leren luwih lanjut tentang wawasan ing depan nang Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Daptarake pitulung menyang aplikasi Mainnet ing depan lan fitur-fitur uniké, sing bakal dirilis ing akhir taun 2024."
       }
     },
     "settings": {
@@ -1041,6 +1116,189 @@
           "description": "Saldo saiki sampeyan dianyari saben jam lan dadi ndeleng ing kene. Ana panghasilan langsung lan staked panjenengan."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Teman-teman sampeyan kudu nggunakake jeneng sing ana saiki nalika mlebu [[:ice]]."
+    },
+    "users": {
+      "team": "Teman"
+    },
+    "team": {
+      "empty": {
+        "team": "Saiki sampeyan ora duwe teman!"
+      },
+      "contacts": {
+        "empty_description": "Synchronize kontak sampeyan lan delok sapeyan sing wis ana ing [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "Alamat BNB Smart Chain",
+    "enter_address_title": "Masukkan alamat\nBNB Smart Chain Anda",
+    "enter_address_description": "Selama Fase Satu, token ICE akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token akan dapat ditukar dari BNB Smart Chain ke blockchain Ice Open Network (ION).",
+    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
+    "validators_warning_title": "Konfirmasi Alamat",
+    "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
+    "walletDescription": "Kami mrekomendasikan nganggo dompet self-custodial kaya [[:bold]]Metamask[[/:bold]] utawa [[:bold]]Trust Wallet[[/:bold]].\n\nMangga pastikan sampeyan nggonakake alamat dompet sampeyan loro kali supaya pasti sampeyan bakal nerima distribusi."
+  },
+  "social_kyc": {
+    "header": "Verifikasi",
+    "verify_with_title": "Verifikasi kan nganggo {{method}}",
+    "select_method_step": {
+      "title": "Langkah KYC #2",
+      "description": "Verifikasi akun sampeyan gampang nganggo profil X sing wis ana."
+    },
+    "instructions_step": {
+      "show_example": "Tampilake conto",
+      "example_title": "Conto repost",
+      "x": {
+        "1": "Buka X lan nyuwun akun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Goleki pos sing dipentokake, sing yaiku pos paling pisanan ing profil.",
+        "3": "❤️ Keno & 🔄 Repost karo [[:bold]]Kutip[[/:bold]] nganggo teks [[:bold]]TEPATE[[/:bold]] ing ngisor iki.",
+        "pop_up": {
+          "title": "Konfirmasi",
+          "description": "Apa sampeyan nduwei nganggo pos sing dipentokake lan nggawe repost karo kutipan nganggo teks sing tepat kaya conto?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Ketik kanggo nggandheng teks",
+        "copied": "Nggandheng"
+      }
+    },
+    "verification_step": {
+      "title": "Konfirmasi",
+      "description": "Kanggo rampungake verifikasi sampeyan, monggo masukkan tautan menyang pos maneh sampeyan rampungake langkah-langkah sajrone. Pastikan tautane bener.",
+      "placeholder": "Masukkan tautan",
+      "instructions_step": {
+        "4": "Taro tautan pos sampeyan ngisor iki. 👇"
+      },
+      "action": {
+        "verify": "Verifikasi",
+        "wait": "Monggo nunggu",
+        "countdown": "{{countdown}} detik wani"
+      },
+      "pop_up": {
+        "title": "Tautan Salah",
+        "description": "Pastikan sampeyan wis nggandheng tautan sing bener.\n\n[[:bold]]Conto:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Jumlah percobaan sing ana: {{count}}",
+      "success": {
+        "title": "Verifikasi Rampung",
+        "description": "Selamat, sampeyan wis sukses rampungake Langkah KYC #2. Sampeyan saiki wis verifikasi."
+      },
+      "error_try_again": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Pastikan sampeyan wis repost pos sing bener, nganggo teks sing disediakake, lan pos iku bisa diakses dening umum."
+      },
+      "error_try_later": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Kami ora bisa rampungake verifikasi. Sampeyan bisa nyoba maneh sajrone 7 dino."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribusi BNB Smart Chain",
+      "description": "Terima koin ICE BNB Smart Chain Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klik tautan [[:bold]]iku[[/:bold]] nganti mbukak langsung tulisan X kita.",
+        "pop_up": {
+          "description": "Tetepi pandhuan lan pastiake sampeyan wis ndelikaké tautan ing langkah awal kanggo mbukak langsung tulisan X kita.",
+          "description2": "Apakah sampeyan seneng postingan sing bener lan nerusakaké karo qouw menggunakan teks sing tepat sing dadi conto?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi BNB Smart Chain."
+      }
+    }
+  },
+  "social_media": {
+    "ice_founder_twitter": {
+      "title": "Ikuti Zeus ing X",
+      "description": "Ikuti Zeus, pendiri visioner kita, ing X, ngendi dheweke duwe wawasan, kabar anyar, lan pemikiran tentang misi kita. Gabung ana percakapan, tanya pitakonan, lan tetep terhubung karo pemimpin inspiratif kita nalika kita mulai perjalanan sing seru iki bareng.",
+      "button": "Ikuti Zeus"
+    }
+  },
+  "account_confirmation": {
+    "title": "Konfirmasi Akun",
+    "description": "Kanggo ngonfirmasi identitas akun sampeyan lan tautake alamat email sampeyan kanthi aman, mangga pastikan sampeyan sukses lewat pemeriksaan emosi kita selama proses otentikasi.",
+    "description2": "Langkah iki nglakokake kita ngamotasi keamanan lan otentisitas akun sampeyan. Matur nuwun kanggo kerjasamane!"
+  },
+  "quiz": {
+    "title": "Kuis",
+    "intro": {
+      "description": "Ing Ice, kita percaya ing ngembangake komunitas anggota sing aktif lan informasi. Misi kita yaiku ngasupake koin Ice menyang wong-wong sing beneran terlibat lan nganggo pandangan kita.",
+      "community_engagement": {
+        "title": "🙌 Pangeling-eling Komunitas Aktif",
+        "description": "Kemungkinan sampeyan ing Ecosistem Ice saééng langsung ngaransang kemampuan pertambangan sampeyan:",
+        "point1": "Tetep Anyar: Nalika terus terkini karo artikel berita lan video kita.",
+        "point2": "Nyumangati aktif: Gabung karo Program Pengembangan Pribadi kita lan sesi langsung ing YouTube utawa Twitter Space.",
+        "point3": "Interaksi Sosial: Ora bebarengan karo carane nyukuri, ngliputi, nggandeng utawa nemtokake babagan Ice.",
+        "bottom_description": "Semakin aktif sampeyan, semakin dhuwur skor interaksi positif sampeyan, nglampahi proses KYC."
+      },
+      "terms_privacy": "Aku ngerti lan aku setuju karo [[:link]]Syarat lan Ketentuan[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Cek Pengetahuan",
+        "point2": "Supaya bisa lulus kuis, sampeyan kudu bisa jawab setidakna 18 pitakonan sing bener.",
+        "point3": "Kuis sing gagal nuduhake butuh nalika sampeyan luwih lanjut amargi bahan kita.",
+        "point4": "Ana wanci tangga kanggo lulus kuis iki. Sampeyan bisa deleng dewe panjenengan ana pira dina sampek tanggal tanggal lewat ing halaman awal sampeyan ing bagian kuis.",
+        "point5": "Sampeyan duwe 3 percobaan tumraping tanggal lewat. Yen sampeyan gagal kuis 3 wanci utawa yen tanggal lewat, sampeyan ora bakal bisa maca maneh lan akun sampeyan bakal dicekel.",
+        "point6": "📚 Kabeh informasi kanggo kuis iki bisa dibaca [[:link]]kéné[[/:link]].",
+        "description": "Kanggo pastiake komunitas kita terinformasi lan njaluk kesamaan karo pandangan kita:",
+        "point1": "Sampeyan bakal diterangake 21 pitakonan sing diambil saka sumber daya komprehensif kita."
+      },
+      "why_quiz": {
+        "title": "💡 Kok Kuis iki?",
+        "description": "Komitmèn kita nganggo kanthi pangertèn lan kawruh ana ing pangrungguming kita. Karo kuis kita, kita tujon kanggo pastiake sing Ice bakal dadi ing tangan sing cocog, wong-wong sing bener-bener ngerti lan nampa karo visi proyèk kita."
+      }
+    },
+    "quiz_failure": {
+      "title": "Kuis Gagal",
+      "description": "Sampeyan ora ngrampungake luwih saka 18 pitakon sah utawa waktune abis, saben sampeyan ora bisa lulus kuis.",
+      "check_faq": "Kanggo ngganti bener sak durunge, kita sarankan sampeyan ngerti kanthi apik karo basis pengetahuan kita lan FAQ kita."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pitakonan {{current}} saka {{total}}",
+      "time_over": "⌛️ Waktu wis habis",
+      "correct_answers": "Jawaban Bener",
+      "wrong_answers": "Jawaban Salah"
+    },
+    "confirmation_popup": {
+      "title": "Konfirmasi",
+      "start_description": "Apa sampeyan yakin pengen mulai kuis?",
+      "cancel_description": "Dhawuhake kuis, sampeyan bakal nggunakaké siji percobaan kanggo nganti. Apakah sampeyan yakin sampeyan pengin dhawuhake kuis saiki?"
+    },
+    "quiz_success": {
+      "title": "Verifikasi Rampung",
+      "description": "Selamat, sampeyan wis rampung verifikasi KYC sampeyan. Jawaban sing bener terus menerus udikake dedikasi lan pengetahuan sampeyan. Sampeyan saiki wis diverifikasi."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Mining Dimateni",
+      "description": "Akses mining sampeyan wis dimatèni amarga tresna kuis sing tiga kali nyabot utawa lewat wanci kang ditentangake, kaya sing diwajibaké déning prosès KYC kita."
+    },
+    "action": "Delengake kuis",
+    "reminder": "Tolong perhatikan bahwa Anda perlu menyelesaikan kuis untuk memenuhi syarat untuk melanjutkan penambangan dan menghindari pemotongan.",
+    "days_left": "Dina sing mbènyu: {{days}}",
+    "retries_left": "Percobaan tersisa: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Pamirsaan BNB Smart Chain",
+      "description": "Ciptakake kahanan pangiriman koin ICE BNB Smart Chain bulanan dening dukungan aktif terhadap pengumuman Exchange paling anyar ing X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, sampeyan wis berhasil rampungaken verifikasi sampeyan. Saiki sampeyan duwe hak kanggo ngowahi status pamirsaan BNB Smart Chain bulanan sampeyan."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Lèwati"
   }
 }

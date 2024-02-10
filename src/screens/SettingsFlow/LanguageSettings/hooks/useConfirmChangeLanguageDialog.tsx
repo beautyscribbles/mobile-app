@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
@@ -18,25 +18,29 @@ export const useConfirmChangeLanguageDialog = () => {
   return {
     openConfirmationDialog: useCallback(
       (language: SupportedLocale) => {
-        navigation.navigate('PopUp', {
-          title: t('settings.change_lang_confirm.title'),
-          message: t('settings.change_lang_confirm.prompt'),
-          buttons: [
-            DEFAULT_DIALOG_NO_BUTTON,
-            {
-              text: t('button.change'),
-              onPress: () => {
-                dispatch(
-                  AccountActions.UPDATE_ACCOUNT.START.create({
-                    language,
-                  }),
-                );
-                AnalyticsEventLogger.trackChangeLanguage({
-                  newLanguage: language,
-                });
+        navigation.navigate({
+          name: 'PopUp',
+          key: 'confirm-lang-popup',
+          params: {
+            title: t('settings.change_lang_confirm.title'),
+            message: t('settings.change_lang_confirm.prompt'),
+            buttons: [
+              DEFAULT_DIALOG_NO_BUTTON,
+              {
+                text: t('button.change'),
+                onPress: () => {
+                  dispatch(
+                    AccountActions.UPDATE_ACCOUNT.START.create({
+                      language,
+                    }),
+                  );
+                  AnalyticsEventLogger.trackChangeLanguage({
+                    newLanguage: language,
+                  });
+                },
               },
-            },
-          ],
+            ],
+          },
         });
       },
       [dispatch, navigation],

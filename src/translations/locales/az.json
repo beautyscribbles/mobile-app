@@ -68,7 +68,13 @@
     "learn_more": "Daha ətraflı öyrən",
     "back_to_login": "Girişə geri dön",
     "follow_us": "Bizi izlə",
-    "subscribe": "Abunə ol"
+    "subscribe": "Abunə ol",
+    "not_sure": "Əmin deyiləm",
+    "confirm_address": "Ünvanı təsdiq edin",
+    "remove_address": "Ünvanı sil",
+    "start": "Başla",
+    "faq": "FAQ",
+    "knowledge_base": "Bilik bazası"
   },
   "team": {
     "contacts_tab": "Kontaktlar",
@@ -190,7 +196,12 @@
     "weak_password": "Zəif şifrə.",
     "wrong_password": "Yalnış şifrə.",
     "no_camera_permissions": "Kamera icazəsi verilməyib.",
-    "no_library_permissions": "Kitabxana icazəsi verilməyib."
+    "no_library_permissions": "Kitabxana icazəsi verilməyib.",
+    "blockchain_address_already_taken": "Ünvan artıq istifadə edilib",
+    "invalid_blockchain_address": "Yanlış ünvan",
+    "address_not_eoa": "Ünvan EOA deyil",
+    "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən.",
+    "unable_to_validate_bsc_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Hər ardıcıl 6 günə bir gün istirahət əldə edirsiniz. ",
       "streak": "ZOLAQ",
       "days_off": "İSTİRAHƏT GÜNLƏRİ"
+    },
+    "roadmap": {
+      "title": "VİZYONUMUZ",
+      "button_title": "Açıq qələm",
+      "button_subtitle": "Bizim Ice vizyonumuz haqqında daha çox məlumat əldə edin."
+    },
+    "join_mainnet": {
+      "title": "Mərkəzi Olmayan Gələcəyə qoşulun",
+      "subtitle": "Gələcək əsas şəbəkə tətbiqinin və unikal xüsusiyyətlərinin qısa bir baxışını alın."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain ünvanı",
+      "subtitle": "Zəhmət olmasa BSC ünvanınızı buraya daxil edin."
+    },
+    "verified_tooltip": {
+      "title": "KYC Təsdiqləndi"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "İndi Əvvəldən Kilidlə!",
     "balance_label": "Kilidlənmiş balans",
     "confirm_title": "Əvvəldən Kilidləməni təsdiq et",
-    "confirm_subtitle": "Sikkələrini əvvəldən kilidləmək istədiyinə əminsən? Təsdiq etdikdən sonra geriyə dönüş yoxdur."
+    "confirm_subtitle": "Sikkələrini əvvəldən kilidləmək istədiyinə əminsən? Təsdiq etdikdən sonra geriyə dönüş yoxdur.",
+    "remove_pre_staking": "Əvvəlki İcmalı çıxart"
   },
   "stats": {
     "header_title": "Statistika",
@@ -532,7 +560,14 @@
     "top_miners": "Top istifadəçilər",
     "top_countries": "Top ölkələr",
     "online_miners": "Onlayn istifadəçilər",
-    "detailed_information": "Detallı məlumat"
+    "detailed_information": "Detallı məlumat",
+    "total_coins": "Ümumi kreditlər",
+    "filter": {
+      "total": "Ümumi",
+      "on_app": "Tətbiq üçün mövcuddur",
+      "pre_staked": "Əvvəlcədən stake edilmiş",
+      "on_blockchain": "Bloq çəkisində"
+    }
   },
   "update_required": {
     "title": "Xahiş olunur yeniləyin ",
@@ -579,9 +614,11 @@
     "wallet": "PUL QABI",
     "blockchain": "Blokçeyn",
     "wallet_update_interval": "hər saat yenilənir",
-    "blockchain_update_interval": "hər 24 saatdan bir yenilənir",
+    "blockchain_update_interval": "hər 28 gün yenilənir",
     "list_end_label": "bu balans tarixinin son əməliyyatıdır.",
-    "no_data": "Seçilmiş müddət üzrə göstərməyə məlumat yoxdur."
+    "no_data": "Seçilmiş müddət üzrə göstərməyə məlumat yoxdur.",
+    "you": "siz",
+    "contribution": "əməkdaşlıq"
   },
   "pop_up": {
     "update_now": "İndi yenilə",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "[[:amount]] sikkələrini həmişəlik itirəcəksən. Davam etmək istədiyindən əminsən?",
     "resurrection_yes_confirm_message": "Ancaq bir dəfə dirilə bilərsən! Davam etmək istədiyindən əminsən? Növbəti saat ərzində [[:amount]] sikkələri balansına qayıdacaq.",
     "delete_account_confirmation_title": "Silməni təsdiq et",
-    "delete_account_confirmation_text": "Hesabı silməklə Ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?"
+    "delete_account_confirmation_text": "Hesabı silməklə Ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?",
+    "registration_update_title": "Qeydiyyat yeniləməsi",
+    "registration_update_text": "Biz telefon nömrəsi istifadə edərək yeni hesablar yaratmağı dayandırdıq. Davam etmək üçün, e-poçt ünvanını və ya sosial şəbəkədə giriş seçməlisiniz.",
+    "link_email_title": "E-poçtunuzu bağlayın",
+    "link_email_text": "Biz telefon nömrəsi ilə girişi dayandırdıq. Giriş etmək üçün, e-poçt ünvanınızı bağlayın və təsdiqləyin.",
+    "account_error_title": "Hesab səhvi",
+    "account_error_text": "Biz telefon nömrəsi ilə girişi dayandırdıq. Təəssüf ki, hesabınız KYC keçməyib və bərpa edilmir.",
+    "login_via_email_title": "Zəhmət olmasa e-poçt vasitəsilə daxil olun",
+    "login_via_email_text": "Biz telefon nömrəsi ilə girişi dayandırdıq. Daxil olmaq üçün, hesabınıza bağlı e-poçt ünvanınızı istifadə edin.",
+    "email_in_use_title": "E-poçt artıq istifadə edilir",
+    "email_in_use_text_part1": "Bağlamağa çalışdığınız e-poçt ünvanı artıq istifadə edilir.",
+    "email_in_use_text_part2": "Əgər bu sizin e-poçt ünvanınızdırsa, xahiş edirik, əvvəlcə onunla daxil olun, qeydiyyat prosesini başa vurun və bu e-poçtu əlçatmaz etmək üçün hesabı silin, sonra telefon nömrəsi ilə daxil olmağa qayıdın və bağlama prosesini başa çatdırın.",
+    "successfully_linked_title": "Uğurla bağlandı!",
+    "successfully_linked_text": "E-poçt uğurla hesabınıza bağlandı"
   },
   "periods": {
     "3_days": "3 gün",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Telefonu təsdiq et ",
     "modify_description": "Ölkə kodunu təsdiq etmək və telefon nömrəni daxil etmək xahiş olunur.",
-    "button": "Ölkəni və telefonu təsdiq et",
-    "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən."
+    "button": "Ölkəni və telefonu təsdiq et"
   },
   "date_select": {
     "title": "Tarix seç"
@@ -919,6 +968,19 @@
       "title": "Instagram-da bizə qoşulun",
       "description_part1": "Bizi Instagram-da izləmək məlumatlı qalmaq və Ice ilə maraqlanan digər istifadəçilər ilə əlaqə qurmaq üçün əla yoldur. ",
       "description_part2": "Əlavə olaraq, buraxacağımız yeni funksiyalar və ya promoşnlar haqqında ilk məlumatlı siz olacaqsınız."
+    },
+    "reddit": {
+      "title": "Reddit-də bizə qoşulun",
+      "description": "Ice cəmiyyətini Reddit-də kəşf edin, burada eyni fikirlərə sahib insanlar fikirlərini bölüşmək üçün toplanır.\n\nSöhbətə qoşulun, suallar verin və Ice çıxarma, xüsusiyyətləri və daha çoxu haqqında maraqlı müzakirələri araşdırın."
+    },
+    "discord": {
+      "title": "Discord-da bizə qoşulun",
+      "description": "Təcili Discord cəmiyyətimizə qoşulun və Ice haqqında olan müzakirələrə və xüsusi təfəkkürlərə daldırılın.\n\nCanlı söhbətlərə daldırılın, Ice-ə aid xəbərlərdən xəbərdar olun və öz marağı bölüşən bir cəmiyyətin hissəsi olun."
+    },
+    "ice_founder_twitter": {
+      "title": "Zeus'u X platformasında izləyin",
+      "description": "Visioner təsisçimiz olan Zeus'u X platformasında izləyin, burada missiyamız haqqında baxışlar, yeniliklər və fikirləri bölüşür. Müzakirə qoşulun, suallar verin və biz birgə bu maraqlı səyahətinə başlayarkən təsirli liderimizlə əlaqəni qoruyun.",
+      "button": "Zeus'u izləyin"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Kamera icazəsi",
       "description": "Davam etmək üçün, kamerağa girişi icazə verin.",
       "action": "Girişə icazə verin"
+    },
+    "selfie_guidelines": {
+      "title": "Öz şəkil təlimatları",
+      "instruction": "Davam etmədən əvvəl, KYC üz üzərindən identifikasiya uğurla başa çatdırmaq üçün bu təlimatları izləyin:",
+      "check_1": "✅ Yüksək keyfiyyətli şəkil olduğundan əmin olun.",
+      "check_2": "✅ Yaxşı işıq altında olun.",
+      "check_3": "✅ Aydın bir fonunuz olsun.",
+      "check_4": "✅ Tünd şəkillər olmasın.",
+      "check_5": "✅ Bulanıq və ya dumanlı şəkillər olmasın.",
+      "check_6": "✅ Kamera lensini təmizləyin.",
+      "warning": "Yuxarıdakı təlimatları əgər izləməsəniz, hesabınıza girişi itirə bilərsiniz.",
+      "confirmation": "Mən bütün öz şəkil təlimatlarını izləyəcəyimi təsdiq edirəm.",
+      "popup_title": "Təsdiq",
+      "popup_body": "Siz bütün öz şəkil təlimatlarını izlədiyinizi təsdiq edirsinizmi?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Zəhmət olmasa düzgün adı daxil edəcəyinizə əmin olun."
+      "dontHaveInvitationCode": "Zəhmət olmasa düzgün adı daxil edəcəyinizə əmin olun.",
+      "description": "Sizi dəvət edən dostunuzun nikini daxil edin."
     },
     "home": {
       "pioneer": {
-        "description": "Hərəkətinizi və dünya statusunuzu izləyin"
+        "description": "Hərəkətinizi və dünya statusunuzu izləyin",
+        "referrals": "DOSTLAR"
       },
       "tasks": {
         "invite_friends": {
           "description": "Sizin komandanızı genişlədin və bir icmaq qurun"
         }
+      },
+      "team": {
+        "title": "Dostlar",
+        "view_team": "dostları göstər"
+      },
+      "roadmap": {
+        "button_subtitle": "Gələcək planımızı Ice-də daha ətraflı öyrənin."
+      },
+      "join_mainnet": {
+        "subtitle": "Gələcək 2024-cü ilin sonlarında buraxılacaq olan Mainnet tətbiqimiz və onun unikal xüsusiyyətləri barədə ətraflı məlumat alın."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Hazırki balansınız saatda bir yenilənir və burada göstərilir. Bu, direkt və qoyulmuş gəlirlərinizi daxil edir."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Dostlarınız [[:ice]] qoşularkən bu nikni istifadə etməlidirlər."
+    },
+    "users": {
+      "team": "Dostlar"
+    },
+    "team": {
+      "empty": {
+        "team": "Sizdə hazırda heç bir dostunuz yoxdur!"
+      },
+      "contacts": {
+        "empty_description": "Əlaqələrinizi sinxronlaşdırın və kimin [[:ice]]-də olduğunu görün."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain ünvanı",
+    "enter_address_title": "BNB Smart Chain\nünvanınızı daxil edin",
+    "enter_address_description": "Fəzlə bir zaman ICE tokenləri BNB Smart Chain blockchainində işləyəcək. Əsas şəbəkə işə salındıqdan sonra, tokenləri BNB Smart Chain-dən Ice Open Network (ION) blockchaininə dəyişdirə bilərsiniz.",
+    "enter_address_confirmation": "BNB Smart Chain ünvanının düzgün olduğundan əminsinizmi?",
+    "validators_warning_title": "Ünvanı Təsdiq Et",
+    "validators_warning_text": "Xüsusiylə öz hesabına BNB Smart Chain ünvanını əlavə edən şəxslər, əsas şəbəkə işə salınmasına görə ağın ən yaxşı 300 təsdiqləyicisindən biri olmağa layiq deyillər.",
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] və ya [[:bold]]Trust Wallet[[/:bold]] kimi özünün nəzarətində olan bir cüzdan istifadə etməyinizi tövsiyə edirik.\n\nXahiş edirik, cüzdan ünvanınızı qəbul edəcəyinizdən əmin olmaq üçün iki dəfə yoxlayasınız."
+  },
+  "social_kyc": {
+    "header": "Doğrulama",
+    "verify_with_title": "{{method}} ilə doğrulama",
+    "select_method_step": {
+      "title": "KYC Mərhələsi #2",
+      "description": "Hesabınızı mövcud X profilinizlə asanlıqla doğrulayın."
+    },
+    "instructions_step": {
+      "show_example": "Nümunəni göstər",
+      "example_title": "Yenidən paylaşmanın nümunəsi",
+      "x": {
+        "1": "X tətbiqini açın və [[:bold]]@ice_blockchain[[/:bold]] hesabını axtarın.",
+        "2": "İlkin profil üzərində olan sabit yazını tapın.",
+        "3": "❤️ Bəyənin və 🔄 yenidən paylaşın, [[:bold]]İstifadə[[/:bold]] edərək aşağıdakı [[:bold]]DÜZGÜN[[/:bold]] mətni istifadə edin.",
+        "pop_up": {
+          "title": "Təsdiq",
+          "description": "Sabit yazını bəyəndiniz və təsdiqlənmiş nümunədə olduğu kimi tam metni istifadə edərək yenidən paylaştınız?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Mətni kopyalamaq üçün toxunun",
+        "copied": "Kopyalandı"
+      }
+    },
+    "verification_step": {
+      "title": "Təsdiq",
+      "description": "Sizin təsdiqinizi başa çatmaq üçün, əvvəlki addımları yerinə yetirdiyiniz yazının linkini köçürün. Linkin düzgün olduğundan əmin olun.",
+      "placeholder": "Linki daxil edin",
+      "instructions_step": {
+        "4": "Öz yazınızın linkini aşağıda köçürün. 👇"
+      },
+      "action": {
+        "verify": "Təsdiq et",
+        "wait": "Xahiş edirik gözləyin",
+        "countdown": "{{countdown}} saniyə qalıb"
+      },
+      "pop_up": {
+        "title": "Yanlış Keçid",
+        "description": "Zəhmət olmasa düzgün keçidi kopyaladığınızdan əmin olun.\n\n[[:bold]]Nümunə:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Qalmış cəhd sayı: {{count}}",
+      "success": {
+        "title": "Təsdiq başa çatdı",
+        "description": "Təbrik edirik, KYC Mərhələsi #2-ni uğurla başa vurduğunuz üçün təsdiq olundunuz. Siz artıq təsdiqlənmişsiniz."
+      },
+      "error_try_again": {
+        "title": "Təsdiq səhvi",
+        "description": "Xahiş edirik təsdiq etdiyiniz yazının doğru olduğundan, təqdim edilmiş mətni istifadə etdiyinizdən və yazı ictimaiyyətə açıq olduğundan əmin olun."
+      },
+      "error_try_later": {
+        "title": "Təsdiq səhvi",
+        "description": "Biz təsdiq prosesini başa çatıra bilmədik. 7 gün sonra yenidən cəhd edə bilərsiniz."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Təqdimatı",
+      "description": "Mövcud X profilinizi istifadə edərək hesabınızı asanlıqla təsdiq edərək BNB Smart Chain ICE tokenlərinizi qəbul edin."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "X postumuzu doğrudan açmaq üçün [[:bold]]buraya[[/:bold]] toxunun.",
+        "pop_up": {
+          "description": "X postumuzu açmaq üçün birinci addımı tıkladığınızdan əmin olmaqla təlimatları izləyin.",
+          "description2": "Siz düzgün postu bəyəndiniz və onu əks etdirək, təqdim edilmiş dəqiqlik mətni ilə təkrar etdinizmi, məsələn?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Təbrik edirik, sizi uğurla təsdiq etdiniz. Siz artıq BNB Smart Chain təqdimatı üçün layiqsiniz."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Hesab təsdiqi",
+    "description": "Hesabınızın kimliyini təsdiq etmək və təhlükəsiz şəkildə e-poçtunuzu bağlamaq üçün, lütfən sizi kimlik və təhlükəsizlik yoxlama testində uğurla keçdiyinizdən əmin olun.",
+    "description2": "Bu addım bizə hesabınızın təhlükəsizliyini və asılılığını təmin etməyimizə kömək edir. Sizin əməyiniz üçün təşəkkür edirik!"
+  },
+  "quiz": {
+    "title": "Test",
+    "intro": {
+      "description": "Ice şirkətində, fəal və bilikli üzvlər cəmiyyətinin tərəqqi üçün inanırıq. Missiyamız Ice koinlərinin təqdimatının yalnız cəmiyyət üzvlərinə edilməsi üçündür, onlara aid olmağı və bizim visionumuza uyğunlaşmağı təmin etməkdir.",
+      "community_engagement": {
+        "title": "🙌 Aktiv Cəmiyyət İştirakı",
+        "description": "Ice Ekosistemindəki əlaqələriniz direkt olaraq qazmaq qabiliyyətinizi təsir edir:",
+        "point1": "Yenilikləri izləyin: Bizim xəbər məqalələrimiz və videoları ilə əlaqə qurun.",
+        "point2": "Aktiv iştirak: Bizim Şəxsi İnkişaf Proqramına və YouTube və Twitter Space-dəki canlı sessiyalarımıza qoşulun.",
+        "point3": "Sosial İşlər: Ice haqqında like, paylaş, izləmə və ya paylaşmaq sureti ilə özünüzü inkişaf etdirin.",
+        "bottom_description": "Siz neçə çox əlaqə yaratırsanız, cəmiyyətdə pozitiv interaksiya nisbətiniz o qədər yüksəlir ki, KYC prosesini keçməyə imkan yaradır."
+      },
+      "terms_privacy": "[[:link]]Əməliyyat Şərtləri və Qaydalarına[[/:link]] razıyam.",
+      "knowledge_check": {
+        "title": "🧠 Bilik Yoxlama",
+        "point2": "Testi uğurla keçmək üçün ən azı 18 sualı düzgün cavablandırmağınız tələb olunur.",
+        "point3": "Səsiz test daha çox materialımızla əlaqə yaratmağınızı göstərir.",
+        "point4": "Testi keçmək üçün müəyyən bir tarix limiti var. Sizin test bölməsində ev səhifənizdə tarix limitinə qədər neçə gününüz qaldığını görmək olar.",
+        "point5": "Sizə verilmiş müəyyən tarix limiti öncəsində 3 təkrarınız mövcuddur. Əgər 3 dəfə testi uğurla keçə bilməzsinizsə və ya tarix limiti bitdikdə, artıq daha çox qazanmağa və hesabınızı kəsməyə icazə verilmir.",
+        "point6": "📚 Bu test üçün bütün məlumatları [[:link]]buradan[[/:link]] oxuya bilərsiniz.",
+        "description": "Cəmiyyətimizin bilikli və bizim visionumuzla uyğun olduğunu təmin etmək üçün:",
+        "point1": "Sizə bizim ətraflı resurslarımızdan gələn 21 sual veriləcəkdir."
+      },
+      "why_quiz": {
+        "title": "💡 Test Nə İçindir?",
+        "description": "Bilə və başa düşməyə olan əməyimiz cəmiyyətimizin önündədir. Bizim testimizlə, Ice-ın doğru əllərə, layiq və bizim layihənin visionu ilə uyğun gələn əllərə düşməsini təmin etməyi hədəfləyirik."
+      }
+    },
+    "quiz_failure": {
+      "title": "Test Uğursuz Oldu",
+      "description": "Siz 18-dən çox sualı düzgün cavablandırmadınız və ya vaxt bitdi, beləliklə, sınaqı keçə bilməzsiniz.",
+      "check_faq": "Növbəti dəfə düzgün cavab verə bilmək üçün, bilik bazamız və FAQ ilə tanış olmağınızı tövsiyə edirik."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Sual {{current}} / {{total}}",
+      "time_over": "⌛️ Vaxt bitdi",
+      "correct_answers": "Düzgün Cavablar",
+      "wrong_answers": "Yanlış Cavablar"
+    },
+    "confirmation_popup": {
+      "title": "Təsdiq",
+      "start_description": "Testi başlamaq istədiyinizə əminsiniz?",
+      "cancel_description": "Testi keçmək üçün bir təkrarı istifadə edəcəksiniz. Testi indi keçmək istədiyinizə əminsiniz?"
+    },
+    "quiz_success": {
+      "title": "Təsdiq Başa Çatdı",
+      "description": "Təbriklər, siz KYC-nizi uğurla başa çatdırdınız. Sizin sürətli düzgün cavablarınız sizin həsrətinizi və bilikinizi sübut etdi. Siz artıq təsdiqləndiniz."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Qazma deaktiv edildi",
+      "description": "Kimlik yoxlama prosesimiz tələb edildiyi kimi üç artıq test uğursuz keçmə oğurluğu və ya təyin olunan vaxtın bitməsinə görə gəlirinə girişinizi deaktiv etdi."
+    },
+    "action": "Testi tamamla",
+    "reminder": "Xahiş edirəm qeyd edin ki, təhrifatdan qorunmaq üçün madencilikə davam etmək üçün sualnəməni tamamlamanız lazımdır.",
+    "days_left": "Qalan gün: {{days}}",
+    "retries_left": "Qalan cəhd sayı: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Təqdimatı",
+      "description": "BNB Smart Chain ICE koinlərinin aylıq təqdimat elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain ICE koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain ICE koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyin."
+    },
+    "results_step": {
+      "success": {
+        "description": "Təbrik edirik, sizi uğurla təsdiq etdiniz. Artıq aylıq BNB Smart Chain təqdimat statusunuzu qorumaq üçün əhəmiyyətli olduğunuzu qeyd edirik."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Keç"
   }
 }

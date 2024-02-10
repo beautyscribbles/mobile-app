@@ -68,7 +68,13 @@
     "learn_more": "さらに詳しく",
     "back_to_login": "ログインに戻る",
     "follow_us": "アカウントをフォロー",
-    "subscribe": "チャンネル登録"
+    "subscribe": "チャンネル登録",
+    "not_sure": "確信が持てない",
+    "confirm_address": "アドレスを確認",
+    "remove_address": "住所を削除",
+    "start": "開始",
+    "faq": "FAQ",
+    "knowledge_base": "知識ベース"
   },
   "team": {
     "contacts_tab": "連絡先",
@@ -190,7 +196,12 @@
     "weak_password": "パスワードが脆弱です。",
     "wrong_password": "パスワードが違います。",
     "no_camera_permissions": "カメラの使用が許可されていません。",
-    "no_library_permissions": "ライブラリへのアクセスが許可されていません。"
+    "no_library_permissions": "ライブラリへのアクセスが許可されていません。",
+    "blockchain_address_already_taken": "アドレスはすでに使用されています",
+    "invalid_blockchain_address": "無効なアドレス",
+    "address_not_eoa": "アドレスはEOAではありません",
+    "same_phone_error": "同じ番号を使うことはできません。",
+    "unable_to_validate_bsc_addr_eoa": "EOAアドレスを検証できません"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "6日間連続でチェックインするごとに、1日の休日が与えられます。",
       "streak": "ストリーク",
       "days_off": "休日"
+    },
+    "roadmap": {
+      "title": "私たちのビジョン",
+      "button_title": "ホワイトペーパー",
+      "button_subtitle": "Iceでの私たちのビジョンについて詳しく学びましょう。"
+    },
+    "join_mainnet": {
+      "title": "分散型未来に参加",
+      "subtitle": "今後のメインネットアプリとそのユニークな機能の一部をご紹介します。"
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain アドレス",
+      "subtitle": "ここにBSCアドレスを入力してください。"
+    },
+    "verified_tooltip": {
+      "title": "KYC 認証済み"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "今すぐ事前ステーキングをしよう！",
     "balance_label": "ステーキングした通貨量",
     "confirm_title": "事前ステーキングの確定",
-    "confirm_subtitle": "本当にコインの事前ステーキングを行いますか？一度確定すると取り消すことはできません。"
+    "confirm_subtitle": "本当にコインの事前ステーキングを行いますか？一度確定すると取り消すことはできません。",
+    "remove_pre_staking": "プリステーキングの解除"
   },
   "stats": {
     "header_title": "成績",
@@ -532,7 +560,14 @@
     "top_miners": "トップユーザー",
     "top_countries": "上位国",
     "online_miners": "オンラインユーザー",
-    "detailed_information": "詳細情報"
+    "detailed_information": "詳細情報",
+    "total_coins": "総コイン数",
+    "filter": {
+      "total": "合計",
+      "on_app": "アプリで利用可能",
+      "pre_staked": "事前ステーク",
+      "on_blockchain": "ブロックチェーン上"
+    }
   },
   "update_required": {
     "title": "アップデートしてください",
@@ -579,9 +614,11 @@
     "wallet": "ウォレット",
     "blockchain": "ブロックチェーン",
     "wallet_update_interval": "1時間ごとに更新",
-    "blockchain_update_interval": "24時間ごとに更新",
+    "blockchain_update_interval": "28日ごとに更新",
     "list_end_label": "これが残高履歴の最後のエントリです。",
-    "no_data": "指定された期間に表示するデータがありません。"
+    "no_data": "指定された期間に表示するデータがありません。",
+    "you": "あなた",
+    "contribution": "貢献"
   },
   "pop_up": {
     "update_now": "今すぐアップデート",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "[[:amount]]枚のコインが永久に失われます。本当に続行しますか？",
     "resurrection_yes_confirm_message": "このチャンスを逃すと、復活させられる機会は二度とありません！本当に続行しますか？[[:amount]]枚のコインは1時間以内に残高に戻ります。",
     "delete_account_confirmation_title": "削除の確認",
-    "delete_account_confirmation_text": "アカウントを削除すると、iceの残高を含む全てのデータが永久に消去されます。続行しますか？"
+    "delete_account_confirmation_text": "アカウントを削除すると、iceの残高を含む全てのデータが永久に消去されます。続行しますか？",
+    "registration_update_title": "登録の更新",
+    "registration_update_text": "電話番号を使用した新しいアカウントの作成を一時停止しました。続行するには、メールアドレスまたはソーシャルネットワークを使用したログインの選択が必要です。",
+    "link_email_title": "メールアドレスをリンク",
+    "link_email_text": "電話番号を使用したログインを一時停止しました。ログインできるようにするには、メールアドレスをリンクし、確認する必要があります。",
+    "account_error_title": "アカウントエラー",
+    "account_error_text": "電話番号を使用したログインを一時停止しました。残念ながら、あなたのアカウントはKYCの検証に合格せず、回復できません。",
+    "login_via_email_title": "メールアドレスを使用してログインしてください",
+    "login_via_email_text": "電話番号を使用したログインを一時停止しました。アカウントに関連付けられたメールアドレスを使用してログインしてください。",
+    "email_in_use_title": "既に使用中のメールアドレス",
+    "email_in_use_text_part1": "リンクしようとしているメールアドレスはすでに使用中です。",
+    "email_in_use_text_part2": "これがあなたのメールアドレスの場合、まずそれを使用してログインし、登録プロセスを完了し、そのアカウントを削除してメールアドレスを使用可能にし、その後、電話番号を使用したログインに戻り、リンクプロセスを完了してください。",
+    "successfully_linked_title": "リンクが成功しました！",
+    "successfully_linked_text": "メールアドレスがアカウントに正常にリンクされました。"
   },
   "periods": {
     "3_days": "3日",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "電話番号認証",
     "modify_description": "国番号を確認し、電話番号を入力してください。",
-    "button": "国と電話番号を確認",
-    "same_phone_error": "同じ番号を使うことはできません。"
+    "button": "国と電話番号を確認"
   },
   "date_select": {
     "title": "日付を選択"
@@ -919,6 +968,19 @@
       "title": "Instagramアカウントをフォロー",
       "description_part1": "Instagramをフォローすれば、あなたと同じくiceに熱い思いを抱いているユーザーとつながることができます。",
       "description_part2": "さらに、新機能やキャンペーン情報もいち早くご案内します。"
+    },
+    "reddit": {
+      "title": "Redditで私たちに参加してください",
+      "description": "RedditでIceコミュニティを発見し、志を同じくする個人が集まり、考えを共有します。\n\n会話に参加し、質問を投げかけ、Iceのマイニング、機能などについての魅力的なディスカッションを探索してください。"
+    },
+    "discord": {
+      "title": "Discordで私たちに参加してください",
+      "description": "私たちの活気あるDiscordコミュニティに参加し、Iceに関するディスカッションや独占的な洞察に没頭してください。\n\n活気あるチャットに参加し、Iceに関連するニュースを把握し、共感を共有するコミュニティの一部としてください。"
+    },
+    "ice_founder_twitter": {
+      "title": "X で Zeus をフォロー",
+      "description": "私たちのビジョナリーファウンダーであるZeusをXでフォローし、彼が私たちの使命についての洞察、更新情報、考えを共有している場所で、会話に参加し、質問をし、このエキサイティングな旅を一緒に始める中で私たちのインスピレーションリーダーと連絡を取り続けてください。",
+      "button": "Zeus をフォロー"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "カメラの許可",
       "description": "続行するには、カメラへのアクセスを許可してください。",
       "action": "アクセスを許可"
+    },
+    "selfie_guidelines": {
+      "title": "セルフィーガイドライン",
+      "instruction": "続行する前に、成功したKYC顔認証のためにこれらのガイドラインに従ってください：",
+      "check_1": "✅ 高品質の写真を持っていることを確認してください。",
+      "check_2": "✅ 適切な照明があることを確認してください。",
+      "check_3": "✅ クリアな背景を確保してください。",
+      "check_4": "✅ 暗い写真は避けてください。",
+      "check_5": "✅ ボケたり霞んだ写真を避けてください。",
+      "check_6": "✅ カメラレンズを清潔に保ってください。",
+      "warning": "上記のガイドラインに従わない場合、アカウントへのアクセスが失われる可能性があります。",
+      "confirmation": "私は基準に従うことを確認します。",
+      "popup_title": "確認",
+      "popup_body": "すべてのセルフィーガイドラインに従ったことを確認しますか？"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。"
+      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。",
+      "description": "あなたを招待した友達のニックネームを入力してください。"
     },
     "home": {
       "pioneer": {
-        "description": "進捗とグローバルステータスを追跡する"
+        "description": "進捗とグローバルステータスを追跡する",
+        "referrals": "友達"
       },
       "tasks": {
         "invite_friends": {
           "description": "チームを育て、コミュニティを築く"
         }
+      },
+      "team": {
+        "title": "友達",
+        "view_team": "友達を表示"
+      },
+      "roadmap": {
+        "button_subtitle": "Iceの将来のビジョンについて詳しく学びましょう。"
+      },
+      "join_mainnet": {
+        "subtitle": "将来のMainnetアプリとそのユニークな機能の一部を、2024年末にリリース予定ですので、ぜひご覧ください。"
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "現在の残高は毎時更新され、ここに表示されます。直接の収益とステークされた収益が含まれています。"
         }
       }
+    },
+    "claimUsername": {
+      "description": "友達は[[:ice]]に参加する際、このニックネームを使用する必要があります。"
+    },
+    "users": {
+      "team": "友達"
+    },
+    "team": {
+      "empty": {
+        "team": "現在、友達はいません！"
+      },
+      "contacts": {
+        "empty_description": "連絡先を同期して、すでに[[:ice]]にいる人を見つけましょう。"
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain アドレス",
+    "enter_address_title": "あなたの\nBNB Smart Chain アドレスを入力してください",
+    "enter_address_description": "フェーズ1中、ICEトークンはBNB Smart Chainブロックチェーン上にリリースされます。メインネットが開始されると、トークンはBNB Smart ChainからIce Open Network（ION）ブロックチェーンに交換できるようになります。",
+    "enter_address_confirmation": "BNB Smart Chainアドレスが正しいことを確認していますか？",
+    "validators_warning_title": "アドレスを確認",
+    "validators_warning_text": "アカウントにBNB Smart Chainアドレスを追加した個人は、メインネットの発売に関するホワイトペーパーに従ってトップ300バリデータの1つになる資格がありません。",
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] または [[:bold]]Trust Wallet[[/:bold]] のようなセルフカストディアルウォレットの使用をお勧めします。\n\n配布を受け取ることを確認するために、ウォレットアドレスを2回確認してください。"
+  },
+  "social_kyc": {
+    "header": "認証",
+    "verify_with_title": "{{method}}で認証",
+    "select_method_step": {
+      "title": "KYCステップ #2",
+      "description": "既存のXプロフィールを使用してアカウントを簡単に認証します。"
+    },
+    "instructions_step": {
+      "show_example": "例を表示",
+      "example_title": "リポストの例",
+      "x": {
+        "1": "Xを開いて、[[:bold]]@ice_blockchain[[/:bold]] アカウントを検索します。",
+        "2": "プロフィール内で最初の投稿である固定投稿を見つけます。",
+        "3": "❤️ いいね！と 🔄 リポストを、以下の[[:bold]]正確な[[/:bold]]テキストを使って行います。",
+        "pop_up": {
+          "title": "確認",
+          "description": "固定投稿にいいね！をし、提供された正確なテキストを使用してリポストしましたか？"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "テキストをコピーするにはタップ",
+        "copied": "コピー済み"
+      }
+    },
+    "verification_step": {
+      "title": "確認",
+      "description": "認証を完了するには、前のステップで行ったポストへのリンクを貼り付けてください。リンクが正しいことを確認してください。",
+      "placeholder": "リンクを貼り付ける",
+      "instructions_step": {
+        "4": "ポストのリンクを以下に貼り付けてください。👇"
+      },
+      "action": {
+        "verify": "確認",
+        "wait": "お待ちください",
+        "countdown": "{{countdown}}秒 残り"
+      },
+      "pop_up": {
+        "title": "無効なリンク",
+        "description": "正しいリンクをコピーしたことを確認してください。\n\n[[:bold]]例：[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "残りの試行回数: {{count}}",
+      "success": {
+        "title": "認証完了",
+        "description": "おめでとうございます、KYCステップ #2を成功裏に完了しました。あなたは今、認証済みです。"
+      },
+      "error_try_again": {
+        "title": "認証エラー",
+        "description": "正しい投稿を提供されたテキストを使用してリポストしたこと、およびその投稿が一般に公開されていることを確認してください。"
+      },
+      "error_try_later": {
+        "title": "認証エラー",
+        "description": "認証を完了できませんでした。7日後に再試行できます。"
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chainディストリビューション",
+      "description": "既存のXプロファイルを使用してアカウントを簡単に確認し、BNB Smart Chain ICEコインを受け取ります。"
+    },
+    "instructions_step": {
+      "x": {
+        "1": "当社のXポストを直接開くために、[[:bold]]こちら[[/:bold]]のリンクをクリックしてください。",
+        "pop_up": {
+          "description": "指示に従い、最初のステップでリンクをクリックしたことを確認して、当社のXポストを直接開いてください。",
+          "description2": "正しい投稿をお気に入りにし、提供された正確なテキストを使用して引用符をつけて再投稿しましたか、例のように？"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "おめでとうございます、あなたは確認を成功裡に完了しました。BNB Smart Chainディストリビューションの対象となります。"
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "アカウント確認",
+    "description": "アカウントの身元を確認し、メールアドレスを安全にリンクするために、認証プロセス中に当社の感情チェックを成功裏にパスすることを確認してください。",
+    "description2": "このステップは、アカウントのセキュリティと正当性を確保するのに役立ちます。ご協力いただきありがとうございます！"
+  },
+  "quiz": {
+    "title": "クイズ",
+    "intro": {
+      "description": "Iceでは、積極的で情報豊富なメンバーのコミュニティを育てることを信じています。私たちの使命は、Iceコインが私たちのビジョンと一致し、真に関与している人々に配布されることを確保することです。",
+      "community_engagement": {
+        "title": "🙌 コミュニティへの積極的な参加",
+        "description": "Iceエコシステム内でのあなたの関与は、直接採掘能力に影響を与えます：",
+        "point1": "最新情報を確認：私たちのニュース記事や動画と関わります。",
+        "point2": "積極的に参加：YouTubeやTwitter Spaceでのライブセッションや、個人開発プログラムに参加します。",
+        "point3": "ソーシャルインタラクション：Iceについての投稿、いいね、共有、フォローなどでプレゼンスを高めます。",
+        "bottom_description": "あなたがより積極的に参加すれば、より高いポジティブインタラクションスコアが得られ、KYCプロセスを進めることができます。"
+      },
+      "terms_privacy": "私は[[:link]]利用規約[[/:link]]を理解し、同意します。",
+      "knowledge_check": {
+        "title": "🧠 知識チェック",
+        "point2": "クイズに合格するには、少なくとも18問の質問に正しく回答する必要があります。",
+        "point3": "失敗したクイズは、当社の資料とのさらなる関与の必要性を示します。",
+        "point4": "クイズを合格する期限があります。クイズセクションのホームページで、期限までの残り日数を確認できます。",
+        "point5": "期限切れの前に3回の再試行があります。クイズに3回失敗するか、期限が切れると、もはやマイニングできず、アカウントは凍結されます。",
+        "point6": "📚 このクイズのすべての情報は[[:link]]こちら[[/:link]]で読むことができます。",
+        "description": "コミュニティが情報を適切に把握し、私たちのビジョンに沿っていることを確認するために：",
+        "point1": "私たちは、包括的なリソースから派生した21の質問を提供します。"
+      },
+      "why_quiz": {
+        "title": "💡 なぜクイズなのか？",
+        "description": "知識と理解に対する私たちのコミットメントは、コミュニティの前面にあります。私たちのクイズを通じて、Iceが正しい手に渡ること、つまりプロジェクトのビジョンを本当に理解し、共感する人々に渡ることを確実にしたいと考えています。"
+      }
+    },
+    "quiz_failure": {
+      "title": "クイズ失敗",
+      "description": "18以上の質問に正しく答えていないか、時間が切れているため、クイズに合格できません。",
+      "check_faq": "次回正しく回答するために、知識ベースとよくある質問に詳しくなることをお勧めします。"
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "{{current}} / {{total}}の質問",
+      "time_over": "⌛️ 時間切れ",
+      "correct_answers": "正しい回答",
+      "wrong_answers": "誤った回答"
+    },
+    "confirmation_popup": {
+      "title": "確認",
+      "start_description": "本当にクイズを開始しますか？",
+      "cancel_description": "クイズをスキップすると、利用可能な3つのリトライのうち1つを使用します。本当に今クイズをスキップしますか？"
+    },
+    "quiz_success": {
+      "title": "確認完了",
+      "description": "おめでとうございます、KYCを成功裏に完了しました。一貫して正しい回答があなたの献身と知識を証明しました。あなたは今、確認されています。"
+    },
+    "mining_disabled_popup": {
+      "title": "❌ マイニング無効",
+      "description": "3回連続でクイズに失敗したか、指定された期間が切れたため、マイニングアクセスが無効になりました。これは私たちのKYCプロセスで必要とされるものです。"
+    },
+    "action": "クイズを完了する",
+    "reminder": "マイニングの継続とスラッシングを回避するために、クイズを完了する必要があることに注意してください。",
+    "days_left": "残り日数: {{days}}",
+    "retries_left": "残りの試行回数：{{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNBスマートチェーン配布",
+      "description": "Xで最新の取引所の発表を積極的にサポートすることにより、月次BNBスマートチェーンICEコインの配布資格を維持してください。"
+    },
+    "results_step": {
+      "success": {
+        "description": "おめでとうございます、あなたは正常に認証を完了しました。今、月次BNBスマートチェーンの配布ステータスを維持する資格があります。"
+      }
+    }
+  },
+  "buttons": {
+    "skip": "スキップ"
   }
 }

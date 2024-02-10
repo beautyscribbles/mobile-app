@@ -2,12 +2,14 @@
 
 import {ActivityIndicator} from '@components/ActivityIndicator';
 import {SectionHeader} from '@components/SectionHeader';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
 import {
+  styles as teamMemberStyles,
   TeamMember,
   TeamMemberSkeleton,
 } from '@screens/HomeFlow/Home/components/Team/components/TeamMember';
@@ -20,11 +22,7 @@ import {ListRenderItem, StyleSheet, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {isAndroid, rem} from 'rn-units';
 
-type Props = {
-  showEmptyTeamView?: boolean;
-};
-
-export const Team = memo(({showEmptyTeamView}: Props) => {
+export const Team = memo(() => {
   const navigation =
     useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
 
@@ -59,36 +57,45 @@ export const Team = memo(({showEmptyTeamView}: Props) => {
       return (
         <View
           key={index}
-          // ItemSeparatorComponent doesn't work with RTL in expected manner.
+          // ItemSeparatorComponent doesn't work with RTL as expected.
           // So have to use a wrapper with a margin.
-          style={index < referrals.length - 1 ? styles.separator : null}
+          style={styles.separator}
           onLayout={onLayout}>
           {item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />}
         </View>
       );
     },
-    [onLayout, referrals.length],
+    [onLayout],
   );
 
   if (referrals.length < 2 && !hasNext) {
-    return showEmptyTeamView ? <View style={styles.emptyTeamView} /> : null;
+    return <View style={styles.emptyTeamView} />;
   }
 
   return (
     <>
       <SectionHeader
-        title={t('home.team.title')}
-        action={t('home.team.view_team')}
+        title={
+          isLightDesign ? t('override.home.team.title') : t('home.team.title')
+        }
+        action={
+          isLightDesign
+            ? t('override.home.team.view_team')
+            : t('home.team.view_team')
+        }
         onActionPress={onViewTeamPress}
       />
       <FlatList
         horizontal
+        overScrollMode={'never'}
         ref={flatListRef}
         data={referrals.length ? referrals : Array<null>(6).fill(null)}
         renderItem={renderItem}
         ListFooterComponent={
           loadNextLoading ? (
-            <ActivityIndicator style={styles.activityIndicator} />
+            <View style={teamMemberStyles.skeleton}>
+              <ActivityIndicator style={styles.activityIndicator} />
+            </View>
           ) : null
         }
         showsHorizontalScrollIndicator={false}
@@ -112,7 +119,9 @@ const styles = StyleSheet.create({
     flexDirection: isRTL && isAndroid ? 'row-reverse' : 'row',
   },
   activityIndicator: {
-    marginLeft: rem(10),
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
   emptyTeamView: {
     paddingTop: rem(12),

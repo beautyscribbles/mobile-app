@@ -2,14 +2,16 @@
 
 import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
-import {FaceAuthKycNumber} from '@api/tokenomics/types';
+import {FaceAuthKycNumber, SocialKycStepNumber} from '@api/tokenomics/types';
 import {Country} from '@constants/countries';
+import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {ViewMeasurementsResult} from '@ice/react-native';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
+import {StatsTabIcon} from '@navigation/components/MainTabBar/components/Icons/StatsTabIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
 import {StatusNotice} from '@navigation/components/StatusNotice';
 import {modalOptions, screenOptions, tabOptions} from '@navigation/options';
@@ -22,6 +24,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
 import {FaceRecognition} from '@screens/FaceRecognitionFlow';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
+import {BscAddress} from '@screens/HomeFlow/BscAddress';
 import {Home} from '@screens/HomeFlow/Home';
 import {
   ActiveOverviewCard,
@@ -30,7 +33,6 @@ import {
 } from '@screens/HomeFlow/Home/types';
 import {InAppNotifications} from '@screens/HomeFlow/InAppNotifications';
 import {Stats} from '@screens/HomeFlow/Stats';
-import {TopCountries} from '@screens/HomeFlow/TopCountries';
 import {TopMiners} from '@screens/HomeFlow/TopMiners';
 import {UserGrowthGraph} from '@screens/HomeFlow/UserGrowthGraph';
 import {ImageView} from '@screens/ImageView';
@@ -38,11 +40,9 @@ import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
 import {InviteShare} from '@screens/InviteFlow/InviteShare';
 import {QRCodeShare} from '@screens/InviteFlow/QRCodeShare';
 import {ActionSheet} from '@screens/Modals/ActionSheet';
+import {BalanceHistoryTooltip} from '@screens/Modals/BalanceHistoryTooltip';
 import {ContextualMenu} from '@screens/Modals/ContextualMenu';
-import {
-  ContextualMenuButton,
-  Coordinates,
-} from '@screens/Modals/ContextualMenu/types';
+import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
@@ -52,12 +52,19 @@ import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1'
 import {ProfilePrivacyEditStep2} from '@screens/Modals/ProfilePrivacyEdit/step2';
 import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3';
 import {ReferralCountInfo} from '@screens/Modals/ReferralCountInfo';
+import {RepostExample} from '@screens/Modals/RepostExample';
 import {Tooltip} from '@screens/Modals/Tooltip';
+import {Coordinates} from '@screens/Modals/types';
+import {VerifiedTooltipPopUp} from '@screens/Modals/VerifiedTooltipPopUp';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
 import {ProfileActionType} from '@screens/ProfileFlow/Profile/types';
 import {Roles} from '@screens/ProfileFlow/Roles';
+import {Quiz} from '@screens/QuizFlow/Quiz';
+import {QuizFailure} from '@screens/QuizFlow/QuizFailure';
+import {QuizIntro} from '@screens/QuizFlow/QuizIntro';
+import {QuizSuccess} from '@screens/QuizFlow/QuizSuccess';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
 import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';
@@ -66,6 +73,7 @@ import {ModifyPhoneNumber} from '@screens/SettingsFlow/ModifyPhoneNumber';
 import {NotificationSettings} from '@screens/SettingsFlow/NotificationSettings';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
+import {SocialKycFlow} from '@screens/SocialKycFlow';
 import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Walkthrough} from '@screens/Walkthrough';
@@ -106,7 +114,9 @@ export type MainStackParamList = {
   FaceRecognition: {
     kycSteps: FaceAuthKycNumber[];
     kycStepBlocked?: FaceAuthKycNumber;
+    isPhoneMigrationFlow?: boolean;
   };
+  SocialKycFlow: {kycStep: SocialKycStepNumber};
   Staking: undefined;
   CreativeIceLibrary: undefined;
   ImageView: {
@@ -123,6 +133,7 @@ export type MainStackParamList = {
       onPress: () => void;
     }[];
   };
+  RepostExample: {kycStep: SocialKycStepNumber};
   DateSelect: {
     onSelect: (range: {start: string | null; end: string | null}) => void;
   };
@@ -133,6 +144,9 @@ export type MainStackParamList = {
     coords: Coordinates;
     buttons: ContextualMenuButton[];
     onClose?: () => void;
+  };
+  BalanceHistoryTooltip: {
+    coords: Coordinates;
   };
   ReferralCountInfo: {
     hostViewParams: ViewMeasurementsResult;
@@ -151,6 +165,16 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep1: undefined;
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
+  BscAddress: undefined;
+  VerifiedTooltipPopUp: {
+    hostViewParams: ViewMeasurementsResult;
+    correctiveOffset?: number;
+  };
+  TopMiners: undefined;
+  QuizIntro: undefined;
+  Quiz: undefined;
+  QuizFailure: undefined;
+  QuizSuccess: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -162,8 +186,6 @@ export type HomeTabStackParamList = {
       }
     | undefined;
   Stats: undefined;
-  TopMiners: undefined;
-  TopCountries: undefined;
   UserGrowthGraph: {
     category: 'active' | 'total';
     statsPeriod: StatsPeriod;
@@ -218,8 +240,6 @@ const HomeTabStackNavigator = () => (
   <HomeTabStack.Navigator screenOptions={screenOptions}>
     <HomeTabStack.Screen name="Home" component={Home} />
     <HomeTabStack.Screen name="Stats" component={Stats} />
-    <HomeTabStack.Screen name="TopMiners" component={TopMiners} />
-    <HomeTabStack.Screen name="TopCountries" component={TopCountries} />
     <HomeTabStack.Screen name="UserGrowthGraph" component={UserGrowthGraph} />
     <HomeTabStack.Screen name="BalanceHistory" component={BalanceHistory} />
   </HomeTabStack.Navigator>
@@ -228,7 +248,7 @@ const HomeTabStackNavigator = () => (
 const ProfileTabStackNavigator = () => (
   <ProfileTabStack.Navigator
     screenOptions={screenOptions}
-    initialRouteName={'MyProfile'}>
+    initialRouteName={isLightDesign ? 'Settings' : 'MyProfile'}>
     <ProfileTabStack.Screen name="MyProfile" component={Profile} />
     <ProfileTabStack.Screen name="Roles" component={Roles} />
     <ProfileTabStack.Screen
@@ -309,9 +329,9 @@ const MainTabs = () => {
         />
         <Tabs.Screen
           name="NewsTab"
-          component={News}
+          component={isLightDesign ? Stats : News}
           options={{
-            tabBarIcon: NewsIcon,
+            tabBarIcon: isLightDesign ? StatsTabIcon : NewsIcon,
             tabBarIconStyle: iconStyles.newsIconStyle,
           }}
           listeners={getListeners('news')}
@@ -364,11 +384,17 @@ export function MainNavigator() {
         component={ActionSheet}
       />
       <MainStack.Screen
+        name="RepostExample"
+        options={modalOptions}
+        component={RepostExample}
+      />
+      <MainStack.Screen
         name="DateSelect"
         options={modalOptions}
         component={DateSelect}
       />
       <MainStack.Screen name="FaceRecognition" component={FaceRecognition} />
+      <MainStack.Screen name="SocialKycFlow" component={SocialKycFlow} />
       <MainStack.Screen name="Staking" component={Staking} />
       <MainStack.Screen
         name="CreativeIceLibrary"
@@ -384,6 +410,11 @@ export function MainNavigator() {
       <MainStack.Screen
         name="ContextualMenu"
         component={ContextualMenu}
+        options={modalOptions}
+      />
+      <MainStack.Screen
+        name="BalanceHistoryTooltip"
+        component={BalanceHistoryTooltip}
         options={modalOptions}
       />
       <MainStack.Screen
@@ -434,6 +465,17 @@ export function MainNavigator() {
         options={modalOptions}
         component={JoinTelegramPopUp}
       />
+      <MainStack.Screen name="BscAddress" component={BscAddress} />
+      <MainStack.Screen
+        name="VerifiedTooltipPopUp"
+        component={VerifiedTooltipPopUp}
+        options={modalOptions}
+      />
+      <MainStack.Screen name="TopMiners" component={TopMiners} />
+      <MainStack.Screen name="QuizIntro" component={QuizIntro} />
+      <MainStack.Screen name="Quiz" component={Quiz} />
+      <MainStack.Screen name="QuizFailure" component={QuizFailure} />
+      <MainStack.Screen name="QuizSuccess" component={QuizSuccess} />
     </MainStack.Navigator>
   );
 }

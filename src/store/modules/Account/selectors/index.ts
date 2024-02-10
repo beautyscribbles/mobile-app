@@ -54,6 +54,10 @@ export const showingsCountSelector = (state: RootState) => {
   return user?.clientData?.rate?.showingsCount ?? 0;
 };
 
+export const bscWarningConfirmedSelector = (state: RootState) => {
+  return state.account.bscAddrWarningConfirmed;
+};
+
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>
   state.account.user?.phoneNumber;
 
@@ -83,5 +87,16 @@ export const isTeamEnabledSelector = (state: RootState) =>
 export const isAchievementsEnabledSelector = (state: RootState) =>
   !!state.account.authConfig?.achievements?.enabled;
 
-export const isFaceDetectionEnabledSelector = (state: RootState) =>
-  !!state.account.authConfig?.['face-detection']?.enabled;
+export const verifiedSelector = (state: RootState) =>
+  !!state.account.user?.verified;
+
+export const distributionXPostLinkSelector = (state: RootState) =>
+  state.account.authConfig?.['social2-kyc']?.['x-post-link'];
+
+export const quizTermsAcceptedSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.quiz?.quizTermsAccepted ?? false;
+};
+
+export const dynamicDistributionDataSelector = (state: RootState) =>
+  state.account.authConfig?.['dynamic-distribution-kyc'];

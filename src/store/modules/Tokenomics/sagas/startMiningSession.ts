@@ -2,6 +2,13 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {
+  DISTRIBUTION_KYC_STEP,
+  EMOTIONS_KYC_STEP,
+  QUIZ_KYC_STEP,
+  SELFIE_KYC_STEP,
+  VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
+} from '@api/tokenomics/constants';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
@@ -10,6 +17,7 @@ import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
+  dynamicDistributionDataSelector,
   firstMiningDateSelector,
   unsafeUserSelector,
   userIdSelector,
@@ -24,6 +32,7 @@ import {
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
+import {openMiningDisabled} from '@store/modules/Tokenomics/utils/openMiningDisabled';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {
@@ -101,28 +110,60 @@ export function* startMiningSessionSaga(
     } else if (isApiError(error, 409, 'KYC_STEPS_REQUIRED')) {
       const errorData = error?.response?.data?.data;
       if (errorData && Array.isArray(errorData.kycSteps)) {
-        if (errorData.kycSteps.includes(1) || errorData.kycSteps.includes(2)) {
-          yield removeScreenByName('Tooltip').catch();
+        yield removeScreenByName('Tooltip').catch();
+        if (
+          errorData.kycSteps.includes(SELFIE_KYC_STEP) ||
+          errorData.kycSteps.includes(EMOTIONS_KYC_STEP)
+        ) {
           navigate({
             name: 'FaceRecognition',
             params: {kycSteps: errorData.kycSteps},
           });
           return;
+        } else if (
+          errorData.kycSteps.includes(VERIFY_SOCIAL_ACCOUNT_KYC_STEP) ||
+          errorData.kycSteps.includes(DISTRIBUTION_KYC_STEP)
+        ) {
+          navigate({
+            name: 'SocialKycFlow',
+            params: {kycStep: errorData.kycSteps[0]},
+          });
+          return;
+        } else if (errorData.kycSteps.includes(QUIZ_KYC_STEP)) {
+          navigate({name: 'QuizIntro', params: undefined});
+          return;
+        } else {
+          const kycStep = errorData.kycSteps?.[0] ?? 0;
+          const dynamicDistributionData: ReturnType<
+            typeof dynamicDistributionDataSelector
+          > = yield select(dynamicDistributionDataSelector);
+          if (dynamicDistributionData?.some(data => data?.step === kycStep)) {
+            navigate({
+              name: 'SocialKycFlow',
+              params: {kycStep},
+            });
+            return;
+          }
         }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
-      const errorData = error?.response?.data?.data;
-      if (errorData && typeof errorData.kycStepBlocked === 'number') {
-        if (errorData.kycStepBlocked === 1 || errorData.kycStepBlocked === 2) {
-          yield removeScreenByName('Tooltip').catch();
+      const kycStepBlocked = error?.response?.data?.data?.kycStepBlocked;
+      yield removeScreenByName('Tooltip').catch();
+      if (typeof kycStepBlocked === 'number') {
+        if (
+          kycStepBlocked === SELFIE_KYC_STEP ||
+          kycStepBlocked === EMOTIONS_KYC_STEP
+        ) {
           navigate({
             name: 'FaceRecognition',
             params: {
-              kycSteps: [errorData.kycStepBlocked],
-              kycStepBlocked: errorData.kycStepBlocked,
+              kycSteps: [kycStepBlocked],
+              kycStepBlocked,
             },
           });
           return;
+        } else {
+          yield call(openMiningDisabled, {kycStepBlocked});
         }
       }
     } else {

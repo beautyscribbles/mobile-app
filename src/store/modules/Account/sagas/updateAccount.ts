@@ -2,10 +2,23 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {
+  EoaBscAddressError,
+  isEoaBscAddress,
+  isValidBscAddress,
+  unchecksummAddress,
+} from '@services/bsc';
+import {logError} from '@services/logging';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
+import {checkProp} from '@utils/guards';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import RNRestart from 'react-native-restart';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
@@ -31,6 +44,19 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
 
       userInfo.phoneNumber = normalizedNumber;
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
+    }
+
+    if (checkProp(userInfo, 'miningBlockchainAccountAddress')) {
+      yield call(
+        validateMiningBlockchainAccountAddress,
+        userInfo.miningBlockchainAccountAddress,
+      );
+
+      if (userInfo.miningBlockchainAccountAddress) {
+        userInfo.miningBlockchainAccountAddress = unchecksummAddress(
+          userInfo.miningBlockchainAccountAddress,
+        );
+      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -84,7 +110,12 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         case 'phoneNumber':
           localizedError = t('errors.phone_number_already_taken');
           break;
+        case 'mining_blockchain_account_address':
+          localizedError = t('errors.blockchain_address_already_taken');
+          break;
       }
+    } else if (isValidationError(error)) {
+      localizedError = error.message;
     }
 
     if (localizedError) {
@@ -94,5 +125,49 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       yield spawn(showError, error);
     }
     throw error;
+  }
+}
+
+function* validateMiningBlockchainAccountAddress(
+  miningBlockchainAccountAddress?: string,
+) {
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
+  );
+  const isAddrRemoveAction =
+    !miningBlockchainAccountAddress && !!user.miningBlockchainAccountAddress;
+  if (!isAddrRemoveAction) {
+    if (
+      !miningBlockchainAccountAddress ||
+      !isValidBscAddress(miningBlockchainAccountAddress)
+    ) {
+      throw new ValidationError(ValidationErrorCode.InvalidBscAddress);
+    }
+
+    try {
+      const isEoa: SagaReturnType<typeof isEoaBscAddress> = yield call(
+        isEoaBscAddress,
+        miningBlockchainAccountAddress,
+      );
+      if (!isEoa) {
+        throw new ValidationError(ValidationErrorCode.BscAddressIsNotEoa);
+      }
+    } catch (error) {
+      if (isValidationError(error)) {
+        throw error;
+      }
+
+      const typedError = error as EoaBscAddressError;
+      const networkErrorTypes: typeof typedError['name'][] = [
+        'HttpRequestError',
+        'TimeoutError',
+      ];
+      if (!networkErrorTypes.includes(typedError.name)) {
+        logError(error);
+      }
+      throw new ValidationError(
+        ValidationErrorCode.UnableToValidateBscAddressEoa,
+      );
+    }
   }
 }

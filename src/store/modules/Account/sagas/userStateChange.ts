@@ -189,7 +189,9 @@ function* createUser({
     },
   );
 
-  yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
+  if (user) {
+    yield put(AnalyticsActions.TRACK_SIGN_UP.START.create({user}));
+  }
 
   return user;
 }

@@ -68,7 +68,13 @@
     "learn_more": "더 알아보기",
     "back_to_login": "로그인으로 돌아가기",
     "follow_us": "팔로우",
-    "subscribe": "구독"
+    "subscribe": "구독",
+    "not_sure": "확실하지 않음",
+    "confirm_address": "주소 확인",
+    "remove_address": "주소 제거",
+    "start": "시작",
+    "faq": "FAQ",
+    "knowledge_base": "지식 베이스"
   },
   "team": {
     "contacts_tab": "연락처",
@@ -190,7 +196,12 @@
     "weak_password": "비밀번호 보안 취약",
     "wrong_password": "잘못된 비밀번호",
     "no_camera_permissions": "카메라 권한이 허용되지 않았습니다.",
-    "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다."
+    "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다.",
+    "blockchain_address_already_taken": "주소가 이미 사용 중입니다",
+    "invalid_blockchain_address": "유효하지 않은 주소",
+    "address_not_eoa": "주소가 EOA가 아닙니다",
+    "same_phone_error": "같은 번호를 사용할 수 없습니다.",
+    "unable_to_validate_bsc_addr_eoa": "EOA 주소를 확인할 수 없습니다"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "6일 연속 체크인하면 하루를 휴일로 받습니다.",
       "streak": "스트릭",
       "days_off": "휴일"
+    },
+    "roadmap": {
+      "title": "우리의 비전",
+      "button_title": "화이트페이퍼",
+      "button_subtitle": "Ice에서 우리의 비전에 대해 더 알아보세요."
+    },
+    "join_mainnet": {
+      "title": "분산 미래에 참여하세요",
+      "subtitle": "다가오는 메인넷 앱과 그 독특한 기능을 미리 만나보세요."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain 주소",
+      "subtitle": "여기에 BSC 주소를 입력하십시오."
+    },
+    "verified_tooltip": {
+      "title": "KYC 인증됨"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "지금 사전 스테이킹하세요!",
     "balance_label": "스테이킹 잔액",
     "confirm_title": "사전 스테이킹 확인",
-    "confirm_subtitle": "정말 코인을 사전 스테이킹하시겠습니까? 한 번 확인하면 되돌릴 수 없습니다."
+    "confirm_subtitle": "정말 코인을 사전 스테이킹하시겠습니까? 한 번 확인하면 되돌릴 수 없습니다.",
+    "remove_pre_staking": "사전 스테이킹 해제"
   },
   "stats": {
     "header_title": "통계",
@@ -532,7 +560,14 @@
     "top_miners": "최고 사용자",
     "top_countries": "최고 국가",
     "online_miners": "온라인 사용자",
-    "detailed_information": "상세 정보"
+    "detailed_information": "상세 정보",
+    "total_coins": "총 코인",
+    "filter": {
+      "total": "총합",
+      "on_app": "앱에서 사용 가능",
+      "pre_staked": "사전 스테이크",
+      "on_blockchain": "블록체인 상에"
+    }
   },
   "update_required": {
     "title": "업데이트하세요",
@@ -579,9 +614,11 @@
     "wallet": "지갑",
     "blockchain": "블록체인",
     "wallet_update_interval": "한 시간마다 업데이트됨",
-    "blockchain_update_interval": "24시간마다 업데이트됨",
+    "blockchain_update_interval": "28 일마다 업데이트됨",
     "list_end_label": "이는 최근 잔액 내역입니다.",
-    "no_data": "지정된 기간 동안 표시할 데이터가 없습니다."
+    "no_data": "지정된 기간 동안 표시할 데이터가 없습니다.",
+    "you": "당신",
+    "contribution": "기여"
   },
   "pop_up": {
     "update_now": "지금 업데이트",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "[[:amount]] 코인을 영원히 잃게 됩니다. 정말 계속하시겠습니까?",
     "resurrection_yes_confirm_message": "단 한 번만 되살릴 수 있습니다! 정말 계속하시겠습니까? 한 시간 안에 [[:amount]] 코인이 잔액에 반영될 것입니다.",
     "delete_account_confirmation_title": "삭제 확인",
-    "delete_account_confirmation_text": "계정을 삭제하면 Ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
+    "delete_account_confirmation_text": "계정을 삭제하면 Ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?",
+    "registration_update_title": "등록 업데이트",
+    "registration_update_text": "전화번호를 사용한 새 계정 생성을 일시 중단했습니다. 계속하려면 이메일 주소 또는 소셜 네트워크를 통한 로그인을 선택해야 합니다.",
+    "link_email_title": "이메일 주소 연결",
+    "link_email_text": "전화번호를 사용한 로그인을 일시 중단했습니다. 로그인하려면 이메일 주소를 연결하고 확인해야 합니다.",
+    "account_error_title": "계정 오류",
+    "account_error_text": "전화번호를 사용한 로그인을 일시 중단했습니다. 죄송하지만 귀하의 계정은 KYC 검증을 통과하지 못했으며 복구할 수 없습니다.",
+    "login_via_email_title": "이메일을 통해 로그인하세요",
+    "login_via_email_text": "전화번호를 사용한 로그인을 일시 중단했습니다. 계정에 연결된 이메일 주소를 사용하여 로그인하세요.",
+    "email_in_use_title": "이미 사용 중인 이메일 주소",
+    "email_in_use_text_part1": "연결하려는 이메일 주소는 이미 사용 중입니다.",
+    "email_in_use_text_part2": "이 이메일 주소가 귀하의 이메일 주소인 경우, 먼저 해당 이메일 주소로 로그인하고 등록 프로세스를 완료하고 해당 계정을 삭제하여 이메일을 사용 가능하게 한 다음 전화번호를 사용한 로그인으로 돌아가 연결 프로세스를 완료하세요.",
+    "successfully_linked_title": "성공적으로 연결되었습니다!",
+    "successfully_linked_text": "이메일이 계정에 성공적으로 연결되었습니다."
   },
   "periods": {
     "3_days": "3일",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "전화 확인",
     "modify_description": "국가 코드를 확인하고 전화번호를 입력하세요.",
-    "button": "국가와 전화 확인",
-    "same_phone_error": "같은 번호를 사용할 수 없습니다."
+    "button": "국가와 전화 확인"
   },
   "date_select": {
     "title": "날짜 선택"
@@ -919,6 +968,19 @@
       "title": "Instagram에서 가입하세요",
       "description_part1": "Instagram에서 팔로우하면 모든 소식을 전달받고 ice에 열정을 가진 다른 사용자들과 연대할 수 있습니다.",
       "description_part2": "또한 출시되는 새로운 기능이나 프로모션 소식을 가장 먼저 파악하게 될 것입니다."
+    },
+    "reddit": {
+      "title": "Reddit에서 함께 하세요",
+      "description": "Reddit에서 Ice 커뮤니티를 발견하십시오. 아이스 마이닝, 기능 등에 관한 흥미로운 토론을 탐색하는 유사한 생각을 가진 개인들이 모이는 곳입니다.\n\n대화에 참여하고 질문을 하며 Ice에 대한 흥미로운 토론을 진행하세요."
+    },
+    "discord": {
+      "title": "Discord에서 함께 하세요",
+      "description": "저희 활기찬 Discord 커뮤니티에 참여하고 Ice에 관한 토론과 독점적인 통찰력에 빠져보세요.\n\n생동감 있는 채팅에 참여하고 Ice와 관련된 뉴스를 계속해서 확인하며 여러분의 열정을 공유하는 커뮤니티의 일원이 되세요."
+    },
+    "ice_founder_twitter": {
+      "title": "X에서 Zeus 팔로우",
+      "description": "우리의 비전을 가진 창립자 인 Zeus를 X에서 팔로우하십시오. 그는 우리의 미션에 대한 통찰력, 업데이트 및 생각을 공유하는 곳으로, 대화에 참여하고 질문을 하며이 흥미로운 여정을 함께 떠날 때 우리의 영감을주는 리더와 연락을 유지하십시오.",
+      "button": "Zeus 팔로우"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "카메라 권한",
       "description": "계속하려면 카메라 접근을 허용하십시오.",
       "action": "접근 허용"
+    },
+    "selfie_guidelines": {
+      "title": "셀카 가이드라인",
+      "instruction": "계속하기 전에 성공적인 KYC 얼굴 인증을 위해 다음 가이드라인을 따르십시오:",
+      "check_1": "✅ 고품질 사진을 가지고 있는지 확인하십시오.",
+      "check_2": "✅ 적절한 조명이 있는지 확인하십시오.",
+      "check_3": "✅ 깨끗한 배경이 있는지 확인하십시오.",
+      "check_4": "✅ 어두운 사진이 없는지 확인하십시오.",
+      "check_5": "✅ 흐릿하거나 안개가 낀 사진이 없는지 확인하십시오.",
+      "check_6": "✅ 카메라 렌즈를 깨끗하게 닦으십시오.",
+      "warning": "위의 가이드라인을 따르지 않으면 계정에 액세스를 잃을 수 있습니다.",
+      "confirmation": "나는 기준을 따를 것을 확인합니다.",
+      "popup_title": "확인",
+      "popup_body": "셀카 가이드라인을 모두 따랐음을 확인하시겠습니까?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오."
+      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오.",
+      "description": "당신을 초대한 친구의 별명을 입력하십시오."
     },
     "home": {
       "pioneer": {
-        "description": "진행 상황과 전체 상태를 추적하세요"
+        "description": "진행 상황과 전체 상태를 추적하세요",
+        "referrals": "친구"
       },
       "tasks": {
         "invite_friends": {
           "description": "팀을 성장시키고 커뮤니티를 구축하세요"
         }
+      },
+      "team": {
+        "title": "친구",
+        "view_team": "친구 보기"
+      },
+      "roadmap": {
+        "button_subtitle": "아이스의 미래 비전에 대해 더 알아보십시오."
+      },
+      "join_mainnet": {
+        "subtitle": "우리의 미래 Mainnet 앱과 그 독특한 기능에 대한 미리보기를 얻어보십시오. 2024년 말에 출시 예정입니다."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "현재 잔액은 매 시간 업데이트되며 여기에 표시됩니다. 직접 및 스테이크한 수익을 포함합니다."
         }
       }
+    },
+    "claimUsername": {
+      "description": "당신의 친구들은 [[:ice]]에 가입할 때 이 별명을 사용해야 합니다."
+    },
+    "users": {
+      "team": "친구"
+    },
+    "team": {
+      "empty": {
+        "team": "현재 친구가 없습니다!"
+      },
+      "contacts": {
+        "empty_description": "연락처를 동기화하고 이미 [[:ice]]에 있는 사람을 확인하십시오."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain 주소",
+    "enter_address_title": "당신의\nBNB Smart Chain 주소를 입력하십시오",
+    "enter_address_description": "제1 단계에서 ICE 토큰은 BNB Smart Chain 블록체인에 출시됩니다. 메인넷트가 시작되면 토큰은 BNB Smart Chain에서 Ice Open Network (ION) 블록체인으로 교환 가능합니다.",
+    "enter_address_confirmation": "BNB Smart Chain 주소가 정확한지 확신하십니까?",
+    "validators_warning_title": "주소 확인",
+    "validators_warning_text": "주의: BNB Smart Chain 주소를 계정에 추가한 개인은 메인넷트 론칭을 위한 저희 화이트페이퍼에 명시된 대로 최상위 300개 유효성 검사자 중 하나가 될 자격이 없습니다.",
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] 또는 [[:bold]]Trust Wallet[[/:bold]]과 같은 자체 보유 월렛 사용을 권장합니다.\n\n배포를 받을 확실성을 위해 월렛 주소를 두 번 확인하십시오."
+  },
+  "social_kyc": {
+    "header": "인증",
+    "verify_with_title": "{{method}}로 인증",
+    "select_method_step": {
+      "title": "KYC 단계 #2",
+      "description": "기존 X 프로필을 사용하여 계정을 간편하게 인증하세요."
+    },
+    "instructions_step": {
+      "show_example": "예시 표시",
+      "example_title": "리포스트 예시",
+      "x": {
+        "1": "X를 열고 [[:bold]]@ice_blockchain[[/:bold]] 계정을 검색합니다.",
+        "2": "프로필에서 고정된 게시물을 찾습니다. 이는 프로필의 첫 번째 게시물입니다.",
+        "3": "❤️ 좋아요를 누르고 [[:bold]]인용[[/:bold]]을 사용하여 아래의 [[:bold]]정확한[[/:bold]] 텍스트로 리포스트합니다.",
+        "pop_up": {
+          "title": "확인",
+          "description": "고정된 게시물에 좋아요를 누르고 주어진 정확한 텍스트를 사용하여 리포스트했나요?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "텍스트 복사하려면 탭",
+        "copied": "복사됨"
+      }
+    },
+    "verification_step": {
+      "title": "확인",
+      "description": "인증을 완료하려면 이전 단계를 완료한 게시물의 링크를 붙여넣어 주세요. 링크가 올바른지 확인하세요.",
+      "placeholder": "링크 붙여넣기",
+      "instructions_step": {
+        "4": "아래에 게시물 링크를 붙여넣어 주세요. 👇"
+      },
+      "action": {
+        "verify": "인증",
+        "wait": "잠시 기다려주세요",
+        "countdown": "{{countdown}}초 남음"
+      },
+      "pop_up": {
+        "title": "잘못된 링크",
+        "description": "올바른 링크를 복사했는지 확인하십시오.\n\n[[:bold]]예:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "남은 시도 횟수: {{count}}",
+      "success": {
+        "title": "인증 완료",
+        "description": "축하합니다, KYC 단계 #2를 성공적으로 완료했습니다. 이제 인증되었습니다."
+      },
+      "error_try_again": {
+        "title": "인증 오류",
+        "description": "올바른 게시물을 리포스트하고 제공된 텍스트를 사용하며 게시물이 공개적으로 사용 가능한지 확인하세요."
+      },
+      "error_try_later": {
+        "title": "인증 오류",
+        "description": "인증을 완료할 수 없습니다. 7일 후에 다시 시도할 수 있습니다."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain 분배",
+      "description": "기존 X 프로필을 사용하여 계정을 손쉽게 확인하고 BNB Smart Chain ICE 코인을 수령하십시오."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "[[:bold]]여기[[/:bold]] 링크를 클릭하여 직접 X 글을 열어보세요.",
+        "pop_up": {
+          "description": "지침을 따르고 첫 번째 단계에서 링크를 클릭하여 직접 X 글을 열었는지 확인하세요.",
+          "description2": "올바른 게시물을 좋아하고 해당 예제처럼 정확한 텍스트를 사용하여 인용구와 함께 다시 게시하셨나요?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "축하합니다, 당신은 성공적으로 검증을 완료하셨습니다. 이제 BNB Smart Chain 분배 자격이 부여됩니다."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "계정 확인",
+    "description": "귀하의 계정 신원을 확인하고 이메일을 안전하게 연결하려면 인증 프로세스 중 감정 검사를 성공적으로 통과해야 합니다.",
+    "description2": "이 단계는 귀하의 계정의 보안과 진정성을 보장하는 데 도움이 됩니다. 협조해 주셔서 감사합니다!"
+  },
+  "quiz": {
+    "title": "퀴즈",
+    "intro": {
+      "description": "Ice에서는 능동적이고 정보 풍부한 회원들의 커뮤니티를 육성하는 것을 지지합니다. 저희의 미션은 Ice 코인이 저희의 비전과 일치하며 진정으로 참여하고 있는 분들에게 배포되도록 하는 것입니다.",
+      "community_engagement": {
+        "title": "🙌 능동적인 커뮤니티 참여",
+        "description": "Ice 생태계 내에서의 참여가 직접 귀하의 채굴 능력에 영향을 미칩니다:",
+        "point1": "업데이트 유지: 저희의 뉴스 기사와 비디오와 상호 작용합니다.",
+        "point2": "능동적으로 참여: YouTube 또는 Twitter Space에서 라이브 세션 또는 개인 개발 프로그램에 참여합니다.",
+        "point3": "소셜 상호 작용: Ice에 대한 포스팅, 좋아요, 공유, 팔로우 등으로 귀하의 존재를 증가시킵니다.",
+        "bottom_description": "귀하가 더 활발하게 참여할수록 긍정적인 상호 작용 점수가 높아져 KYC 프로세스를 완료할 수 있습니다."
+      },
+      "terms_privacy": "[[:link]]이용 약관[[/:link]]을 이해하고 동의합니다.",
+      "knowledge_check": {
+        "title": "🧠 지식 확인",
+        "point2": "퀴즈를 통과하려면 적어도 18개의 질문에 올바르게 답해야 합니다.",
+        "point3": "실패한 퀴즈는 당사 자료와 더 많은 참여가 필요하다는 신호입니다.",
+        "point4": "퀴즈를 통과하기까지의 기한이 있습니다. 퀴즈 섹션에서 홈페이지에서 남은 일수를 볼 수 있습니다.",
+        "point5": "만료 날짜 이전에 3번의 재시도 기회가 제공됩니다. 퀴즈를 3번 실패하거나 만료 날짜가 지나면 더 이상 채굴을 할 수 없으며 계정이 제한됩니다.",
+        "point6": "📚 이 퀴즈에 대한 모든 정보는 [[:link]]여기에서[[/:link]] 읽을 수 있습니다.",
+        "description": "저희 커뮤니티가 충분히 정보를 습득하고 저희의 비전과 일치하는지 확인하기 위해:",
+        "point1": "21개의 문제가 저희의 종합적인 자료에서 유도됩니다."
+      },
+      "why_quiz": {
+        "title": "💡 왜 퀴즈인가요?",
+        "description": "우리의 지식과 이해에 대한 헌신은 우리 커뮤니티의 최전선에 있습니다. 우리 퀴즈를 통해 Ice가 진정으로 이해하고 프로젝트의 비전과 일치하는 사람들의 손에 전달되기를 원합니다."
+      }
+    },
+    "quiz_failure": {
+      "title": "퀴즈 실패",
+      "description": "18개 이상의 질문에 올바르게 답하지 않았거나 시간이 만료되었기 때문에 퀴즈를 통과할 수 없습니다.",
+      "check_faq": "다음에 올바르게 답하기 위해 저희의 지식 베이스와 FAQ를 숙지하는 것을 권장합니다."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "질문 {{current}} / {{total}}",
+      "time_over": "⌛️ 시간이 종료되었습니다",
+      "correct_answers": "올바른 답변",
+      "wrong_answers": "잘못된 답변"
+    },
+    "confirmation_popup": {
+      "title": "확인",
+      "start_description": "퀴즈를 시작하시겠습니까?",
+      "cancel_description": "퀴즈를 건너 뛰면 사용 가능한 3번의 재시도 중 1번을 사용하게 됩니다. 지금 퀴즈를 건너 뛰시겠습니까?"
+    },
+    "quiz_success": {
+      "title": "검증 완료",
+      "description": "축하합니다, KYC를 성공적으로 완료하셨습니다. 일관되게 올바른 답변으로 귀하의 헌신과 지식을 증명했습니다. 이제 귀하가 검증되었습니다."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ 채굴 비활성화됨",
+      "description": "퀴즈 3회 연속 실패 또는 지정된 시간 만료로 인해 채굴 액세스가 비활성화되었습니다. 이는 저희 KYC 프로세스에 따른 것입니다."
+    },
+    "action": "퀴즈 완료하기",
+    "reminder": "채굴을 계속하고 벌점을 피하려면 퀴즈를 완료해야 함을 주의하세요.",
+    "days_left": "남은 일수: {{days}}",
+    "retries_left": "남은 재시도 횟수: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB 스마트 체인 배포",
+      "description": "X에서 최신 거래소 공지사항을 적극적으로 지원하여 매월 BNB 스마트 체인 ICE 코인 분배 자격을 유지하십시오."
+    },
+    "results_step": {
+      "success": {
+        "description": "축하합니다. 귀하의 확인 작업을 성공적으로 완료하셨습니다. 이제 월간 BNB 스마트 체인 분배 상태를 유지할 자격이 있습니다."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "건너뛰기"
   }
 }

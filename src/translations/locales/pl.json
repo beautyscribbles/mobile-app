@@ -68,7 +68,13 @@
     "learn_more": "Dowiedz się więcej",
     "back_to_login": "Powrót do logowania",
     "follow_us": "Śledź nas",
-    "subscribe": "Subskrybuj"
+    "subscribe": "Subskrybuj",
+    "not_sure": "Nie jestem pewny",
+    "confirm_address": "Potwierdź adres",
+    "remove_address": "Usuń adres",
+    "start": "Rozpocznij",
+    "faq": "FAQ",
+    "knowledge_base": "Baza wiedzy"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -190,7 +196,12 @@
     "weak_password": "Słabe hasło.",
     "wrong_password": "Błędne hasło.",
     "no_camera_permissions": "Uprawnienia do korzystania z kamery nie zostały przyznane.",
-    "no_library_permissions": "Uprawnienia biblioteczne nie zostały przyznane."
+    "no_library_permissions": "Uprawnienia biblioteczne nie zostały przyznane.",
+    "blockchain_address_already_taken": "Adres jest już zajęty",
+    "invalid_blockchain_address": "Nieprawidłowy adres blockchain",
+    "address_not_eoa": "Adres nie jest EOA",
+    "same_phone_error": "Nie można użyć tego samego numeru.",
+    "unable_to_validate_bsc_addr_eoa": "Nie można zweryfikować adresu EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Za każde 6 kolejnych dni przysługuje jeden dzień wolny.",
       "streak": "SERIA",
       "days_off": "DNI WOLNE"
+    },
+    "roadmap": {
+      "title": "NASZA WIZJA",
+      "button_title": "Biała księga",
+      "button_subtitle": "Dowiedz się więcej o naszej wizji w Ice."
+    },
+    "join_mainnet": {
+      "title": "Dołącz do Zdecentralizowanej Przyszłości",
+      "subtitle": "Otrzymaj przedsmak naszej nadchodzącej aplikacji Mainnet i jej unikalnych funkcji."
+    },
+    "bsc_address": {
+      "title": "Adres BNB Smart Chain",
+      "subtitle": "Proszę wprowadzić swój adres BSC tutaj."
+    },
+    "verified_tooltip": {
+      "title": "KYC Zweryfikowane"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Pre-stake'uj teraz!",
     "balance_label": "Stake'owane saldo",
     "confirm_title": "Potwierdź pre-stake",
-    "confirm_subtitle": "Czy na pewno chcesz pre-stake'ować swoje monety? Po potwierdzeniu nie można tego cofnąć."
+    "confirm_subtitle": "Czy na pewno chcesz pre-stake'ować swoje monety? Po potwierdzeniu nie można tego cofnąć.",
+    "remove_pre_staking": "Usuń Pre-Staking"
   },
   "stats": {
     "header_title": "Statystyki",
@@ -532,7 +560,14 @@
     "top_miners": "Najlepsi użytkownicy",
     "top_countries": "Czołowe kraje",
     "online_miners": "Użytkownicy online",
-    "detailed_information": "Szczegółowe informacje"
+    "detailed_information": "Szczegółowe informacje",
+    "total_coins": "Łączna liczba monet",
+    "filter": {
+      "total": "Łącznie",
+      "on_app": "Dostępne w aplikacji",
+      "pre_staked": "Pre-staked",
+      "on_blockchain": "Na blockchainie"
+    }
   },
   "update_required": {
     "title": "Prosimy o aktualizację",
@@ -579,9 +614,11 @@
     "wallet": "Portfel",
     "blockchain": "Blockchain",
     "wallet_update_interval": "aktualizowane co godzinę",
-    "blockchain_update_interval": "aktualizowane co 24 godziny",
+    "blockchain_update_interval": "aktualizowane co 28 dni",
     "list_end_label": "jest to ostatni wpis w historii salda.",
-    "no_data": "Brak danych do wyświetlenia dla określonego okresu."
+    "no_data": "Brak danych do wyświetlenia dla określonego okresu.",
+    "you": "ty",
+    "contribution": "wkład"
   },
   "pop_up": {
     "update_now": "Zaktualizuj teraz",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Stracisz następującą liczbę monet na zawsze: [[:amount]]. Czy na pewno chcesz kontynuować?",
     "resurrection_yes_confirm_message": "Wskrzeszenie jest możliwe tylko raz! Czy na pewno chcesz kontynuować? Monety, które powrócą na saldo w ciągu następnej godziny: [[:amount]].",
     "delete_account_confirmation_title": "Potwierdź usunięcie",
-    "delete_account_confirmation_text": "Usunięcie konta spowoduje trwałe usunięcie wszystkich danych, w tym salda Ice. Czy chcesz kontynuować?"
+    "delete_account_confirmation_text": "Usunięcie konta spowoduje trwałe usunięcie wszystkich danych, w tym salda Ice. Czy chcesz kontynuować?",
+    "registration_update_title": "Aktualizacja rejestracji",
+    "registration_update_text": "Tymczasowo wstrzymaliśmy tworzenie nowych kont za pomocą numeru telefonu. Aby kontynuować, musisz wybrać adres e-mail lub logowanie za pomocą sieci społecznościowych.",
+    "link_email_title": "Połącz swój adres e-mail",
+    "link_email_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Proszę połącz swój adres e-mail i potwierdź go, aby móc się zalogować.",
+    "account_error_title": "Błąd konta",
+    "account_error_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Niestety twoje konto nie przeszło procesu KYC i nie jest uprawnione do odzyskania.",
+    "login_via_email_title": "Proszę zaloguj się za pomocą adresu e-mail",
+    "login_via_email_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Proszę użyj adresu e-mail powiązanego z twoim kontem, aby się zalogować.",
+    "email_in_use_title": "Adres e-mail jest już używany",
+    "email_in_use_text_part1": "Adres e-mail, który próbujesz połączyć, jest już używany.",
+    "email_in_use_text_part2": "Jeśli to jest twój adres e-mail, zaloguj się najpierw za jego pomocą, zakończ proces rejestracji i usuń to konto, aby uwolnić adres e-mail, a następnie wróć, aby zalogować się za pomocą numeru telefonu i ukończyć proces łączenia.",
+    "successfully_linked_title": "Pomyślnie połączono!",
+    "successfully_linked_text": "Adres e-mail został pomyślnie połączony z twoim kontem."
   },
   "periods": {
     "3_days": "3 dni",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Potwierdź telefon",
     "modify_description": "Potwierdź kod kraju i wprowadź numer telefonu.",
-    "button": "Potwierdź kraj i telefon",
-    "same_phone_error": "Nie można użyć tego samego numeru."
+    "button": "Potwierdź kraj i telefon"
   },
   "date_select": {
     "title": "Wybierz datę"
@@ -919,6 +968,19 @@
       "title": "Dołącz do nas na Instagramie",
       "description_part1": "Obserwowanie nas na Instagramie to świetny sposób, aby być na bieżąco i łączyć się z innymi użytkownikami, którzy również pasjonują się Ice",
       "description_part2": "Ponadto jako pierwszy dowiesz się o wszelkich nowych funkcjach lub promocjach, które oferujemy."
+    },
+    "reddit": {
+      "title": "Dołącz do nas na Reddit",
+      "description": "Odkryj społeczność Ice na Reddit, gdzie osoby o podobnych poglądach spotykają się, aby dzielić się swoimi myślami.\n\nDołącz do rozmowy, zadawaj pytania i eksploruj interesujące dyskusje na temat wydobycia Ice, funkcji i wiele więcej."
+    },
+    "discord": {
+      "title": "Dołącz do nas na Discord",
+      "description": "Dołącz do naszej żywiołowej społeczności na Discordzie i zagłębiaj się w dyskusje i ekskluzywne spostrzeżenia na temat Ice.\n\nWeź udział w żywych rozmowach, bądź na bieżąco z wiadomościami związanymi z Ice i stań się częścią społeczności, która dzieli Twoją pasję."
+    },
+    "ice_founder_twitter": {
+      "title": "Śledź Zeusa na X",
+      "description": "Śledź Zeusa, naszego wizjonerskiego założyciela, na X, gdzie dzieli się spostrzeżeniami, aktualizacjami i myślami na temat naszej misji. Dołącz do rozmowy, zadawaj pytania i pozostań w kontakcie z naszym inspirującym liderem, gdy ruszamy w tę ekscytującą podróż razem.",
+      "button": "Śledź Zeusa"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Uprawnienia aparatu",
       "description": "Aby kontynuować, proszę zezwolić na dostęp do aparatu.",
       "action": "Zezwól na dostęp"
+    },
+    "selfie_guidelines": {
+      "title": "Wytyczne dotyczące Selfie",
+      "instruction": "Zanim przejdziesz dalej, proszę postępuj zgodnie z tymi wytycznymi, aby pomyślnie przeprowadzić autentykację KYC twarzy:",
+      "check_1": "✅ Upewnij się, że masz wysokiej jakości zdjęcie.",
+      "check_2": "✅ Upewnij się, że masz dobre oświetlenie.",
+      "check_3": "✅ Upewnij się, że masz czyste tło.",
+      "check_4": "✅ Brak ciemnych zdjęć.",
+      "check_5": "✅ Brak rozmazanych lub zamglonych zdjęć.",
+      "check_6": "✅ Wyczyść obiektyw kamery.",
+      "warning": "Jeśli nie będziesz przestrzegać powyższych wytycznych, możesz utracić dostęp do swojego konta.",
+      "confirmation": "Potwierdzam, że będę przestrzegać kryteriów.",
+      "popup_title": "Potwierdzenie",
+      "popup_body": "Czy potwierdzasz, że przestrzegłeś wszystkich wytycznych dotyczących selfie?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Upewnij się, że wprowadziłeś poprawny pseudonim."
+      "dontHaveInvitationCode": "Upewnij się, że wprowadziłeś poprawny pseudonim.",
+      "description": "Wprowadź ksywkę przyjaciela, który Cię zaprosił."
     },
     "home": {
       "pioneer": {
-        "description": "Śledź swój postęp i globalny status"
+        "description": "Śledź swój postęp i globalny status",
+        "referrals": "PRZYJACIELE"
       },
       "tasks": {
         "invite_friends": {
           "description": "Rozwijaj swoją drużynę i buduj społeczność"
         }
+      },
+      "team": {
+        "title": "Przyjaciele",
+        "view_team": "zobacz przyjaciół"
+      },
+      "roadmap": {
+        "button_subtitle": "Dowiedz się więcej o naszej przyszłej wizji na Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Otrzymaj podgląd naszej przyszłej aplikacji Mainnet i jej unikalnych funkcji, które zostaną wydane pod koniec 2024 roku."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Twoje obecne saldo jest aktualizowane co godzinę i jest tutaj wyświetlane. Obejmuje to twoje bezpośrednie i zablokowane zarobki."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Twoi przyjaciele muszą używać tej ksywki, gdy dołączają do [[:ice]]."
+    },
+    "users": {
+      "team": "Przyjaciele"
+    },
+    "team": {
+      "empty": {
+        "team": "Obecnie nie masz żadnych przyjaciół!"
+      },
+      "contacts": {
+        "empty_description": "Synchronizuj swoje kontakty i zobacz, kto jest już na [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "Adres BNB Smart Chain",
+    "enter_address_title": "Wprowadź swój\nadres BNB Smart Chain",
+    "enter_address_description": "W trakcie Fazy Pierwszej tokeny ICE zostaną wydane na blockchainie BNB Smart Chain. Po uruchomieniu Mainnet tokeny będą można wymieniać z BNB Smart Chain na blockchain Ice Open Network (ION).",
+    "enter_address_confirmation": "Czy jesteś pewien, że Twój adres BNB Smart Chain jest poprawny?",
+    "validators_warning_title": "Potwierdź Adres",
+    "validators_warning_text": "Proszę zwrócić uwagę: Osoby, które dodały adres BNB Smart Chain do swojego konta, nie kwalifikują się do zostania jednym z najlepszych 300 walidatorów, zgodnie z naszym whitepaperem dotyczącym uruchomienia głównego łańcucha.",
+    "walletDescription": "Zalecamy korzystanie z portfela samodzielnie zarządzanego, takiego jak [[:bold]]Metamask[[/:bold]] lub [[:bold]]Trust Wallet[[/:bold]].\n\nProszę upewnij się, że dwukrotnie sprawdzisz swój adres portfela, aby mieć pewność, że otrzymasz dystrybucję."
+  },
+  "social_kyc": {
+    "header": "Weryfikacja",
+    "verify_with_title": "Weryfikacja za pomocą {{method}}",
+    "select_method_step": {
+      "title": "Krok KYC #2",
+      "description": "Zweryfikuj swoje konto łatwo, korzystając ze swojego istniejącego profilu X."
+    },
+    "instructions_step": {
+      "show_example": "Pokaż przykład",
+      "example_title": "Przykład repostu",
+      "x": {
+        "1": "Otwórz X i wyszukaj konto [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Znajdź przypięty post, który jest pierwszym postem na profilu.",
+        "3": "❤️ Polub & 🔄 Zarepostuj go z [[:bold]]cytat[[/:bold]] używając [[:bold]]DOKŁADNEGO[[/:bold]] tekstu poniżej.",
+        "pop_up": {
+          "title": "Potwierdzenie",
+          "description": "Czy polubiłeś przypięty post i zarepostowałeś go z cytatem, używając dokładnego tekstu podanego w przykładzie?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kliknij, aby skopiować tekst",
+        "copied": "Skopiowano"
+      }
+    },
+    "verification_step": {
+      "title": "Potwierdzenie",
+      "description": "Aby ukończyć weryfikację, proszę wkleić link do postu, gdzie ukończyłeś poprzednie kroki. Upewnij się, że link jest prawidłowy.",
+      "placeholder": "Wklej link",
+      "instructions_step": {
+        "4": "Wklej link do swojego postu poniżej. 👇"
+      },
+      "action": {
+        "verify": "Zweryfikuj",
+        "wait": "Proszę czekać",
+        "countdown": "Pozostało {{countdown}} sekund"
+      },
+      "pop_up": {
+        "title": "Nieprawidłowe Łącze",
+        "description": "Upewnij się, że skopiowałeś właściwe łącze.\n\n[[:bold]]Przykład:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Liczba pozostałych prób: {{count}}",
+      "success": {
+        "title": "Weryfikacja zakończona",
+        "description": "Gratulacje, pomyślnie ukończyłeś Krok KYC #2. Jesteś teraz zweryfikowany."
+      },
+      "error_try_again": {
+        "title": "Błąd weryfikacji",
+        "description": "Upewnij się, że zarepostowałeś prawidłowy post, używając podanego tekstu, i że post jest publicznie dostępny."
+      },
+      "error_try_later": {
+        "title": "Błąd weryfikacji",
+        "description": "Nie udało nam się zakończyć weryfikacji. Możesz spróbować ponownie za 7 dni."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Dystrybucja BNB Smart Chain",
+      "description": "Odbierz swoje monety ICE BNB Smart Chain, weryfikując swoje konto łatwo za pomocą istniejącego profilu X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kliknij link [[:bold]]tutaj[[/:bold]], aby otworzyć naszą publikację X bezpośrednio.",
+        "pop_up": {
+          "description": "Postępuj zgodnie z instrukcjami i upewnij się, że w pierwszym kroku kliknąłeś link, aby otworzyć naszą publikację X bezpośrednio.",
+          "description2": "Czy polubiłeś właściwy post i ponownie opublikowałeś go z cytatem, używając dokładnego tekstu, jak w przykładzie?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulacje, ukończyłeś pomyślnie weryfikację. Teraz jesteś uprawniony do otrzymywania dystrybucji BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Potwierdzenie konta",
+    "description": "Aby zweryfikować tożsamość twojego konta i bezpiecznie połączyć swój adres e-mail, upewnij się, że pomyślnie przejdziesz test emocji podczas procesu uwierzytelniania.",
+    "description2": "Ten krok pomaga nam zapewnić bezpieczeństwo i autentyczność twojego konta. Dziękujemy za współpracę!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "W Ice wierzymy w tworzenie społeczności aktywnych i dobrze poinformowanych członków. Nasza misja polega na zapewnieniu, że monety Ice trafiają do tych, którzy naprawdę zaangażowani są i współgrają z naszą wizją.",
+      "community_engagement": {
+        "title": "🙌 Aktywne zaangażowanie społeczności",
+        "description": "Twoje zaangażowanie w ekosystemie Ice ma bezpośredni wpływ na Twoje możliwości wydobywcze:",
+        "point1": "Bądź na bieżąco: Śledź nasze artykuły i filmy informacyjne.",
+        "point2": "Aktywny udział: Dołącz do naszego programu rozwoju osobistego i udziału w sesjach na żywo na YouTube lub Twitter Space.",
+        "point3": "Interakcje społeczne: Zwiększ swoją obecność, lubiąc, udostępniając, śledząc lub publikując treści o Ice.",
+        "bottom_description": "Im bardziej jesteś zaangażowany, tym wyższy jest Twój wynik pozytywnych interakcji, co umożliwia przejście procesu KYC."
+      },
+      "terms_privacy": "Rozumiem i zgadzam się z [[:link]]Regulaminem[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Sprawdzenie Wiedzy",
+        "point2": "Aby zdać quiz, musisz udzielić poprawnej odpowiedzi na co najmniej 18 pytań.",
+        "point3": "Nieudany quiz wskazuje na konieczność dalszego zaangażowania się w nasze materiały.",
+        "point4": "Istnieje limit czasowy na zaliczenie quizu. Możesz sprawdzić, ile dni zostało do daty wygaśnięcia na swojej stronie głównej w sekcji quizu.",
+        "point5": "Masz 3 próby dostępne przed datą wygaśnięcia. Jeśli nie zdasz quizu 3 razy lub data wygaśnięcia minie, nie będziesz mógł już wydobywać i Twoje konto zostanie ukarane.",
+        "point6": "📚 Wszystkie informacje dotyczące tego quizu można przeczytać [[:link]]tutaj[[/:link]].",
+        "description": "Aby upewnić się, że nasza społeczność jest dobrze poinformowana i zgadza się z naszą wizją:",
+        "point1": "Otrzymasz 21 pytań opartych na naszych obszernych zasobach."
+      },
+      "why_quiz": {
+        "title": "💡 Dlaczego Quiz?",
+        "description": "Nasze zaangażowanie w wiedzę i zrozumienie znajduje się na czele naszej społeczności. Poprzez nasz quiz chcemy zapewnić, że Ice trafia do właściwych rąk, tych, którzy naprawdę rozumieją i podzielają wizję naszego projektu."
+      }
+    },
+    "quiz_failure": {
+      "title": "Niezdany Quiz",
+      "description": "Nie odpowiedziałeś poprawnie na więcej niż 18 pytań lub czas minął, więc nie możesz zdać quizu.",
+      "check_faq": "Aby odpowiedzieć poprawnie następnym razem, zalecamy zapoznanie się z naszą bazą wiedzy i FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pytanie {{current}} z {{total}}",
+      "time_over": "⌛️ Czas minął",
+      "correct_answers": "Poprawne Odpowiedzi",
+      "wrong_answers": "Błędne Odpowiedzi"
+    },
+    "confirmation_popup": {
+      "title": "Potwierdzenie",
+      "start_description": "Czy na pewno chcesz rozpocząć quiz?",
+      "cancel_description": "Pomijając quiz, zużyjesz jedną dostępną próbę. Czy na pewno chcesz teraz pominąć quiz?"
+    },
+    "quiz_success": {
+      "title": "Zakończono Weryfikację",
+      "description": "Gratulacje, zakończyłeś pomyślnie swoje KYC. Twoje ciągłe poprawne odpowiedzi potwierdziły Twoje zaangażowanie i wiedzę. Jesteś teraz zweryfikowany."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Wyłączona Wydobywanie",
+      "description": "Dostęp do wydobywania został wyłączony ze względu na trzy kolejne nieudane quizy lub wygaśnięcie przyznanej daty, zgodnie z naszym procesem KYC."
+    },
+    "action": "Ukończ quiz",
+    "reminder": "Proszę zauważyć, że musisz ukończyć quiz, aby być uprawnionym do kontynuacji wydobywania i uniknięcia kary.",
+    "days_left": "Pozostało dni: {{days}}",
+    "retries_left": "Pozostałe próby: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Dystrybucja BNB Smart Chain",
+      "description": "Zachowaj swoją uprawnienie do miesięcznej dystrybucji monet ICE BNB Smart Chain, aktywnie wspierając najnowsze ogłoszenia giełd na X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulacje, pomyślnie ukończyłeś weryfikację. Teraz jesteś uprawniony do utrzymania swojego miesięcznego statusu dystrybucji BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Pomiń"
   }
 }

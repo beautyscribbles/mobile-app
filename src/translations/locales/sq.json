@@ -68,7 +68,13 @@
     "learn_more": "Mëso më shumë",
     "back_to_login": "Kthehu te identifikimi",
     "follow_us": "Na ndiq",
-    "subscribe": "Abonohu"
+    "subscribe": "Abonohu",
+    "not_sure": "Nuk jam i sigurt",
+    "confirm_address": "Konfirmoni adresën",
+    "remove_address": "Hiqi adresën",
+    "start": "Fillo",
+    "faq": "Pyetje të shpeshta",
+    "knowledge_base": "Baza e njohurive"
   },
   "team": {
     "contacts_tab": "Kontaktet",
@@ -190,7 +196,12 @@
     "weak_password": "Fjalëkalim i dobët.",
     "wrong_password": "Fjalëkalim i gabuar.",
     "no_camera_permissions": "Nuk janë dhënë lejet për kamerën.",
-    "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën."
+    "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën.",
+    "blockchain_address_already_taken": "Adresa është tashmë e zënë",
+    "invalid_blockchain_address": "Adresa e blockchain-i nuk është e vlefshme",
+    "address_not_eoa": "Adresa nuk është EOA",
+    "same_phone_error": "Nuk mund të përdorësh të njëjtin numër.",
+    "unable_to_validate_bsc_addr_eoa": "E pamundur për të vërtetuar adresën EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Për çdo 6 ditë të njëpasnjëshme ti merr një ditë pushimi.",
       "streak": "RRJEDHA",
       "days_off": "DITË PUSHIMI"
+    },
+    "roadmap": {
+      "title": "VIZIONI YNË",
+      "button_title": "Libër i bardhë",
+      "button_subtitle": "Mësoni më shumë për vizionin tonë në Ice."
+    },
+    "join_mainnet": {
+      "title": "Bashkohuni me të Ardhmen e Zdërtuar",
+      "subtitle": "Merrni një shikim paraprak të aplikacionit Mainnet të ardhshëm tonë dhe veçorive të tij unike."
+    },
+    "bsc_address": {
+      "title": "Adresa BNB Smart Chain",
+      "subtitle": "Ju lutem futni adresën tuaj BSC këtu."
+    },
+    "verified_tooltip": {
+      "title": "KYC Verifikuar"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Pre-Stake tani!",
     "balance_label": "Shuma e vënë në staking",
     "confirm_title": "Konfirmo Pre-Stake",
-    "confirm_subtitle": "Je i sigurt që dëshiron t'i vësh në pre-stake monedhat? Kjo nuk mund të zhbëhet pasi të konfirmosh."
+    "confirm_subtitle": "Je i sigurt që dëshiron t'i vësh në pre-stake monedhat? Kjo nuk mund të zhbëhet pasi të konfirmosh.",
+    "remove_pre_staking": "Hiq Pre-Staking"
   },
   "stats": {
     "header_title": "Statistikat",
@@ -532,7 +560,14 @@
     "top_miners": "Përdoruesit kryesorë",
     "top_countries": "Vendet kryesore",
     "online_miners": "Përdoruesit në internet",
-    "detailed_information": "Informacion i detajuar"
+    "detailed_information": "Informacion i detajuar",
+    "total_coins": "Totali i monedhëve",
+    "filter": {
+      "total": "Totali",
+      "on_app": "I disponueshëm në aplikacion",
+      "pre_staked": "Përpara staked",
+      "on_blockchain": "Në blockchain"
+    }
   },
   "update_required": {
     "title": "Të lutemi përditëso",
@@ -579,9 +614,11 @@
     "wallet": "Kuleta",
     "blockchain": "Zinxhiri me blloqe",
     "wallet_update_interval": "përditësuar çdo orë",
-    "blockchain_update_interval": "përditësuar çdo 24 orë",
+    "blockchain_update_interval": "azhurnohet çdo 28 ditë",
     "list_end_label": "kjo është hyrja e fundit e historikut të shumës në gjendje.",
-    "no_data": "Nuk ka të dhëna të disponuara "
+    "no_data": "Nuk ka të dhëna të disponuara ",
+    "you": "ju",
+    "contribution": "kontributë"
   },
   "pop_up": {
     "update_now": "Përditëso tani",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Do t'i humbasësh [[:amount]] monedhat përgjithmonë. Je i sigurt se dëshiron të vazhdosh?",
     "resurrection_yes_confirm_message": "Ringjalljen mund ta bësh vetëm një herë! Je i sigurt se dëshiron të vazhdosh? Monedhat [[:amount]] do t'i rikthehen shumës në gjendje brenda orës.",
     "delete_account_confirmation_title": "Konfirmo fshirjen",
-    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në Ice. Dëshiron të vazhdosh?"
+    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në Ice. Dëshiron të vazhdosh?",
+    "registration_update_title": "Përditësim i Regjistrimit",
+    "registration_update_text": "Ne kemi ndërprerë përkohësisht krijimin e llogarive të reja duke përdorur numrin e telefonit. Për të vazhduar, duhet të zgjidhni ose një adresë emaili ose të bëni hyrjen përmes rrjeteve sociale.",
+    "link_email_title": "Lidhni adresën tuaj të emailit",
+    "link_email_text": "Ne kemi ndërprerë përkohësisht hyrjen duke përdorur numrin e telefonit. Ju lutemi lidhni adresën tuaj të emailit dhe konfirmoni atë për të mundur të bëni hyrjen.",
+    "account_error_title": "Gabim i Llogarisë",
+    "account_error_text": "Ne kemi ndërprerë përkohësisht hyrjen duke përdorur numrin e telefonit. Na vjen keq, llogaria juaj nuk ka kaluar procesin KYC dhe nuk është e përshkallëzueshme.",
+    "login_via_email_title": "Ju lutemi, hyni përmes emailit",
+    "login_via_email_text": "Ne kemi ndërprerë përkohësisht hyrjen duke përdorur numrin e telefonit. Ju lutemi përdorni adresën tuaj të emailit të lidhur me llogarinë tuaj për të bërë hyrjen.",
+    "email_in_use_title": "Adresa e Emailit është tashmë në përdorim",
+    "email_in_use_text_part1": "Adresa e emailit që po përpiqeni ta lidhni është tashmë në përdorim.",
+    "email_in_use_text_part2": "Nëse kjo është adresa juaj e emailit, ju lutemi hyni me të së pari, finalizoni procesin e regjistrimit dhe fshini këtë llogari për të liruar adresën e emailit, pastaj kthehuni tek hyrja me numrin e telefonit për të përfunduar procesin e lidhjes.",
+    "successfully_linked_title": "Lidhur me Sukses!",
+    "successfully_linked_text": "Adresa e emailit është lidhur me sukses me llogarinë tuaj."
   },
   "periods": {
     "3_days": "3 ditë",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Konfirmo telefonin",
     "modify_description": "Të lutemi konfirmo prefiksin e shtetit tënd dhe fut numrin e telefonit.",
-    "button": "Konfirmo shtetin dhe telefonin",
-    "same_phone_error": "Nuk mund të përdorësh të njëjtin numër."
+    "button": "Konfirmo shtetin dhe telefonin"
   },
   "date_select": {
     "title": "Zgjidh datën"
@@ -919,6 +968,19 @@
       "title": " Instagram",
       "description_part1": "Ndjekja në Instagram është mënyrë e mirë për të qëndruar në dijeni dhe për t'u lidhur me përdorues të tjerë që janë gjithashtu të pasionuar pas Ice",
       "description_part2": "Përveç kësaj, do të jesh i pari në dijeni të veçorive të reja ose promovimeve që po hedhim në treg."
+    },
+    "reddit": {
+      "title": "Bashkohuni me ne në Reddit",
+      "description": "Zbuloni komunitetin Ice në Reddit, ku individë me mendime të ngjashme mblidhen për të ndarë mendimet e tyre.\n\nBashkohuni në bisedë, bëni pyetje dhe eksploroni diskutimet interesante mbi minierën e Ice, veçoritë dhe shumë më tepër."
+    },
+    "discord": {
+      "title": "Bashkohuni me ne në Discord",
+      "description": "Bashkohuni me komunitetin tonë të gjallë në Discord dhe zhyteni në biseda dhe pamje ekskluzive mbi Ice.\n\nMerrni pjesë në biseda të gjallë, mbani veten të informuar për lajmet lidhur me Ice dhe bëhuni pjesë e një komuniteti që ndan pasionin tuaj."
+    },
+    "ice_founder_twitter": {
+      "title": "Ndiq Zeusin në X",
+      "description": "Ndiq Zeusin, themeluesin tonë vizionar, në X, ku ai ndan pikëpamjet, përditësime dhe mendimet e tij mbi misionin tonë. Bashkohuni në bisedë, bëni pyetje dhe mbeteni të lidhur me udhëheqësin tonë frymëzues ndërsa nisim këtë udhëtim emocionues së bashku.",
+      "button": "Ndiq Zeusin"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Leja e kamerës",
       "description": "Për të vazhduar, ju lutem lejoni qasjen në kamerë.",
       "action": "Lejo qasjen"
+    },
+    "selfie_guidelines": {
+      "title": "Udhëzime për Selfie",
+      "instruction": "Para se të vazhdoni, ju lutemi ndiqni këto udhëzime për një verifikim të suksesshëm të fytyrës KYC:",
+      "check_1": "✅ Sigurohuni që keni një foto të cilësisë së lartë.",
+      "check_2": "✅ Sigurohuni që keni ndriçim të mirë.",
+      "check_3": "✅ Sigurohuni që keni sfond të pastër.",
+      "check_4": "✅ Pa foto të errëta.",
+      "check_5": "✅ Pa foto të mbyllura ose të mjegullta.",
+      "check_6": "✅ Pastrojeni lentinë e kamerës.",
+      "warning": "Nëse nuk ndiqni udhëzimet e mësipërme, mund të humbisni qasjen në llogarinë tuaj.",
+      "confirmation": "Unë konfirmoj se do të ndjek kriteret.",
+      "popup_title": "Konfirmim",
+      "popup_body": "A e konfirmoni se keni ndjekur të gjitha udhëzimet për selfie?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë."
+      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë.",
+      "description": "Vendosni pseudonimin e miqës që ju ftoi."
     },
     "home": {
       "pioneer": {
-        "description": "Ndjekni progresin tuaj dhe statusin global"
+        "description": "Ndjekni progresin tuaj dhe statusin global",
+        "referrals": "MIQTË"
       },
       "tasks": {
         "invite_friends": {
           "description": "Rritni ekipin tuaj dhe ndërtoni një komunitet"
         }
+      },
+      "team": {
+        "title": "Miqtë",
+        "view_team": "shiko miqtë"
+      },
+      "roadmap": {
+        "button_subtitle": "Merrni më shumë informacion mbi vizionin tonë të ardhshëm në Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Merrni një shikim paraprak në aplikacionin tonë Mainnet të ardhshëm dhe veçoritë unike të tij që do të lansohen në fund të vitit 2024."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Bilanci juaj aktual përditësohet çdo orë dhe shfaqet këtu. Përfshin të ardhurat tuaja të drejtpërdrejta dhe të bllokuara."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Miqtë tuaj duhet të përdorin këtë pseudonim kur bashkohen me [[:ice]]."
+    },
+    "users": {
+      "team": "Miqtë"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentalisht nuk keni miq!"
+      },
+      "contacts": {
+        "empty_description": "Sinkronizoni kontaktet tuaja dhe shikoni kush është već në [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "Adresa BNB Smart Chain",
+    "enter_address_title": "Futni adresën tuaj\nBNB Smart Chain",
+    "enter_address_description": "Gjatë Fazës Së Parë, tokenat ICE do të lansohen në blockchainin BNB Smart Chain. Pas lëshimit të Mainnet, tokenat mund të ndërrohen nga BNB Smart Chain në blockchainin Ice Open Network (ION).",
+    "enter_address_confirmation": "A jeni të sigurt se adresa juaj BNB Smart Chain është e saktë?",
+    "validators_warning_title": "Konfirmo Adresën",
+    "validators_warning_text": "Ju lutem vini re: Personat që kanë shtuar një adresë BNB Smart Chain në llogarinë e tyre nuk janë të kualifikuar për të bërë një prej 300 validatoreve kryesorë, sipas specifikimeve në whitepaper tonë për lëshimin e rrjetit kryesor.",
+    "walletDescription": "Ne rekomandojmë përdorimin e një xhepi me vetëmbrojtje si [[:bold]]Metamask[[/:bold]] ose [[:bold]]Trust Wallet[[/:bold]].\n\nJu lutemi sigurohuni që të kontrolloni dy herë adresën tuaj të xhepit për të siguruar që do të merrni distributën."
+  },
+  "social_kyc": {
+    "header": "Verifikimi",
+    "verify_with_title": "Verifikoni me {{method}}",
+    "select_method_step": {
+      "title": "Hapi KYC #2",
+      "description": "Verifikoni llogarinë tuaj me lehtësi duke përdorur profilin tuaj ekzistues X."
+    },
+    "instructions_step": {
+      "show_example": "Shfaq shembullin",
+      "example_title": "Shembulli i shpërndarjes",
+      "x": {
+        "1": "Hapni X dhe kërkoni llogarinë [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Gjeni postimin e fiksuar, i cili është postimi i parë në profil.",
+        "3": "❤️ Pëlqeni & 🔄 Shpërndani atë me [[:bold]]Citat[[/:bold]] duke përdorur tekstin [[:bold]]PËRFAKS[[/:bold]] më poshtë.",
+        "pop_up": {
+          "title": "Konfirmimi",
+          "description": "A keni pëlqyer postimin e fiksuar dhe e keni shpërndarë me një citat duke përdorur tekstin e përcaktuar në shembull?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Trokit për të kopjuar tekstin",
+        "copied": "Kopjuar"
+      }
+    },
+    "verification_step": {
+      "title": "Konfirmimi",
+      "description": "Për të përfunduar verifikimin, ngjitni lidhjen për postimin ku keni kryer hapat e mëparshëm. Sigurohuni që lidhja është e saktë.",
+      "placeholder": "Ngjitni lidhjen",
+      "instructions_step": {
+        "4": "Ngjitni lidhjen për postimin tuaj më poshtë. 👇"
+      },
+      "action": {
+        "verify": "Verifikoni",
+        "wait": "Ju lutem prisni",
+        "countdown": "{{countdown}} sekonda mbetur"
+      },
+      "pop_up": {
+        "title": "Lidhja e pavlefshme",
+        "description": "Sigurohuni që keni kopjuar lidhjen e duhur.\n\n[[:bold]]Shembull:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Numri i përpjekjeve të mbetura: {{count}}",
+      "success": {
+        "title": "Verifikimi Përfundoi",
+        "description": "Urime, keni përfunduar me sukses Hapin KYC #2. Tani jeni verifikuar."
+      },
+      "error_try_again": {
+        "title": "Gabim në Verifikim",
+        "description": "Sigurohuni që keni shpërndarë postimin e saktë, duke përdorur tekstin e dhënë, dhe që postimi është i disponueshëm në mënyrë publike."
+      },
+      "error_try_later": {
+        "title": "Gabim në Verifikim",
+        "description": "Ne nuk mund të përfundojmë verifikimin. Mund të provoni përsëri në 7 ditë."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribucioni i BNB Smart Chain",
+      "description": "Merrni monedhat ICE të BNB Smart Chain duke verifikuar llogarinë tuaj lehtësisht duke përdorur profilin X ekzistues."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klikoni në lidhjen [[:bold]]këtu[[/:bold]] për të hapur drejtpërdrejt postimin tonë X.",
+        "pop_up": {
+          "description": "Përcjellni udhëzimet dhe sigurohuni që keni klikuar në lidhjen në hapin e parë për të hapur drejtpërdrejt postimin tonë X.",
+          "description2": "A ju pëlqeu postimi i saktë dhe e postuat atë përsëri me një citat duke përdorur tekstin e saktë të dhënë, ashtu si në shembull?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani jeni të kualifikuar për distribucionin e BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Konfirmimi i Llogarisë",
+    "description": "Për të verifikuar identitetin e llogarisë suaj dhe lidhur sigurtësisht adresën tuaj të emailit, ju lutemi sigurohuni që keni kaluar me sukses testin e emocioneve gjatë procesit të autentikimit.",
+    "description2": "Ky hap na ndihmon të sigurojmë sigurinë dhe autenticitetin e llogarisë suaj. Ju falenderojmë për bashkëpunimin!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "Në Ice, besojmë në nxitjen e një komuniteti të anëtarëve aktivë dhe të informuar. Misioni ynë është të sigurojmë që monedhat Ice të ndahen për ata që janë vërtetë të angazhuar dhe të pajisur me qëllimet tona.",
+      "community_engagement": {
+        "title": "🙌 Angazhimi aktiv në komunitet",
+        "description": "Angazhimi juaj në Ekosistemin Ice ndikon drejtpërdrejt në aftësitë tuaja të minierës:",
+        "point1": "Mbanini të azhornuar: Angazhohuni me artikujt tona të lajmeve dhe videot.",
+        "point2": "Merrni pjesë aktivisht: Bashkohuni në Programin e Zhvillimit Personal dhe sesionet live në YouTube ose Twitter Space.",
+        "point3": "Ndërkime sociale: Rrisni praninë tuaj duke dhënë like, ndarë, ndjekur, ose postuar rreth Ice.",
+        "bottom_description": "Sa më shumë të angazhoheni, aq më e larta është vlerësimi pozitiv i ndërveprimit tuaj, duke ju lejuar të kaloni procesin KYC."
+      },
+      "terms_privacy": "Unë kuptoj dhe pajtohem me [[:link]]Kushtet dhe Kushtet e Privatësisë[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kontrolli i Dijes",
+        "point2": "Për të kaluar quiz-in, duhet të përgjigjeni saktësisht të paktën 18 pyetje.",
+        "point3": "Quiz-i i dështuar tregon nevojën për angazhim më të thellë me materialet tona.",
+        "point4": "Ka një kufi kohor për të kryer quiz-in. Mund të shihni sa ditë ju mbeten deri në datën e skadimit në faqen tuaj të fillimit në seksionin e quiz-it.",
+        "point5": "Keni në dispozicion 3 tentativa para datës së skadimit. Nëse nuk e kryeni quiz-in 3 herë ose datës së skadimit i ka kaluar afati, nuk do të mund të minoni më, dhe llogaria juaj do të ndëshkohet.",
+        "point6": "📚 Te gjitha informacionet për këtë quiz mund të lexohen [[:link]]këtu[[/:link]].",
+        "description": "Për të siguruar që komuniteti ynë është i informuar mirë dhe i pajisur me qëllimet tona:",
+        "point1": "Ju do t'ju prezantohen 21 pyetje të nxjerra nga burimet tona të pasura."
+      },
+      "why_quiz": {
+        "title": "💡 Pse Quiz-i?",
+        "description": "Angazhimi ynë për dijeninë dhe kuptimin është në krye të komunitetit tonë. Me anë të quiz-it tonë, synojmë të sigurojmë që Ice të arrijë në duart e duhura, atyre që vërtet e kuptojnë dhe përputhen me vizionin e projektit tonë."
+      }
+    },
+    "quiz_failure": {
+      "title": "Testi dështoi",
+      "description": "Ju nuk keni përgjigjur saktë më shumë se 18 pyetje ose ka skaduar koha, kështu që nuk mund të kaloni testin.",
+      "check_faq": "Për të përgjigjur saktë herën tjetër, ju sugjerojmë të njiheni me bazën tonë të njohurive dhe pyetjet e shpeshta."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pyetja {{current}} nga {{total}}",
+      "time_over": "⌛️ Koha ka përfunduar",
+      "correct_answers": "Përgjigjet e sakta",
+      "wrong_answers": "Përgjigjet e gabuara"
+    },
+    "confirmation_popup": {
+      "title": "Konfirmim",
+      "start_description": "A jeni të sigurt që doni të filloni quiz-in?",
+      "cancel_description": "Duke kaluar quiz-in, do të përdorni një nga 3 tentativat e disponueshme. A jeni të sigurt se doni ta kalojini quiz-in tani?"
+    },
+    "quiz_success": {
+      "title": "Verifikimi i Përfunduar",
+      "description": "Urime, keni përfunduar me sukses KYC tuaj. Përgjigjet tuaja të vazhdueshme të sakta kanë provuar përkushtimin dhe njohuritë tuaja. Tani jeni të verifikuar."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Minieratë e Çaktivizuar",
+      "description": "Aksesimi juaj në minieratë është çaktivizuar për shkak të tre dështimeve të radhës në quiz ose skadimit të kohës të caktuar, sipas kërkesave të procesit tonë KYC."
+    },
+    "action": "Përfundoni quiz-in",
+    "reminder": "Ju lutemi vini re se duhet të përfundoni ankandën për të qenë në gjendje të vazhdoni minierën dhe të shmangni goditjen.",
+    "days_left": "Ditë të mbetura: {{days}}",
+    "retries_left": "Përpjekjet e mbetura: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Shpërndarja e BNB Smart Chain",
+      "description": "Mbani përmbajtjen tuaj mujore për të drejtuarit e monedhave ICE të BNB Smart Chain duke mbështetur aktivisht njoftimet më të reja të Bursës në X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani keni të drejtë të mbani statusin tuaj mujor të shpërndarjes së BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Kalo"
   }
 }

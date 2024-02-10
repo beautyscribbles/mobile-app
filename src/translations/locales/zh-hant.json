@@ -68,7 +68,13 @@
     "learn_more": "了解更多",
     "back_to_login": "返回登入",
     "follow_us": "追蹤我們",
-    "subscribe": "訂閱"
+    "subscribe": "訂閱",
+    "not_sure": "不確定",
+    "confirm_address": "確認地址",
+    "remove_address": "刪除地址",
+    "start": "開始",
+    "faq": "常見問題",
+    "knowledge_base": "知識庫"
   },
   "team": {
     "contacts_tab": "聯絡人",
@@ -190,7 +196,12 @@
     "weak_password": "低強度密碼。",
     "wrong_password": "密碼錯誤。",
     "no_camera_permissions": "未授予相機權限",
-    "no_library_permissions": "未授予資料庫權限"
+    "no_library_permissions": "未授予資料庫權限",
+    "blockchain_address_already_taken": "地址已被使用",
+    "invalid_blockchain_address": "無效的區塊鏈地址",
+    "address_not_eoa": "地址不是 EOA",
+    "same_phone_error": "您無法使用相同的號碼。",
+    "unable_to_validate_bsc_addr_eoa": "無法驗證EOA地址"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "每連續簽到 6 天，將可休息一天。",
       "streak": "連續日數",
       "days_off": "休息日數"
+    },
+    "roadmap": {
+      "title": "我們的願景",
+      "button_title": "白皮書",
+      "button_subtitle": "在Ice了解更多關於我們的願景。"
+    },
+    "join_mainnet": {
+      "title": "加入去中心化的未來",
+      "subtitle": "提前了解我們即將推出的 Mainnet 應用程序及其獨特功能。"
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain地址",
+      "subtitle": "請在此處輸入您的BSC地址。"
+    },
+    "verified_tooltip": {
+      "title": "KYC 已驗證"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "立刻預先質押！",
     "balance_label": "質押餘額",
     "confirm_title": "確認預先質押",
-    "confirm_subtitle": "確定要預先質押您的貨幣嗎？ 一旦確認便無法撤銷。"
+    "confirm_subtitle": "確定要預先質押您的貨幣嗎？ 一旦確認便無法撤銷。",
+    "remove_pre_staking": "移除預先賭注"
   },
   "stats": {
     "header_title": "數據",
@@ -532,7 +560,14 @@
     "top_miners": "使用者排名",
     "top_countries": "國家排名",
     "online_miners": "線上使用者",
-    "detailed_information": "詳細資訊"
+    "detailed_information": "詳細資訊",
+    "total_coins": "總硬幣數量",
+    "filter": {
+      "total": "總量",
+      "on_app": "在應用程式上可用",
+      "pre_staked": "預先抵押",
+      "on_blockchain": "在區塊鏈上"
+    }
   },
   "update_required": {
     "title": "請進行更新",
@@ -579,9 +614,11 @@
     "wallet": "錢包",
     "blockchain": "區域鏈",
     "wallet_update_interval": "每小時更新",
-    "blockchain_update_interval": "每 24 小時更新",
+    "blockchain_update_interval": "每28天更新一次",
     "list_end_label": "這是餘額歷史的最後一條項目。",
-    "no_data": "指定期間內沒有可以顯示的資料。"
+    "no_data": "指定期間內沒有可以顯示的資料。",
+    "you": "你",
+    "contribution": "貢獻"
   },
   "pop_up": {
     "update_now": "立即更新",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "您將永遠失去您的 [[:amount]] 幣。 確定要繼續嗎？",
     "resurrection_yes_confirm_message": "您只能復活一次！ 確定要繼續嗎？ [[:amount]] 幣將於接下來一小時內歸還至您的餘額。",
     "delete_account_confirmation_title": "確認刪除",
-    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 Ice 餘額。 要繼續進行嗎？"
+    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 Ice 餘額。 要繼續進行嗎？",
+    "registration_update_title": "註冊更新",
+    "registration_update_text": "我們暫停使用電話號碼創建新帳戶。為了繼續，您需要選擇電子郵件地址或透過社交網絡登錄。",
+    "link_email_title": "鏈接您的電子郵件",
+    "link_email_text": "我們暫停使用電話號碼登錄。請鏈接您的電子郵件地址並確認以便能夠登錄。",
+    "account_error_title": "帳戶錯誤",
+    "account_error_text": "我們暫停使用電話號碼登錄。很抱歉，您的帳戶未通過KYC驗證，無法恢復。",
+    "login_via_email_title": "請使用電子郵件登錄",
+    "login_via_email_text": "我們暫停使用電話號碼登錄。請使用與您的帳戶相關聯的電子郵件地址登錄。",
+    "email_in_use_title": "電子郵件已被使用",
+    "email_in_use_text_part1": "您正嘗試鏈接的電子郵件地址已被使用。",
+    "email_in_use_text_part2": "如果這是您的電子郵件地址，請先使用它登錄，完成註冊流程並刪除該帳戶以使電子郵件可用，然後返回使用電話號碼登錄以完成鏈接過程。",
+    "successfully_linked_title": "鏈接成功！",
+    "successfully_linked_text": "電子郵件已成功鏈接到您的帳戶。"
   },
   "periods": {
     "3_days": "3 天",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "確認電話",
     "modify_description": "請確認國家代碼並輸入電話號碼。",
-    "button": "確認國家與電話",
-    "same_phone_error": "您無法使用相同的號碼。"
+    "button": "確認國家與電話"
   },
   "date_select": {
     "title": "選擇日期"
@@ -919,6 +968,19 @@
       "title": "加入我們的 Instagram",
       "description_part1": "在 Instagram 關注我們來得知最新消息，並與其他同樣對 Ice 充滿熱情的使用者保持聯繫。",
       "description_part2": "此外，您還能在第一時間知道我們將推出的新功能與促銷。"
+    },
+    "reddit": {
+      "title": "加入我們在Reddit上",
+      "description": "在Reddit上探索Ice社區，那裡志同道合的人聚在一起分享他們的想法。\n\n加入討論，提出問題，並探索有關Ice挖掘、功能等引人入勝的討論。"
+    },
+    "discord": {
+      "title": "加入我們在Discord上",
+      "description": "加入我們充滿活力的Discord社區，深入討論和Ice相關的見解。\n\n參與活躍的對話，了解與Ice相關的新聞，並成為一個與您共享激情的社區的一部分。"
+    },
+    "ice_founder_twitter": {
+      "title": "在X上關注Zeus",
+      "description": "在X上關注Zeus，我們的有遠見的創始人，在那裡他分享關於我們使命的見解、更新和想法。加入對話，提問問題，並與我們的鼓舞人心的領袖保持聯繫，當我們一起踏上這段令人興奮的旅程時。",
+      "button": "關注Zeus"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "相機權限",
       "description": "請允許訪問相機以繼續。",
       "action": "允許訪問"
+    },
+    "selfie_guidelines": {
+      "title": "自拍指南",
+      "instruction": "在繼續之前，請遵循以下自拍 KYC 成功認證的指南：",
+      "check_1": "✅ 確保您有高品質的照片。",
+      "check_2": "✅ 有足夠的照明。",
+      "check_3": "✅ 有乾淨的背景。",
+      "check_4": "✅ 沒有暗的照片。",
+      "check_5": "✅ 沒有模糊或有霧的照片。",
+      "check_6": "✅ 清潔相機鏡頭。",
+      "warning": "如果您不遵循上述指南，您可能會失去訪問您的帳戶的權利。",
+      "confirmation": "我確認我將遵循這些標準。",
+      "popup_title": "確認",
+      "popup_body": "您確認您已經遵循了所有自拍指南嗎？"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "請確保您輸入正確的暱稱。"
+      "dontHaveInvitationCode": "請確保您輸入正確的暱稱。",
+      "description": "輸入邀請您的朋友的暱稱。"
     },
     "home": {
       "pioneer": {
-        "description": "追蹤您的進度和全球狀態"
+        "description": "追蹤您的進度和全球狀態",
+        "referrals": "朋友"
       },
       "tasks": {
         "invite_friends": {
           "description": "發展您的團隊並建立社群"
         }
+      },
+      "team": {
+        "title": "朋友",
+        "view_team": "查看朋友"
+      },
+      "roadmap": {
+        "button_subtitle": "了解更多有關我們在 Ice 未來願景的資訊。"
+      },
+      "join_mainnet": {
+        "subtitle": "提前瞭解我們即將推出的 Mainnet 應用程式及其獨特功能，將於 2024 年底發布。"
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "您的當前餘額每小時更新一次，並在此顯示。它包括您的直接收益和质押收益。"
         }
       }
+    },
+    "claimUsername": {
+      "description": "您的朋友加入 [[:ice]] 時必須使用此暱稱。"
+    },
+    "users": {
+      "team": "朋友"
+    },
+    "team": {
+      "empty": {
+        "team": "目前您沒有朋友！"
+      },
+      "contacts": {
+        "empty_description": "同步您的聯絡人並查看誰已經在 [[:ice]] 上。"
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain地址",
+    "enter_address_title": "在此處輸入您的\nBNB Smart Chain地址",
+    "enter_address_description": "在第一階段期間，ICE代幣將在BNB Smart Chain區塊鏈上發布。在Mainnet啟動後，您可以將代幣從BNB Smart Chain交換到Ice Open Network（ION）區塊鏈。",
+    "enter_address_confirmation": "您確定您的BNB Smart Chain地址是正確的嗎？",
+    "validators_warning_title": "確認地址",
+    "validators_warning_text": "請注意：將BNB Smart Chain地址添加到其帳戶的個人不有資格成為我們白皮書中主網啟動的300個主驗證者之一。",
+    "walletDescription": "我們建議使用自我保管的錢包，例如 [[:bold]]Metamask[[/:bold]] 或 [[:bold]]Trust Wallet[[/:bold]]。\n\n請確保您檢查您的錢包地址兩次，以確保您將收到分發。"
+  },
+  "social_kyc": {
+    "header": "驗證",
+    "verify_with_title": "使用{{method}}驗證",
+    "select_method_step": {
+      "title": "KYC 步驟 #2",
+      "description": "使用您現有的 X 檔案輕鬆驗證您的帳戶。"
+    },
+    "instructions_step": {
+      "show_example": "顯示示例",
+      "example_title": "轉發示例",
+      "x": {
+        "1": "打開 X 並搜索 [[:bold]]@ice_blockchain[[/:bold]] 帳戶。",
+        "2": "找到固定的帖子，這是個人檔案上的第一篇帖子。",
+        "3": "❤️ 點贊 & 🔄 轉發，使用下面的[[:bold]]引用[[/:bold]]文本，確保文本[[:bold]]完全一致[[/:bold]]。",
+        "pop_up": {
+          "title": "確認",
+          "description": "您是否喜歡了固定的帖子並使用示例中提供的確切文本進行了轉發？"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "點擊複製文本",
+        "copied": "已複製"
+      }
+    },
+    "verification_step": {
+      "title": "確認",
+      "description": "為了完成您的驗證，請粘貼您完成前面步驟的帖子連結。確保連結正確。",
+      "placeholder": "粘貼連結",
+      "instructions_step": {
+        "4": "在下面粘貼您的帖子連結。👇"
+      },
+      "action": {
+        "verify": "驗證",
+        "wait": "請稍候",
+        "countdown": "剩餘時間：{{countdown}}秒"
+      },
+      "pop_up": {
+        "title": "無效連結",
+        "description": "請確保您複製了正確的連結。\n\n[[:bold]]示例：[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "剩餘嘗試次數：{{count}}",
+      "success": {
+        "title": "驗證完成",
+        "description": "恭喜，您已成功完成 KYC 步驟 #2。您現在已驗證。"
+      },
+      "error_try_again": {
+        "title": "驗證錯誤",
+        "description": "請確保您已正確轉發了帖子，使用了提供的文本，並且帖子是公開可見的。"
+      },
+      "error_try_later": {
+        "title": "驗證錯誤",
+        "description": "我們無法完成驗證。您可以在7天後再次嘗試。"
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain分發",
+      "description": "通過使用您現有的X個人檔案輕鬆驗證您的帳戶，接收您在BNB Smart Chain上的ICE代幣。"
+    },
+    "instructions_step": {
+      "x": {
+        "1": "點擊[[:bold]]這裡[[/:bold]]的鏈接，直接打開我們的X帖子。",
+        "pop_up": {
+          "description": "遵循說明，確保您在第一步中單擊了鏈接以直接打開我們的X帖子。",
+          "description2": "您是否喜歡正確的帖子，並使用提供的精確文本進行引用再次發布它，就像示例中那樣？"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "恭喜，您已成功完成驗證。現在，您有資格參與BNB Smart Chain分發。"
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "帳戶確認",
+    "description": "為了驗證您的帳戶身份並安全地鏈接您的電子郵件地址，請確保您在身份驗證過程中成功通過了我們的情感檢查。",
+    "description2": "這一步幫助我們確保您的帳戶的安全性和真實性。感謝您的合作！"
+  },
+  "quiz": {
+    "title": "測驗",
+    "intro": {
+      "description": "在Ice，我們堅信要培養一個充滿活力和知情的社區。我們的使命是確保Ice幣分發給那些真正參與並與我們的願景相符的人。",
+      "community_engagement": {
+        "title": "🙌 積極社區參與",
+        "description": "您在Ice生態系統內的參與直接影響著您的挖掘能力：",
+        "point1": "保持更新：參與我們的新聞文章和視頻。",
+        "point2": "積極參與：加入我們的個人發展計劃以及YouTube或Twitter Space上的直播會話。",
+        "point3": "社交互動：通過點贊、分享、關注或發布關於Ice的內容來增加您的存在感。",
+        "bottom_description": "您參與越積極，您的積極互動得分越高，使您能夠通過KYC流程。"
+      },
+      "terms_privacy": "我理解並同意[[:link]]使用條款和隱私政策[[/:link]]。",
+      "knowledge_check": {
+        "title": "🧠 知識測試",
+        "point2": "要通過測驗，您需要至少正確回答 18 個問題。",
+        "point3": "測驗不及格表示您需要進一步深入研究我們的材料。",
+        "point4": "測驗有一個完成期限。您可以在測驗部分的首頁上看到距離到期日還有多少天。",
+        "point5": "在到期日期之前，您有 3 次重試的機會。如果您在測驗中連續失敗 3 次或到期日期過了，您將無法再進行挖礦，您的帳戶將被削減。",
+        "point6": "📚 關於此測驗的所有信息都可以在這裡閱讀 [[:link]]這裡[[/:link]]。",
+        "description": "為了確保我們的社區充分了解並與我們的願景一致：",
+        "point1": "您將收到21個問題，這些問題源自我們的全面資源。"
+      },
+      "why_quiz": {
+        "title": "💡 為什麼要測驗？",
+        "description": "我們對知識和理解的承諾位於我們社區的前沿。通過我們的測驗，我們旨在確保 Ice 落入合適的手中，那些真正理解並與我們項目的願景相一致的人手中。"
+      }
+    },
+    "quiz_failure": {
+      "title": "測試未通過",
+      "description": "您未能正確回答超過18個問題或時間已到期，因此您無法通過測驗。",
+      "check_faq": "為了下次正確回答，我們建議您熟悉我們的知識庫和常見問題解答。"
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "問題{{current}} / {{total}}",
+      "time_over": "⌛️ 時間已結束",
+      "correct_answers": "正確答案",
+      "wrong_answers": "錯誤答案"
+    },
+    "confirmation_popup": {
+      "title": "確認",
+      "start_description": "您確定要開始測試嗎？",
+      "cancel_description": "跳過測驗將使用您可用的 3 次重試之一。您確定要立即跳過測驗嗎？"
+    },
+    "quiz_success": {
+      "title": "驗證完成",
+      "description": "恭喜，您已成功完成KYC。您持續的正確回答證明了您的奉獻和知識。您現在已經驗證。"
+    },
+    "mining_disabled_popup": {
+      "title": "❌ 停用挖礦",
+      "description": "由於連續三次測驗失敗或到期時間到期，根據我們的 KYC 流程要求，已停用您的挖礦訪問權限。"
+    },
+    "action": "完成測驗",
+    "reminder": "请注意，您需要完成测验才能继续挖矿并避免惩罚。",
+    "days_left": "剩餘天數：{{days}}",
+    "retries_left": "剩余尝试次数：{{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB智能鏈分配",
+      "description": "通過積極支持X上最新的交易所公告，保持您每月BNB智能鏈ICE幣分配資格。"
+    },
+    "results_step": {
+      "success": {
+        "description": "恭喜您成功完成了您的驗證。現在您有資格保持每月BNB智能鏈分配狀態。"
+      }
+    }
+  },
+  "buttons": {
+    "skip": "跳過"
   }
 }

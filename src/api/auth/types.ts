@@ -8,10 +8,6 @@ type AuthCodeConfig =
       emailCodeAuthBlackList: string[];
     };
 
-type FaceAuthConfig = {
-  'face-auth'?: {enabled: boolean};
-};
-
 type TeamConfig = {
   team?: {enabled: boolean};
 };
@@ -20,12 +16,22 @@ type AchievementsConfig = {
   achievements?: {enabled: boolean};
 };
 
-type FaceDetectionConfig = {
-  'face-detection'?: {enabled: boolean};
+type DistributionKyc = {
+  'social2-kyc': {
+    'x-post-link'?: string;
+  };
 };
 
-export type AuthConfig = AuthCodeConfig &
-  FaceAuthConfig &
+type DynamicDistributionKyc = {
+  'dynamic-distribution-kyc': {
+    step: number;
+    xPostLink?: string;
+    xPostExample?: string;
+  }[];
+};
+
+export type FeatureToggleConfig = AuthCodeConfig &
   TeamConfig &
   AchievementsConfig &
-  FaceDetectionConfig;
+  DistributionKyc &
+  DynamicDistributionKyc;

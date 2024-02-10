@@ -6,8 +6,12 @@ import {
   FaceAuthKycNumber,
   MiningSummary,
   PreStakingSummary,
+  QuizKycStep,
   RankingSummary,
+  SocialKycStepNumber,
+  TotalCoins,
 } from '@api/tokenomics/types';
+import {StatsPeriod} from '@store/modules/Stats/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const GET_MINING_SUMMARY = createAction('GET_MINING_SUMMARY', {
@@ -55,7 +59,7 @@ const START_MINING_SESSION = createAction('START_MINING_SESSION', {
   START: (params?: {
     resurrect?: boolean;
     tapToMineActionType?: 'Extended' | 'Default';
-    skipKYCStep?: FaceAuthKycNumber;
+    skipKYCStep?: FaceAuthKycNumber | SocialKycStepNumber | QuizKycStep;
   }) => params,
   SUCCESS: (miningSummary: MiningSummary | null) => ({miningSummary}),
   FAILED: (errorMessage: string) => ({errorMessage}),
@@ -74,6 +78,15 @@ const CLAIM_DAILY_BONUS = createAction('CLAIM_DAILY_BONUS', {
   STATE: true,
 });
 
+const GET_TOTAL_COINS_STATS = createAction('GET_TOTAL_COINS_STATS', {
+  START: (statsPeriod: StatsPeriod) => ({statsPeriod}),
+  SUCCESS: (statsPeriod: StatsPeriod, totalCoins: TotalCoins) => ({
+    statsPeriod,
+    totalCoins,
+  }),
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
+
 export const TokenomicsActions = Object.freeze({
   GET_MINING_SUMMARY,
   GET_BALANCE_SUMMARY,
@@ -83,4 +96,5 @@ export const TokenomicsActions = Object.freeze({
   START_MINING_SESSION,
   START_OR_UPDATE_PRE_STAKING,
   CLAIM_DAILY_BONUS,
+  GET_TOTAL_COINS_STATS,
 });

@@ -21,6 +21,8 @@ type Props = {
   topMargin?: number;
   showBackButton?: boolean;
   onGoBack?: () => void;
+  preventDefaultAction?: boolean;
+  children?: ReactNode;
 };
 
 export const HEADER_HEIGHT = rem(56);
@@ -41,6 +43,8 @@ export const Header = memo(
     topMargin,
     showBackButton = true,
     onGoBack,
+    preventDefaultAction,
+    children,
   }: Props) => {
     const {top: topNotchHeight} = useSafeAreaInsets();
     const topInset = topMargin ?? topNotchHeight;
@@ -77,12 +81,14 @@ export const Header = memo(
                 color={color}
                 label={backLabel}
                 onGoBack={onGoBack}
+                preventDefaultAction={preventDefaultAction}
               />
             )}
             {!!renderRightButtons && (
               <View style={styles.rightButtons}>{renderRightButtons()}</View>
             )}
           </View>
+          {children}
         </Animated.View>
       </>
     );

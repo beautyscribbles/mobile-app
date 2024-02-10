@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {StatsType} from '@components/BarGraph/components/BarLabel';
 import {HorizontalBar} from '@components/BarGraph/components/HorizontalBar';
 import {BarGraphData} from '@components/BarGraph/types';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
@@ -11,6 +12,7 @@ import {SharedValue, useSharedValue, withTiming} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 type Props = {
+  type: StatsType;
   data: BarGraphData[];
 };
 
@@ -27,7 +29,7 @@ export const getBarGraphHeight = (numberOfRows: number) => {
 export function getValueData(data: BarGraphData[]) {
   const maxValue = data.length ? Math.max(...data.map(({value}) => value)) : 0;
   const stepValue = Math.ceil(maxValue / NUMBER_OF_STEPS_X);
-  const numberOfSteps = Math.min(maxValue, NUMBER_OF_STEPS_X);
+  const numberOfSteps = Math.ceil(Math.min(maxValue, NUMBER_OF_STEPS_X));
   const lastXValue = stepValue * numberOfSteps;
 
   return {stepValue, lastXValue, numberOfSteps};
@@ -64,6 +66,7 @@ type BarItemProps = {
   maxValue: number;
   sharedValue: SharedValue<number>;
   doAnimate: boolean;
+  type: StatsType;
 };
 
 export const BarItem = memo(
@@ -73,6 +76,7 @@ export const BarItem = memo(
     sharedValue,
     maxValue,
     doAnimate,
+    type,
   }: BarItemProps) => {
     return (
       <View style={styles.row} key={`${label}${value}`}>
@@ -83,13 +87,14 @@ export const BarItem = memo(
           value={value}
           sharedValue={sharedValue}
           doAnimate={doAnimate}
+          type={type}
         />
       </View>
     );
   },
 );
 
-export const BarGraph = memo(({data}: Props) => {
+export const BarGraph = memo(({data, type}: Props) => {
   const {stepValue, lastXValue, numberOfSteps} = useMemo(
     () => getValueData(data),
     [data],
@@ -125,6 +130,7 @@ export const BarGraph = memo(({data}: Props) => {
           maxValue={lastXValue}
           sharedValue={sharedValue}
           doAnimate={true}
+          type={type}
         />
       ))}
       <BarFooter

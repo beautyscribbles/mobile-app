@@ -73,6 +73,10 @@ export type User = {
     So if now > `repeatableKYCSteps[xxx]` you retry that step
    */
   repeatableKYCSteps?: Record<string, string>;
+
+  miningBlockchainAccountAddress?: string;
+
+  verified?: boolean | null;
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2' | 'TEAM';
@@ -100,10 +104,15 @@ export type RateData = {
   lastShowingDate?: string | null;
 };
 
+export type QuizData = {
+  quizTermsAccepted?: boolean | null;
+};
+
 export type ClientData = {
   registrationProcessFinalizedSteps?: RegistrationProcessFinalizedStep[];
   walkthroughProgress?: {[key in WalkthroughStepKey]?: WalkthroughStepProgress};
   miningStateTooltipSeen?: string[];
   phoneNumberIso?: string | null;
   rate?: RateData | null;
+  quiz?: QuizData | null;
 };

@@ -68,7 +68,13 @@
     "learn_more": "Tìm hiểu thêm",
     "back_to_login": "Quay lại đăng nhập",
     "follow_us": "Theo dõi chúng tôi",
-    "subscribe": "Đăng ký"
+    "subscribe": "Đăng ký",
+    "not_sure": "Không chắc chắn",
+    "confirm_address": "Xác nhận địa chỉ",
+    "remove_address": "Xóa địa chỉ",
+    "start": "Bắt đầu",
+    "faq": "Câu hỏi thường gặp",
+    "knowledge_base": "Cơ sở kiến thức"
   },
   "team": {
     "contacts_tab": "Danh bạ",
@@ -190,7 +196,12 @@
     "weak_password": "Mật khẩu yếu.",
     "wrong_password": "Sai mật khẩu.",
     "no_camera_permissions": "Chưa cấp quyền truy cập máy ảnh.",
-    "no_library_permissions": "Chưa cấp quyền truy cập thư viện."
+    "no_library_permissions": "Chưa cấp quyền truy cập thư viện.",
+    "blockchain_address_already_taken": "Địa chỉ đã được sử dụng",
+    "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
+    "address_not_eoa": "Địa chỉ không phải là EOA",
+    "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại.",
+    "unable_to_validate_bsc_addr_eoa": "Không thể xác minh địa chỉ EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Cứ 6 ngày liên tiếp thì bạn được nghỉ một ngày.",
       "streak": "CHUỖI",
       "days_off": "NGÀY NGHỈ"
+    },
+    "roadmap": {
+      "title": "TƯƠNG LAI CỦA CHÚNG TÔI",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Tìm hiểu thêm về tầm nhìn của chúng tôi tại Ice."
+    },
+    "join_mainnet": {
+      "title": "Tham gia Tương lai Phi tập trung",
+      "subtitle": "Nhận cái nhìn sơ bộ về ứng dụng Mainnet sắp tới của chúng tôi và các tính năng độc đáo của nó."
+    },
+    "bsc_address": {
+      "title": "Địa chỉ BNB Smart Chain",
+      "subtitle": "Vui lòng nhập địa chỉ BSC của bạn ở đây."
+    },
+    "verified_tooltip": {
+      "title": "KYC Đã Xác Minh"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Giữ và khóa sớm ngay!",
     "balance_label": "Số dư giữ và khóa",
     "confirm_title": "Xác nhận giữ và khóa sớm",
-    "confirm_subtitle": "Bạn có chắc chắn muốn giữ và khóa sớm số đồng tiền của mình không? Không thể hoàn tác sau khi bạn xác nhận."
+    "confirm_subtitle": "Bạn có chắc chắn muốn giữ và khóa sớm số đồng tiền của mình không? Không thể hoàn tác sau khi bạn xác nhận.",
+    "remove_pre_staking": "Xóa Trước Khi Stake"
   },
   "stats": {
     "header_title": "Thống kê",
@@ -532,7 +560,14 @@
     "top_miners": "Người dùng hàng đầu",
     "top_countries": "Các quốc gia hàng đầu",
     "online_miners": "Người dùng trực tuyến",
-    "detailed_information": "Thông tin chi tiết"
+    "detailed_information": "Thông tin chi tiết",
+    "total_coins": "Tổng số đồng tiền",
+    "filter": {
+      "total": "Tổng",
+      "on_app": "Có sẵn trên ứng dụng",
+      "pre_staked": "Trước khi gắn cờ",
+      "on_blockchain": "Trên Blockchain"
+    }
   },
   "update_required": {
     "title": "Vui lòng cập nhật",
@@ -579,9 +614,11 @@
     "wallet": "Ví",
     "blockchain": "Chuỗi khối",
     "wallet_update_interval": "được cập nhật mỗi giờ",
-    "blockchain_update_interval": "được cập nhật mỗi 24 giờ",
+    "blockchain_update_interval": "được cập nhật mỗi 28 ngày",
     "list_end_label": "đây là mục cuối cùng của lịch sử số dư.",
-    "no_data": "Không có dữ liệu để hiển thị trong khoảng thời gian được chỉ định."
+    "no_data": "Không có dữ liệu để hiển thị trong khoảng thời gian được chỉ định.",
+    "you": "bạn",
+    "contribution": "đóng góp"
   },
   "pop_up": {
     "update_now": "Cập nhật ngay",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Bạn sẽ mất vĩnh viễn [[:amount]] đồng. Bạn có chắc chắn muốn tiếp tục không?",
     "resurrection_yes_confirm_message": "Bạn chỉ có thể hồi sinh một lần! Bạn có chắc chắn muốn tiếp tục không? [[:amount]] đồng sẽ được hoàn trả vào số dư của bạn trong vòng một giờ tới.",
     "delete_account_confirmation_title": "Xác nhận xóa",
-    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư Ice của bạn. Bạn có muốn tiến hành không?"
+    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư Ice của bạn. Bạn có muốn tiến hành không?",
+    "registration_update_title": "Cập Nhật Đăng Ký",
+    "registration_update_text": "Chúng tôi đã tạm ngừng việc tạo tài khoản mới bằng số điện thoại. Để tiếp tục, bạn cần chọn địa chỉ email hoặc đăng nhập thông qua mạng xã hội.",
+    "link_email_title": "Liên Kết Địa Chỉ Email",
+    "link_email_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Vui lòng liên kết địa chỉ email của bạn và xác nhận để có thể đăng nhập.",
+    "account_error_title": "Lỗi Tài Khoản",
+    "account_error_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Xin lỗi, tài khoản của bạn không qua được KYC và không đủ điều kiện để khôi phục.",
+    "login_via_email_title": "Vui lòng Đăng Nhập Bằng Email",
+    "login_via_email_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Vui lòng sử dụng địa chỉ email được liên kết với tài khoản của bạn để đăng nhập.",
+    "email_in_use_title": "Email Đã Được Sử Dụng",
+    "email_in_use_text_part1": "Địa chỉ email bạn đang cố gắng liên kết đã được sử dụng.",
+    "email_in_use_text_part2": "Nếu đây là địa chỉ email của bạn, vui lòng đăng nhập trước với nó, hoàn tất quá trình đăng ký và xóa tài khoản đó để có sẵn địa chỉ email, sau đó quay lại đăng nhập bằng số điện thoại để hoàn thành quá trình liên kết.",
+    "successfully_linked_title": "Liên Kết Thành Công!",
+    "successfully_linked_text": "Địa chỉ email đã được liên kết thành công với tài khoản của bạn."
   },
   "periods": {
     "3_days": "3 ngày",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Xác nhận số điện thoại",
     "modify_description": "Vui lòng xác nhận mã quốc gia của bạn và nhập số điện thoại của bạn.",
-    "button": "Xác nhận quốc gia và số điện thoại",
-    "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại."
+    "button": "Xác nhận quốc gia và số điện thoại"
   },
   "date_select": {
     "title": "Chọn ngày"
@@ -919,6 +968,19 @@
       "title": "Tham gia với chúng tôi trên Instagram",
       "description_part1": "Theo dõi chúng tôi trên Instagram là một cách tuyệt vời để cập nhật thông tin và kết nối với những người dùng khác cũng đam mê Ice",
       "description_part2": "Ngoài ra, bạn sẽ là người đầu tiên được biết mọi tính năng hoặc chương trình khuyến mãi mới mà chúng tôi sắp tung ra."
+    },
+    "reddit": {
+      "title": "Tham gia cùng chúng tôi trên Reddit",
+      "description": "Khám phá cộng đồng Ice trên Reddit, nơi những người có quan điểm tương tự tụ họp để chia sẻ ý kiến của họ.\n\nTham gia cuộc trò chuyện, đặt câu hỏi và khám phá các cuộc thảo luận hấp dẫn về việc khai thác Ice, các tính năng và nhiều hơn nữa."
+    },
+    "discord": {
+      "title": "Tham gia cùng chúng tôi trên Discord",
+      "description": "Tham gia cộng đồng nhiệt huyết của chúng tôi trên Discord và đắm chìm vào cuộc trò chuyện và cái nhìn độc đáo về Ice.\n\nTham gia cuộc trò chuyện sống động, cập nhật tin tức liên quan đến Ice và trở thành một phần của một cộng đồng chia sẻ đam mê của bạn."
+    },
+    "ice_founder_twitter": {
+      "title": "Theo dõi Zeus trên X",
+      "description": "Theo dõi Zeus, người sáng lập tầm nhìn của chúng tôi, trên X, nơi ông chia sẻ thông tin, cập nhật và suy nghĩ về sứ mệnh của chúng tôi. Tham gia cuộc trò chuyện, đặt câu hỏi và duy trì liên lạc với người lãnh đạo truyền cảm hứng của chúng tôi khi chúng tôi bắt đầu hành trình thú vị này cùng nhau.",
+      "button": "Theo dõi Zeus"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Quyền truy cập máy ảnh",
       "description": "Để tiếp tục, vui lòng cho phép truy cập máy ảnh.",
       "action": "Cho phép truy cập"
+    },
+    "selfie_guidelines": {
+      "title": "Hướng dẫn Selfie",
+      "instruction": "Trước khi tiếp tục, hãy tuân thủ các hướng dẫn sau để thực hiện xác minh KYC bằng khuôn mặt thành công:",
+      "check_1": "✅ Đảm bảo bạn có hình ảnh chất lượng cao.",
+      "check_2": "✅ Có đủ ánh sáng.",
+      "check_3": "✅ Có nền sạch sẽ.",
+      "check_4": "✅ Không có hình ảnh tối.",
+      "check_5": "✅ Không có hình ảnh mờ hoặc sương mù.",
+      "check_6": "✅ Làm sạch ống kính máy ảnh.",
+      "warning": "Nếu bạn không tuân thủ các hướng dẫn trên, bạn có thể mất quyền truy cập vào tài khoản của mình.",
+      "confirmation": "Tôi xác nhận rằng tôi sẽ tuân theo các tiêu chí.",
+      "popup_title": "Xác nhận",
+      "popup_body": "Bạn có xác nhận rằng bạn đã tuân thủ tất cả các hướng dẫn về selfie không?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác."
+      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác.",
+      "description": "Nhập biệt danh của người bạn mời bạn."
     },
     "home": {
       "pioneer": {
-        "description": "Theo dõi tiến trình của bạn và tình trạng toàn cầu"
+        "description": "Theo dõi tiến trình của bạn và tình trạng toàn cầu",
+        "referrals": "BẠN BÈ"
       },
       "tasks": {
         "invite_friends": {
           "description": "Phát triển đội của bạn và xây dựng một cộng đồng"
         }
+      },
+      "team": {
+        "title": "Bạn bè",
+        "view_team": "xem bạn bè"
+      },
+      "roadmap": {
+        "button_subtitle": "Tìm hiểu thêm về tầm nhìn tương lai của chúng tôi tại Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Nhận cái nhìn sơ qua về ứng dụng Mainnet của chúng tôi sắp tới và những tính năng độc đáo của nó sẽ ra mắt vào cuối năm 2024."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và hiển thị ở đây. Nó bao gồm thu nhập trực tiếp và thu nhập đặt cược của bạn."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Bạn bè của bạn phải sử dụng biệt danh này khi tham gia [[:ice]]."
+    },
+    "users": {
+      "team": "Bạn bè"
+    },
+    "team": {
+      "empty": {
+        "team": "Hiện tại bạn không có bạn bè nào!"
+      },
+      "contacts": {
+        "empty_description": "Đồng bộ hóa danh bạ của bạn và xem ai đã có trong [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "Địa chỉ BNB Smart Chain",
+    "enter_address_title": "Nhập địa chỉ\ncủa bạn vào đây",
+    "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain BNB Smart Chain. Sau khi Mainnet được khởi chạy, token có thể được đổi từ BNB Smart Chain sang mạng lưới Ice Open Network (ION).",
+    "enter_address_confirmation": "Bạn có chắc rằng địa chỉ BNB Smart Chain của bạn là chính xác không?",
+    "validators_warning_title": "Xác Nhận Địa Chỉ",
+    "validators_warning_text": "Vui lòng lưu ý: Những người đã thêm địa chỉ BNB Smart Chain vào tài khoản của họ không được phép trở thành một trong 300 người xác minh chính theo whitepaper của chúng tôi cho sự ra mắt mạng chính.",
+    "walletDescription": "Chúng tôi khuyên bạn nên sử dụng một ví tự quản lý như [[:bold]]Metamask[[/:bold]] hoặc [[:bold]]Trust Wallet[[/:bold]].\n\nVui lòng đảm bảo bạn kiểm tra địa chỉ ví của mình hai lần để đảm bảo bạn sẽ nhận được phân phối."
+  },
+  "social_kyc": {
+    "header": "Xác minh",
+    "verify_with_title": "Xác minh bằng {{method}}",
+    "select_method_step": {
+      "title": "Bước KYC #2",
+      "description": "Xác minh tài khoản của bạn một cách dễ dàng bằng cách sử dụng hồ sơ X hiện có của bạn."
+    },
+    "instructions_step": {
+      "show_example": "Hiển thị ví dụ",
+      "example_title": "Ví dụ về bài đăng lại",
+      "x": {
+        "1": "Mở X và tìm kiếm tài khoản [[:bold]]@ice_blockchain[[/:bold]]",
+        "2": "Tìm bài đăng đã ghim, đó là bài đăng đầu tiên trên hồ sơ.",
+        "3": "❤️ Thích & 🔄 Đăng lại nó với [[:bold]]Trích dẫn[[/:bold]] bằng cách sử dụng văn bản [[:bold]]CHÍNH XÁC[[/:bold]] dưới đây.",
+        "pop_up": {
+          "title": "Xác nhận",
+          "description": "Bạn đã thích bài đăng đã ghim và đăng lại nó với một trích dẫn bằng văn bản chính xác được cung cấp, như trong ví dụ chưa?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Nhấn để sao chép văn bản",
+        "copied": "Đã sao chép"
+      }
+    },
+    "verification_step": {
+      "title": "Xác nhận",
+      "description": "Để hoàn tất quá trình xác minh của bạn, vui lòng dán liên kết đến bài đăng mà bạn đã thực hiện các bước trước đó. Đảm bảo liên kết là chính xác.",
+      "placeholder": "Dán liên kết",
+      "instructions_step": {
+        "4": "Dán liên kết của bài đăng của bạn ở dưới. 👇"
+      },
+      "action": {
+        "verify": "Xác minh",
+        "wait": "Vui lòng đợi",
+        "countdown": "{{countdown}} giây còn lại"
+      },
+      "pop_up": {
+        "title": "Liên kết Không Hợp Lệ",
+        "description": "Vui lòng đảm bảo bạn đã sao chép liên kết đúng.\n\n[[:bold]]Ví dụ:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Số lần thử còn lại: {{count}}",
+      "success": {
+        "title": "Xác minh Hoàn tất",
+        "description": "Chúc mừng bạn đã hoàn thành thành công Bước KYC #2. Bây giờ bạn đã được xác minh."
+      },
+      "error_try_again": {
+        "title": "Lỗi Xác minh",
+        "description": "Vui lòng đảm bảo bạn đã đăng lại bài đăng chính xác, sử dụng văn bản được cung cấp và bài đăng là công khai."
+      },
+      "error_try_later": {
+        "title": "Lỗi Xác minh",
+        "description": "Chúng tôi không thể hoàn thành quá trình xác minh. Bạn có thể thử lại sau 7 ngày."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Phân phối BNB Smart Chain",
+      "description": "Nhận các đồng ICE của bạn trên BNB Smart Chain bằng cách xác minh tài khoản của bạn dễ dàng bằng hồ sơ X hiện có."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Nhấn vào liên kết [[:bold]]tại đây[[/:bold]] để mở trực tiếp bài viết X của chúng tôi.",
+        "pop_up": {
+          "description": "Tuân theo hướng dẫn và đảm bảo bạn đã nhấn vào liên kết trong bước đầu tiên để mở trực tiếp bài viết X của chúng tôi.",
+          "description2": "Bạn có thích bài viết đúng và chia sẻ lại nó với dấu trích dẫn sử dụng văn bản chính xác được cung cấp, như trong ví dụ không?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Chúc mừng, bạn đã hoàn thành việc xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối BNB Smart Chain."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Xác Nhận Tài Khoản",
+    "description": "Để xác minh danh tính tài khoản của bạn và liên kết địa chỉ email của bạn một cách an toàn, vui lòng đảm bảo rằng bạn đã vượt qua thành công bước kiểm tra cảm xúc của chúng tôi trong quá trình xác thực.",
+    "description2": "Bước này giúp chúng tôi đảm bảo tính bảo mật và xác thực của tài khoản của bạn. Cảm ơn sự hợp tác của bạn!"
+  },
+  "quiz": {
+    "title": "Kiểm tra",
+    "intro": {
+      "description": "Tại Ice, chúng tôi tin tưởng trong việc tạo dựng một cộng đồng thành viên hoạt động và thông tin. Sứ mệnh của chúng tôi là đảm bảo rằng các đồng Ice được phân phối cho những người thực sự tham gia và chia sẻ tầm nhìn của chúng tôi.",
+      "community_engagement": {
+        "title": "🙌 Tương tác cộng đồng tích cực",
+        "description": "Sự tham gia của bạn trong Hệ sinh thái Ice ảnh hưởng trực tiếp đến khả năng đào của bạn:",
+        "point1": "Luôn cập nhật: Tương tác với bài viết tin tức và video của chúng tôi.",
+        "point2": "Tham gia tích cực: Tham gia vào Chương trình Phát triển Cá nhân của chúng tôi và các buổi trực tiếp trên YouTube hoặc Twitter Space.",
+        "point3": "Tương tác xã hội: Tăng sự hiện diện của bạn bằng cách thích, chia sẻ, theo dõi hoặc đăng bài về Ice.",
+        "bottom_description": "Bạn càng tương tác tích cực, điểm tương tác tích cực càng cao, giúp bạn đi qua quy trình KYC."
+      },
+      "terms_privacy": "Tôi hiểu và tôi đồng ý với [[:link]]Điều khoản và Điều kiện[[/:link]] cùng với Chính sách bảo mật[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kiểm tra kiến thức",
+        "point2": "Để đậu bài kiểm tra, bạn cần trả lời ít nhất 18 câu hỏi đúng.",
+        "point3": "Bài kiểm tra không đạt nghĩa là bạn cần tiếp tục nghiên cứu tài liệu của chúng tôi thêm.",
+        "point4": "Có giới hạn thời gian để hoàn thành bài kiểm tra. Bạn có thể xem còn bao nhiêu ngày trước ngày hết hạn trên trang chủ của bạn trong phần kiểm tra.",
+        "point5": "Bạn có 3 lần thử lại trước ngày hết hạn. Nếu bạn trượt bài kiểm tra 3 lần hoặc qua ngày hết hạn, bạn sẽ không thể đào tiền nữa và tài khoản của bạn sẽ bị giảm điểm.",
+        "point6": "📚 Tất cả thông tin về bài kiểm tra này có thể đọc tại đây [[:link]]ở đây[[/:link]].",
+        "description": "Để đảm bảo cộng đồng của chúng tôi được thông tin và đồng lòng với tầm nhìn của chúng tôi:",
+        "point1": "Bạn sẽ được đặt ra 21 câu hỏi dựa trên nguồn tài liệu phong phú của chúng tôi."
+      },
+      "why_quiz": {
+        "title": "💡 Tại sao lại có bài kiểm tra?",
+        "description": "Sự cam kết của chúng tôi đối với kiến thức và sự hiểu biết đang ở hàng đầu của cộng đồng của chúng tôi. Với bài kiểm tra, chúng tôi muốn đảm bảo rằng Ice sẽ đi vào tay đúng người, những người thực sự hiểu và đồng tình với tầm nhìn của dự án của chúng tôi."
+      }
+    },
+    "quiz_failure": {
+      "title": "Bài kiểm tra không đỗ",
+      "description": "Bạn không trả lời đúng hơn 18 câu hỏi hoặc hết thời gian, vì vậy bạn không thể qua bài kiểm tra.",
+      "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Câu hỏi {{current}} của {{total}}",
+      "time_over": "⌛️ Hết giờ",
+      "correct_answers": "Câu trả lời đúng",
+      "wrong_answers": "Câu trả lời sai"
+    },
+    "confirmation_popup": {
+      "title": "Xác nhận",
+      "start_description": "Bạn có chắc chắn muốn bắt đầu bài kiểm tra không?",
+      "cancel_description": "Bằng cách bỏ qua bài kiểm tra, bạn sẽ sử dụng một trong số 3 lần thử lại có sẵn. Bạn có chắc chắn muốn bỏ qua bài kiểm tra ngay bây giờ không?"
+    },
+    "quiz_success": {
+      "title": "Xác minh Hoàn tất",
+      "description": "Xin chúc mừng, bạn đã hoàn thành thành công KYC của bạn. Các câu trả lời chính xác liên tục của bạn đã chứng minh sự tận tụy và kiến thức của bạn. Bây giờ bạn đã được xác minh."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Không thể đào tiền",
+      "description": "Truy cập đào tiền của bạn đã bị vô hiệu hóa do ba lần thất bại liên tiếp trong bài kiểm tra hoặc hết thời gian quy định, theo quy trình KYC của chúng tôi."
+    },
+    "action": "Hoàn thành bài kiểm tra",
+    "reminder": "Vui lòng lưu ý rằng bạn cần hoàn thành bài kiểm tra để được tiếp tục đào và tránh bị trừ điểm.",
+    "days_left": "Số ngày còn lại: {{days}}",
+    "retries_left": "Các lần thử lại còn lại: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Phân phối BNB Smart Chain",
+      "description": "Duy trì đủ điều kiện hàng tháng để phân phối đồng ICE từ BNB Smart Chain bằng cách ủng hộ mạnh mẽ các thông báo trao đổi mới nhất trên X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Xin chúc mừng, bạn đã hoàn thành xác minh của bạn thành công. Bây giờ bạn đã đủ điều kiện duy trì trạng thái phân phối hàng tháng của BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Bỏ qua"
   }
 }

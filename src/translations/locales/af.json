@@ -68,7 +68,13 @@
     "learn_more": "Leer meer",
     "back_to_login": "Terug na Aanmelding",
     "follow_us": "Volg ons",
-    "subscribe": "Teken in"
+    "subscribe": "Teken in",
+    "not_sure": "Nie seker nie",
+    "confirm_address": "Bevestig adres",
+    "remove_address": "Verwyder adres",
+    "start": "Begin",
+    "faq": "FAQ",
+    "knowledge_base": "Kennisbank"
   },
   "team": {
     "contacts_tab": "Kontakte",
@@ -190,7 +196,12 @@
     "weak_password": "Swak wagwoord.",
     "wrong_password": "Verkeerde wagwoord.",
     "no_camera_permissions": "Kameratoestemmings word nie verleen nie.",
-    "no_library_permissions": "Biblioteektoestemmings word nie verleen nie."
+    "no_library_permissions": "Biblioteektoestemmings word nie verleen nie.",
+    "blockchain_address_already_taken": "Adres is reeds in gebruik",
+    "invalid_blockchain_address": "Ongeldige adres",
+    "address_not_eoa": "Adres is nie EOA nie",
+    "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie.",
+    "unable_to_validate_bsc_addr_eoa": "Kan nie EOA valideer nie"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Vir elke 6 opeenvolgende dae ontvang jy een dag af.",
       "streak": "STREEP",
       "days_off": "DAE AF"
+    },
+    "roadmap": {
+      "title": "ONS VISIE",
+      "button_title": "Witboek",
+      "button_subtitle": "Meer te weten komen over onze visie bij Ice."
+    },
+    "join_mainnet": {
+      "title": "Sluit aan by die Gedesentraliseerde Toekoms",
+      "subtitle": "Kry 'n voorskou van ons aankomende Hoofnet-toep en sy unieke kenmerke."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain-adres",
+      "subtitle": "Voer asseblief jou BSC-adres hier in."
+    },
+    "verified_tooltip": {
+      "title": "KYC Geverifieer"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Speel nou vooraf!",
     "balance_label": "Afgepende balans",
     "confirm_title": "Bevestig vooraf-inset",
-    "confirm_subtitle": "Is jy seker jy wil jou munte vooraf inspan? Dit kan nie ontdoen word sodra jy bevestig het nie."
+    "confirm_subtitle": "Is jy seker jy wil jou munte vooraf inspan? Dit kan nie ontdoen word sodra jy bevestig het nie.",
+    "remove_pre_staking": "Verwyder Vooraf-Inset"
   },
   "stats": {
     "header_title": "Statistieke",
@@ -532,7 +560,14 @@
     "top_miners": "Top gebruikers",
     "top_countries": "Top lande",
     "online_miners": "Aanlyn gebruikers",
-    "detailed_information": "Gedetailleerde inligting"
+    "detailed_information": "Gedetailleerde inligting",
+    "total_coins": "Totale munte",
+    "filter": {
+      "total": "Totaal",
+      "on_app": "Beskikbaar op App",
+      "pre_staked": "Vooraf gestaak",
+      "on_blockchain": "Op die blokketting"
+    }
   },
   "update_required": {
     "title": "Dateer asseblief op",
@@ -579,9 +614,11 @@
     "wallet": "BEURSIE",
     "blockchain": "Blokketting",
     "wallet_update_interval": "elke uur opgedateer",
-    "blockchain_update_interval": "elke 24 uur opgedateer",
+    "blockchain_update_interval": "elke 28 dae opgedateer",
     "list_end_label": "dit is die laaste inskrywing van die balansgeskiedenis.",
-    "no_data": "Daar is geen data om vir die gespesifiseerde tydperk te vertoon nie."
+    "no_data": "Daar is geen data om vir die gespesifiseerde tydperk te vertoon nie.",
+    "you": "jy",
+    "contribution": "bydrae"
   },
   "pop_up": {
     "update_now": "Opdateer Nou",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Jy sal jou [[:amount]] munte vir ewig verloor. Is jy seker jy wil voortgaan?",
     "resurrection_yes_confirm_message": "Jy kan net een keer opstaan! Is jy seker jy wil voortgaan? Die [[:amount]] munte sal binne die volgende uur na jou balans terugkeer.",
     "delete_account_confirmation_title": "Bevestig Skrap",
-    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou Ice balans. Wil jy voortgaan?"
+    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou Ice balans. Wil jy voortgaan?",
+    "registration_update_title": "Registrasie opdateer",
+    "registration_update_text": "Ons het die skep van nuwe rekeninge met behulp van die telefoonnommer opgeskort. Om voort te gaan, sal u 'n e-posadres of 'n aanmelding in 'n sosiale netwerk moet kies.",
+    "link_email_title": "Koppel u e-pos",
+    "link_email_text": "Ons het die aanmelding met die telefoonnommer opgeskort. Koppel asseblief u e-posadres en bevestig dit om aan te meld.",
+    "account_error_title": "Rekeningfout",
+    "account_error_text": "Ons het die aanmelding met die telefoonnommer opgeskort. Ongelukkig het u rekening nie KYC geslaag nie en is nie geregtig op herstel nie.",
+    "login_via_email_title": "Meld asseblief aan via e-pos",
+    "login_via_email_text": "Ons het die aanmelding met die telefoonnommer opgeskort. Gebruik asseblief die e-pos wat aan u rekening gekoppel is om aan te meld.",
+    "email_in_use_title": "E-pos alreeds in gebruik",
+    "email_in_use_text_part1": "Die e-posadres wat u probeer koppel, is reeds in gebruik.",
+    "email_in_use_text_part2": "Indien dit u e-posadres is, meld asseblief eers daarmee aan, voltooi die registrasieproses en verwyder daardie rekening om die e-pos beskikbaar te maak, keer dan terug na die aanmelding met die telefoonnommer om die koppelproses te voltooi.",
+    "successfully_linked_title": "Suksesvol gekoppel!",
+    "successfully_linked_text": "Die e-pos is suksesvol aan u rekening gekoppel"
   },
   "periods": {
     "3_days": "3 dae",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Bevestig Foon",
     "modify_description": "Bevestig asseblief jou landkode en voer jou foonnommer in.",
-    "button": "Bevestig land en telefoon",
-    "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie."
+    "button": "Bevestig land en telefoon"
   },
   "date_select": {
     "title": "Kies datum"
@@ -922,6 +971,19 @@
       "title": "Sluit by ons aan op Instagram",
       "description_part1": "Om ons op Instagram te volg is 'n goeie manier om op hoogte te bly en kontak te maak met ander gebruikers wat ook passievol is oor Ice",
       "description_part2": "Boonop sal jy die eerste wees wat weet van enige nuwe kenmerke of promosies wat ons bekendstel."
+    },
+    "reddit": {
+      "title": "Sluit by ons aan op Reddit",
+      "description": "Ontdek die Ice-gemeenskap op Reddit, waar soortgelykdenkende individue saamkom om hul gedagtes te deel.\n\nSluit aan by die gesprek, vra vrae, en verken boeiende besprekings oor Ice-myne, kenmerke, en meer."
+    },
+    "discord": {
+      "title": "Sluit by ons aan op Discord",
+      "description": "Sluit aan by ons lewendige Discord-gemeenskap en duik in gesprekke en eksklusiewe insigte oor Ice.\n\nNeem deel aan lewendige geselskappe, bly op hoogte van nuus oor ice, en wees deel van 'n gemeenskap wat jou passie deel."
+    },
+    "ice_founder_twitter": {
+      "title": "Volg Zeus op X",
+      "description": "Volg Zeus, ons visionêre stigter, op X, waar hy insigte, opdaterings en gedagtes oor ons missie deel. Sluit aan by die gesprek, vra vrae en bly in kontak met ons inspirerende leier terwyl ons saam aan hierdie opwindende reis begin.",
+      "button": "Volg Zeus"
     }
   },
   "ping_referrals_pop_up": {
@@ -1089,20 +1151,46 @@
       "title": "Kamera toestemming",
       "description": "Om voort te gaan, staan asseblief toegang tot die kamera toe.",
       "action": "Staan toegang toe"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Riglyne",
+      "instruction": "Voordat u voortgaan, volg asseblief hierdie riglyne vir 'n suksesvolle KYC gesig verifikasie:",
+      "check_1": "✅ Maak seker jy het 'n hoë kwaliteit foto.",
+      "check_2": "✅ Het goeie beligting.",
+      "check_3": "✅ Het 'n skoon agtergrond.",
+      "check_4": "✅ Geen donker fotos nie.",
+      "check_5": "✅ Geen wazige of mistige fotos nie.",
+      "check_6": "✅ Skoon kamera-lens.",
+      "warning": "As u nie die bogenoemde riglyne volg nie, kan u toegang tot u rekening verloor.",
+      "confirmation": "Ek bevestig dat ek aan die kriteria sal voldoen.",
+      "popup_title": "Bevestiging",
+      "popup_body": "Bevestig u dat u al die selfie riglyne gevolg het?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer."
+      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer.",
+      "description": "Voer die bynaam van die vriend in wat jou genooi het."
     },
     "home": {
       "pioneer": {
-        "description": "Volg jou vordering en wêreldwye status op"
+        "description": "Volg jou vordering en wêreldwye status op",
+        "referrals": "VRIENDE"
       },
       "tasks": {
         "invite_friends": {
           "description": "Bou jou span uit en skep 'n gemeenskap"
         }
+      },
+      "team": {
+        "title": "Vriende",
+        "view_team": "sien vriende"
+      },
+      "roadmap": {
+        "button_subtitle": "Leer meer oor ons toekomstige visie by Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Kry 'n voorsmaak van ons toekomstige Mainnet-app en sy unieke eienskappe, wat aan die einde van 2024 vrygestel sal word."
       }
     },
     "settings": {
@@ -1131,6 +1219,182 @@
           "description": "Jou huidige balans word elke uur opgedateer en hier vertoon. Dit sluit jou direkte en gestaakte verdienste in."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Jou vriende sal hierdie bynaam moet gebruik wanneer hulle by [[:ice]] aansluit."
+    },
+    "users": {
+      "team": "Vriende"
+    },
+    "team": {
+      "empty": {
+        "team": "Jy het tans nie enige vriende nie!"
+      },
+      "contacts": {
+        "empty_description": "Synchroniseer jou kontakte en sien wie is reeds op [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain-adres",
+    "enter_address_title": "Voer jou\nBNB Smart Chain-adres in",
+    "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die BNB Smart Chain blockchain vrygestel word. Sodra die hoofnet geloods is, sal die tokens vanaf die BNB Smart Chain na die Ice Open Network (ION) blockchain geruil kan word.",
+    "enter_address_confirmation": "Is jy seker dat die BNB Smart Chain-adres korrek is?",
+    "validators_warning_title": "Bevestig Adres",
+    "validators_warning_text": "Let daarop dat individue wat 'n BNB Smart Chain-adres bygevoeg het tot hul rekening, nie in aanmerking kom om een van die top 300-valideerders te word nie, soos uiteengesit in ons whitepaper vir die hoofnet-lansering nie.",
+    "walletDescription": "Ons adviseer om 'n self-bestuurde beursie soos [[:bold]]Metamask[[/:bold]] of [[:bold]]Trust Wallet[[/:bold]] te gebruik.\n\nMaak asseblief seker dat jy jou beursie-adres dubbelkontroleer om seker te maak dat jy die verspreiding ontvang."
+  },
+  "social_kyc": {
+    "header": "Verifikasie",
+    "verify_with_title": "Verifieer met {{method}}",
+    "select_method_step": {
+      "title": "KYC Stap #2",
+      "description": "Verifieer jou rekening maklik deur jou bestaande X-profiel te gebruik."
+    },
+    "instructions_step": {
+      "show_example": "Wys voorbeeld",
+      "example_title": "Voorbeeld van die herpos",
+      "x": {
+        "1": "Maak X oop en soek vir [[:bold]]@ice_blockchain[[/:bold]] rekening.",
+        "2": "Vind die vasgepenste pos, wat die eerste pos op die profiel is.",
+        "3": "❤️ Hou van & 🔄 Herpos dit met [[:bold]]Aanhaling[[/:bold]] deur die [[:bold]]PRESIES[[/:bold]] teks hieronder te gebruik.",
+        "pop_up": {
+          "title": "Bevestiging",
+          "description": "Het jy die vasgepenste pos gelike en herpos met 'n aanhaling deur die presiese teks soos in die voorbeeld gebruik?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Klik om teks te kopieer",
+        "copied": "Gekopieer"
+      }
+    },
+    "verification_step": {
+      "title": "Bevestiging",
+      "description": "Om jou verifikasie te voltooi, plak asseblief die skakel na die pos waar jy die vorige stappe voltooi het. Maak seker die skakel is korrek.",
+      "placeholder": "Voer die skakel in",
+      "instructions_step": {
+        "4": "Plak die skakel van jou pos hieronder. 👇"
+      },
+      "action": {
+        "verify": "Verifieer",
+        "wait": "Wag asseblief",
+        "countdown": "{{countdown}}s oorblywend"
+      },
+      "pop_up": {
+        "title": "Ongeldige Skakel",
+        "description": "Maak asseblief seker dat jy die regte skakel gekopieer het.\n\n[[:bold]]Voorbeeld:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Aantal pogings oor: {{count}}",
+      "success": {
+        "title": "Verifikasie Voltooi",
+        "description": "Gelukwens, jy het suksesvol jou KYC Stap #2 voltooi. Jy is nou geverifieer."
+      },
+      "error_try_again": {
+        "title": "Verifikasie Fout",
+        "description": "Maak asseblief seker dat jy die korrekte pos hergepost het met die verskafte teks en dat die pos openbaar beskikbaar is."
+      },
+      "error_try_later": {
+        "title": "Verifikasie Fout",
+        "description": "Ons kon die verifikasie nie voltooi nie. Jy kan weer probeer oor 7 dae."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain-verspreiding",
+      "description": "Ontvang jou BNB Smart Chain ICE-munte deur jou rekening maklik te verifieer met behulp van jou bestaande X-profiel."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Tik op die skakel [[:bold]]hier[[/:bold]] om ons X-pos direk te oop.",
+        "pop_up": {
+          "description": "Volg asseblief die instruksies en maak seker dat jy in die eerste stap op die skakel getik het om ons X-pos direk te oop te maak.",
+          "description2": "Het jy die regte pos gelike en dit met 'n aanhalingsteken herpos met die presiese teks wat verskaf is, soos in die voorbeeld?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gelukwens, jy het jou verifikasie suksesvol voltooi. Jy kom nou in aanmerking vir die BNB Smart Chain-verspreiding."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Rekeningbevestiging",
+    "description": "Om u rekeningidentiteit te verifieer en u e-pos veilig te koppel, moet u verseker dat u suksesvol deur ons emosie-kontrole tydens die outentiseringsproses gaan.",
+    "description2": "Hierdie stap help ons om die veiligheid en egtheid van u rekening te verseker. Dankie vir u samewerking!"
+  },
+  "quiz": {
+    "title": "Toets",
+    "intro": {
+      "description": "By Ice, glo ons in die bevordering van 'n gemeenskap van aktiewe en ingeligte lede. Ons missie is om te verseker dat Ice-munte aan dié wat werklik betrokke is en ooreenstem met ons visie, uitgedeel word.",
+      "community_engagement": {
+        "title": "🙌 Aktiewe Gemeenskapsbetrokkenheid",
+        "description": "Jou betrokkenheid binne die Ice-ekosisteem beïnvloed direk jou mynboumoontlikhede:",
+        "point1": "Bly op hoogte: Betrokkenheid met ons nuusartikels en video's.",
+        "point2": "Neem aktief deel: Sluit aan by ons Persoonlike Ontwikkelingsprogram en lewende sessies op YouTube of Twitter Space.",
+        "point3": "Sosiale interaksies: Verbeter jou teenwoordigheid deur te like, deel, volg, of pos te plaas oor Ice.",
+        "bottom_description": "Hoe meer betrokke jy is, hoe hoër jou positiewe interaksiesyfer, wat jou in staat stel om die KYC-proses te deurloop."
+      },
+      "terms_privacy": "Ek verstaan ​​en stem in met die [[:link]]Algemene Voorwaardes[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kennistoets",
+        "point2": "Om die toets te slaag, moet jy ten minste 18 vrae korrek beantwoord.",
+        "point3": "’n Mislukte toets dui op ’n behoefte aan verdere interaksie met ons materiaal.",
+        "point4": "Daar is ’n datumbeperking vir die slaag van die toets. Jy kan sien hoeveel dae jy oor het tot die vervaldatum op jou tuisblad in die toetsafdeling.",
+        "point5": "Jy het 3 herhalings beskikbaar voordat die vervaldatum verstryk. As jy die toets 3 keer misluk of as die vervaldatum verloop, sal jy nie meer kan myn nie en jou rekening sal in snyfase gaan.",
+        "point6": "📚 Alle inligting vir hierdie toets kan [[:link]]hier[[/:link]] gelees word.",
+        "description": "Om te verseker dat ons gemeenskap goed ingelig is en ooreenstem met ons visie:",
+        "point1": "Jy sal voorgele word met 21 vrae wat uit ons omvattende bronne afgelei is."
+      },
+      "why_quiz": {
+        "title": "💡 Waarom die Toets?",
+        "description": "Ons toewyding tot kennis en begrip is aan die voorpunt van ons gemeenskap. Met ons toets mik ons daarop om te verseker dat Ice sy pad vind na die regte hande, dié die werklik verstaan en ooreenstem met ons projek se visie."
+      }
+    },
+    "quiz_failure": {
+      "title": "Mislukte Toets",
+      "description": "Jy het nie meer as 18 vrae korrek beantwoord of die tyd het verstreke nie, dus jy kan nie die kwis slaag nie.",
+      "check_faq": "Om volgende keer reg te antwoord, stel ons voor dat jy jou bekendstel met ons kennisbank en FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Vraag {{current}} van {{total}}",
+      "time_over": "⌛️ Tyd is verby",
+      "correct_answers": "Korrek Antwoorde",
+      "wrong_answers": "Verkeerde Antwoorde"
+    },
+    "confirmation_popup": {
+      "title": "Bevestiging",
+      "start_description": "Is jy seker jy wil die toets begin?",
+      "cancel_description": "Deur die toets oor te slaan, sal jy een beskikbare herhaalpoging gebruik. Is jy seker jy wil die toets nou oorslaan?"
+    },
+    "quiz_success": {
+      "title": "Verifikasie Voltooi",
+      "description": "Gelukwens, jy het jou KYC suksesvol voltooi. Jou konsekwente korrekte antwoorde het jou toewyding en kennis bewys. Jy is nou geverifieer."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Mynbou gedeaktiveer",
+      "description": "Jou mynboutoegang is gedeaktiveer as gevolg van drie agtereenvolgende toetsmislukkings of die verstryking van die toegelate tyd, soos vereis deur ons KYC-proses."
+    },
+    "action": "Voltooi die toets",
+    "reminder": "Let daarop dat jy die vraelys moet voltooi om in aanmerking te kom om voort te gaan met mynbou en snyding te voorkom.",
+    "days_left": "Dae oor: {{days}}",
+    "retries_left": "Pogings oor: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Slim Kettingverspreiding",
+      "description": "Handhaaf jou maandelikse BNB Slim Ketting ICE-muntenverspreidingsgeregtigheid deur aktief die nuutste Ruil-aankondigings op X te ondersteun."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gelukwens, jy het jou verifikasie suksesvol voltooi. Jy is nou geregtig om jou maandelikse BNB Slim Kettingverspreidingsstatus te handhaaf."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Overslaan"
   }
 }

@@ -1,18 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {PagerIndicators} from '@components/PagerIndicators';
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {LINKS} from '@constants/links';
-import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {BlockchainCell} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/BlockchainCell';
 import {DataCellSeparator} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/DataCell';
+import {ExternalLink} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/ExternalLink';
 import {WalletCell} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/WalletCell';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {ArrowLink} from '@svg/ArrowLink';
 import {BottomBump} from '@svg/BottomBump';
 import {t} from '@translations/i18n';
-import {openLinkWithInAppBrowser} from '@utils/device';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useState} from 'react';
@@ -24,8 +20,6 @@ import {rem} from 'rn-units';
 // PixelRatio.roundToNearestPixel here is to avoid a small gap between the container and the BottomBump component
 export const PAGER_HEADER_HEIGHT = PixelRatio.roundToNearestPixel(rem(116));
 export const PAGER_HEADER_BUMP_HEIGHT = rem(8);
-export const PAGER_HEADER_OUTER_HEIGHT =
-  PAGER_HEADER_HEIGHT + PAGER_HEADER_BUMP_HEIGHT;
 
 export const PagerHeader = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,10 +28,6 @@ export const PagerHeader = () => {
 
   const onPageChange = (event: PagerViewOnPageSelectedEvent) => {
     setActiveIndex(event.nativeEvent.position);
-  };
-
-  const onLinkPress = () => {
-    openLinkWithInAppBrowser({url: LINKS.BLOCK_EXPLORER ?? ''});
   };
 
   return (
@@ -51,13 +41,13 @@ export const PagerHeader = () => {
             value={balanceSummary && formatNumberString(balanceSummary.total)}
           />
           <DataCellSeparator />
-          <BlockchainCell value={'0.00'} />
-          <Touchable
-            onPress={onLinkPress}
-            style={styles.slideLink}
-            hitSlop={SMALL_BUTTON_HIT_SLOP}>
-            <ArrowLink width={rem(16)} height={rem(16)} />
-          </Touchable>
+          <BlockchainCell
+            value={
+              balanceSummary &&
+              formatNumberString(balanceSummary.totalMiningBlockchain)
+            }
+          />
+          <ExternalLink style={styles.slideLink} />
         </View>
         <View style={styles.slide}>
           <WalletCell

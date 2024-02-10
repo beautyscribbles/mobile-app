@@ -2,20 +2,24 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
+import {AccountActions} from '@store/modules/Account/actions';
 import {
-  isFaceDetectionEnabledSelector,
+  appLocaleSelector,
   userIdSelector,
 } from '@store/modules/Account/selectors';
+import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
+import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
 import {
-  getCroppedPictureUri,
-  isEmotionsAuthFinalised,
-} from '@store/modules/FaceRecognition/utils';
+  migrationEmailSelector,
+  migrationUserIdSelector,
+} from '@store/modules/Validation/selectors';
 import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
@@ -25,32 +29,10 @@ type Actions = ReturnType<
   typeof FaceRecognitionActions.EMOTIONS_AUTH.START.create
 >;
 
-async function getCroppedFrames({
-  frames,
-  pictureWidth,
-  cropStartY,
-  faceDetectionEnabled,
-}: {
-  frames: string[];
-  pictureWidth: number;
-  cropStartY: number;
-  faceDetectionEnabled: boolean;
-}): Promise<string[]> {
-  return Promise.all(
-    frames.map(frame =>
-      getCroppedPictureUri({
-        pictureUri: frame,
-        pictureWidth,
-        cropStartY,
-        faceDetectionEnabled,
-      }),
-    ),
-  );
-}
-
 export function* initEmotionsAuthSaga(action: Actions) {
   try {
-    const {videoUri, videoWidth, videoHeight} = action.payload;
+    const {videoUri, videoWidth, videoHeight, isPhoneMigrationFlow} =
+      action.payload;
     const sessionId: ReturnType<typeof emotionsAuthSessionSelector> =
       yield select(emotionsAuthSessionSelector);
     const emotions: ReturnType<typeof emotionsAuthEmotionsSelector> =
@@ -58,38 +40,54 @@ export function* initEmotionsAuthSaga(action: Actions) {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
+    const migrationEmail: ReturnType<typeof migrationEmailSelector> =
+      yield select(migrationEmailSelector);
+    const migrationUserId: ReturnType<typeof migrationUserIdSelector> =
+      yield select(migrationUserIdSelector);
 
-    const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
-      extractFramesWithFFmpeg,
-      {
-        inputUri: videoUri,
-      },
+    const deviceUniqueId: ReturnType<typeof deviceUniqueIdSelector> =
+      yield select(deviceUniqueIdSelector);
+    const locale: ReturnType<typeof appLocaleSelector> = yield select(
+      appLocaleSelector,
     );
 
     const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
       getPictureCropStartY,
       {pictureWidth: videoWidth, pictureHeight: videoHeight},
     );
-
-    const faceDetectionEnabled: ReturnType<
-      typeof isFaceDetectionEnabledSelector
-    > = yield select(isFaceDetectionEnabledSelector);
-
-    const croppedFrames: SagaReturnType<typeof getCroppedFrames> = yield call(
-      getCroppedFrames,
+    const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
+      extractFramesWithFFmpeg,
       {
-        frames,
-        pictureWidth: videoWidth,
+        inputUri: videoUri,
         cropStartY,
-        faceDetectionEnabled,
+        outputSize: FACE_RECOGNITION_PICTURE_SIZE,
+        width: videoWidth,
       },
     );
+
+    if (isPhoneMigrationFlow && !migrationUserId) {
+      throw new Error('migrationUserId is not defined');
+    }
+
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
       yield call(Api.faceRecognition.emotionsAuth, {
-        userId,
+        userId: isPhoneMigrationFlow ? migrationUserId! : userId,
         sessionId,
-        pictureUris: croppedFrames,
+        pictureUris: frames,
+        isPhoneMigrationFlow: isPhoneMigrationFlow,
+        deviceUniqueId,
+        email: migrationEmail,
+        language: locale,
       });
+
+    if (response.loginSession) {
+      yield put(
+        AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.SET_SESSION.create(
+          response.loginSession,
+        ),
+      );
+    }
+
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);
     // If while we were waiting for this response the whole auth is already finalised

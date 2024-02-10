@@ -132,6 +132,12 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
       });
       yield put(TokenomicsActions.CLAIM_DAILY_BONUS.STATE.create());
       break;
+    case 'bsc-address':
+      navigate({
+        name: 'BscAddress',
+        params: undefined,
+      });
+      break;
     default:
       if (!handledInApp) {
         if (!isDeeplink && !isUniversalLink) {

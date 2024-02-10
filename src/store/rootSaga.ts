@@ -3,6 +3,7 @@
 import {isApiError, isNetworkError} from '@api/client';
 import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
+import {isValidationError} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {authWatchers} from '@store/modules/Account/sagas';
 import {achievementsWatchers} from '@store/modules/Achievements/sagas';
@@ -21,8 +22,10 @@ import {newsWatchers} from '@store/modules/News/sagas';
 import {notificationsWatchers} from '@store/modules/Notifications/sagas';
 import {permissionsWatchers} from '@store/modules/Permissions/sagas';
 import {pushNotificationsWatchers} from '@store/modules/PushNotifications/sagas';
+import {quizWatchers} from '@store/modules/Quiz/sagas';
 import {rateAppWatchers} from '@store/modules/RateApp/sagas';
 import {referralsWatchers} from '@store/modules/Referrals/sagas';
+import {socialKycWatchers} from '@store/modules/SocialKyc/sagas';
 import {socialsWatchers} from '@store/modules/Socials/sagas';
 import {statsWatchers} from '@store/modules/Stats/sagas';
 import {statusNoticeWatchers} from '@store/modules/StatusNotice/sagas';
@@ -47,6 +50,7 @@ const watchers = [
   ...validationWatchers,
   ...devicesWatchers,
   ...linkingWatchers,
+  ...socialKycWatchers,
   ...pushNotificationsWatchers,
   ...appCommonWatchers,
   ...creativeLibraryWatchers,
@@ -61,6 +65,7 @@ const watchers = [
   ...inAppNotificationsWatchers,
   ...backgroundTasksWatchers,
   ...socialsWatchers,
+  ...quizWatchers,
 ];
 
 export function* rootSaga(): SagaIterator {
@@ -114,6 +119,13 @@ const shouldLog = (error: unknown) => {
    * Some started requests may fail when app goes background
    */
   if (isNetworkError(error) && AppState.currentState !== 'active') {
+    return false;
+  }
+
+  /**
+   * Local validation errors, e.g. "invalid phone number"
+   */
+  if (isValidationError(error)) {
     return false;
   }
 

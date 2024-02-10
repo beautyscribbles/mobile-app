@@ -68,7 +68,13 @@
     "learn_more": "Läs mer",
     "back_to_login": "Tillbaka till inloggning",
     "follow_us": "Följ oss",
-    "subscribe": "Prenumerera"
+    "subscribe": "Prenumerera",
+    "not_sure": "Inte säker",
+    "confirm_address": "Bekräfta adress",
+    "remove_address": "Ta bort adressen",
+    "start": "Börja",
+    "faq": "Vanliga frågor",
+    "knowledge_base": "Kunskapsbas"
   },
   "team": {
     "contacts_tab": "Kontakter",
@@ -190,7 +196,12 @@
     "weak_password": "Svagt lösenord.",
     "wrong_password": "Fel lösenord.",
     "no_camera_permissions": "Kamerabehörighet beviljas inte.",
-    "no_library_permissions": "Biblioteksbehörigheter beviljas inte."
+    "no_library_permissions": "Biblioteksbehörigheter beviljas inte.",
+    "blockchain_address_already_taken": "Adressen är redan tagen",
+    "invalid_blockchain_address": "Ogiltig blockchain-adress",
+    "address_not_eoa": "Adressen är inte EOA",
+    "same_phone_error": "Du kan inte använda samma nummer.",
+    "unable_to_validate_bsc_addr_eoa": "Kan inte validera EOA-adressen"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "För varje 6 dagar du i följd du checkar in får du en ledig dag.",
       "streak": "INCHECKNINGAR I FÖLJD",
       "days_off": "LEDIGA DAGAR"
+    },
+    "roadmap": {
+      "title": "VÅR VISION",
+      "button_title": "Vitbok",
+      "button_subtitle": "Lär dig mer om vår vision på Ice."
+    },
+    "join_mainnet": {
+      "title": "Gå med i Den Decentraliserade Framtiden",
+      "subtitle": "Få en förhandsvisning av vår kommande Mainnet-app och dess unika funktioner."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain-adress",
+      "subtitle": "Vänligen ange din BSC-adress här."
+    },
+    "verified_tooltip": {
+      "title": "KYC Verifierad"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Pre-staka nu!",
     "balance_label": "Stakat saldo",
     "confirm_title": "Bekräfta pre-stake",
-    "confirm_subtitle": "Är du säker på att du vill pre-staka dina mynt? Detta kan inte ångras när du väl har bekräftat."
+    "confirm_subtitle": "Är du säker på att du vill pre-staka dina mynt? Detta kan inte ångras när du väl har bekräftat.",
+    "remove_pre_staking": "Ta bort Pre-Staking"
   },
   "stats": {
     "header_title": "Statistik",
@@ -532,7 +560,14 @@
     "top_miners": "Toppanvändare",
     "top_countries": "Toppländer",
     "online_miners": "Onlineanvändare",
-    "detailed_information": "Detaljerad information"
+    "detailed_information": "Detaljerad information",
+    "total_coins": "Totalt antal mynt",
+    "filter": {
+      "total": "Totalt",
+      "on_app": "Tillgängligt i appen",
+      "pre_staked": "Förinställt",
+      "on_blockchain": "På blockkedjan"
+    }
   },
   "update_required": {
     "title": "Vänligen uppdatera",
@@ -579,9 +614,11 @@
     "wallet": "Plånbok",
     "blockchain": "Blockkedja",
     "wallet_update_interval": "uppdateras varje timme",
-    "blockchain_update_interval": "uppdateras var 24:e timme",
+    "blockchain_update_interval": "uppdateras varje 28 dagar",
     "list_end_label": "detta är den sista posten i saldohistoriken.",
-    "no_data": "Det finns inga data att visa för den angivna perioden."
+    "no_data": "Det finns inga data att visa för den angivna perioden.",
+    "you": "du",
+    "contribution": "bidrag"
   },
   "pop_up": {
     "update_now": "Uppdatera nu",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "Du kommer att förlora dina [[:amount]] mynt för alltid. Är du säker på att du vill fortsätta?",
     "resurrection_yes_confirm_message": "Du kan bara återuppstå en gång! Är du säker på att du vill fortsätta? De [[:amount]] mynten kommer att återföras till ditt saldo inom den närmaste timmen.",
     "delete_account_confirmation_title": "Bekräfta borttagning",
-    "delete_account_confirmation_text": "Om du tar bort ditt konto raderas alla dina data permanent, inklusive ditt Ice-saldo. Vill du fortsätta?"
+    "delete_account_confirmation_text": "Om du tar bort ditt konto raderas alla dina data permanent, inklusive ditt Ice-saldo. Vill du fortsätta?",
+    "registration_update_title": "Uppdatering av registrering",
+    "registration_update_text": "Vi har tillfälligt avbrutit skapandet av nya konton med telefonnummer. För att fortsätta måste du antingen välja en e-postadress eller logga in via sociala nätverk.",
+    "link_email_title": "Koppla din e-postadress",
+    "link_email_text": "Vi har tillfälligt avbrutit inloggning med telefonnummer. Vänligen koppla din e-postadress och bekräfta den för att kunna logga in.",
+    "account_error_title": "Kontofel",
+    "account_error_text": "Vi har tillfälligt avbrutit inloggning med telefonnummer. Tyvärr har ditt konto inte passerat KYC-processen och är inte berättigat till återställning.",
+    "login_via_email_title": "Vänligen logga in via e-post",
+    "login_via_email_text": "Vi har tillfälligt avbrutit inloggning med telefonnummer. Vänligen använd e-postadressen kopplad till ditt konto för att logga in.",
+    "email_in_use_title": "E-postadressen används redan",
+    "email_in_use_text_part1": "E-postadressen du försöker koppla är redan i bruk.",
+    "email_in_use_text_part2": "Om detta är din e-postadress, vänligen logga in med den först, slutför registreringsprocessen och ta bort det kontot för att göra e-postadressen tillgänglig, sedan återvänd till inloggning med telefonnummer för att slutföra kopplingsprocessen.",
+    "successfully_linked_title": "Framgångsrikt kopplat!",
+    "successfully_linked_text": "E-postadressen har framgångsrikt kopplats till ditt konto."
   },
   "periods": {
     "3_days": "3 dagarna",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Bekräfta telefon",
     "modify_description": "Bekräfta din landskod och ange ditt telefonnummer.",
-    "button": "Bekräfta land och telefon",
-    "same_phone_error": "Du kan inte använda samma nummer."
+    "button": "Bekräfta land och telefon"
   },
   "date_select": {
     "title": "Välj datum"
@@ -919,6 +968,19 @@
       "title": "Följ oss på Instagram",
       "description_part1": "Att följa oss på Instagram är ett bra sätt att hålla sig uppdaterad och få kontakt med andra användare som också brinner för Ice.",
       "description_part2": "Dessutom kommer du att vara den första som får reda på alla nya funktioner eller kampanjer som vi lanserar."
+    },
+    "reddit": {
+      "title": "Gå med oss på Reddit",
+      "description": "Upptäck Ice-samhället på Reddit, där likasinnade individer samlas för att dela sina tankar.\n\nDelta i samtalet, ställ frågor och utforska engagerande diskussioner om Ice-gruvdrift, funktioner och mycket mer."
+    },
+    "discord": {
+      "title": "Gå med oss på Discord",
+      "description": "Gå med i vår livliga Discord-community och dyk ner i diskussioner och exklusiva insikter om Ice.\n\nDelta i levande konversationer, håll dig uppdaterad om nyheter relaterade till Ice och bli en del av en gemenskap som delar din passion."
+    },
+    "ice_founder_twitter": {
+      "title": "Följ Zeus på X",
+      "description": "Följ Zeus, vår visionära grundare, på X, där han delar insikter, uppdateringar och tankar om vår mission. Delta i konversationen, ställ frågor och håll dig uppkopplad med vår inspirerande ledare när vi tillsammans ger oss ut på denna spännande resa.",
+      "button": "Följ Zeus"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Kameratillstånd",
       "description": "För att fortsätta, vänligen tillåt åtkomst till kameran.",
       "action": "Tillåt åtkomst"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie-riktlinjer",
+      "instruction": "Innan du fortsätter, följ dessa riktlinjer för en framgångsrik ansiktsautentisering KYC:",
+      "check_1": "✅ Se till att du har en högkvalitativ bild.",
+      "check_2": "✅ Ha bra belysning.",
+      "check_3": "✅ Ha en ren bakgrund.",
+      "check_4": "✅ Inga mörka bilder.",
+      "check_5": "✅ Inga suddiga eller dimmiga bilder.",
+      "check_6": "✅ Rengör kameraobjektivet.",
+      "warning": "Om du inte följer ovanstående riktlinjer kan du förlora åtkomsten till ditt konto.",
+      "confirmation": "Jag bekräftar att jag kommer att följa kriterierna.",
+      "popup_title": "Bekräftelse",
+      "popup_body": "Bekräftar du att du har följt alla selfie-riktlinjer?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Se till att du har angett rätt smeknamn."
+      "dontHaveInvitationCode": "Se till att du har angett rätt smeknamn.",
+      "description": "Ange smeknamnet på den vän som bjöd in dig."
     },
     "home": {
       "pioneer": {
-        "description": "Följ din framsteg och globala status"
+        "description": "Följ din framsteg och globala status",
+        "referrals": "VÄNNER"
       },
       "tasks": {
         "invite_friends": {
           "description": "Bygg upp ditt team och skapa en gemenskap"
         }
+      },
+      "team": {
+        "title": "Vänner",
+        "view_team": "se vänner"
+      },
+      "roadmap": {
+        "button_subtitle": "Få mer information om vår framtidsvision på Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Få en förhandsvisning av vår kommande Mainnet-app och dess unika funktioner som kommer att lanseras mot slutet av 2024."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta och blockerade intäkter."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Dina vänner måste använda detta smeknamn när de går med i [[:ice]]."
+    },
+    "users": {
+      "team": "Vänner"
+    },
+    "team": {
+      "empty": {
+        "team": "Du har för närvarande inga vänner!"
+      },
+      "contacts": {
+        "empty_description": "Synkronisera dina kontakter och se vem som redan är på [[:ice]]."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain-adress",
+    "enter_address_title": "Ange din\nBNB Smart Chain-adress",
+    "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på BNB Smart Chain-blockkedjan. Efter Mainnet-lanseringen kan token bytas från BNB Smart Chain till Ice Open Network (ION)-blockkedjan.",
+    "enter_address_confirmation": "Är du säker på att din BNB Smart Chain-adress är korrekt?",
+    "validators_warning_title": "Bekräfta Adressen",
+    "validators_warning_text": "Observera: Personer som har lagt till en BNB Smart Chain-adress på sitt konto är inte kvalificerade att bli en av de 300 främsta validerarna enligt vår whitepaper för huvudnätets lansering.",
+    "walletDescription": "Vi rekommenderar att använda en självförvarad plånbok som [[:bold]]Metamask[[/:bold]] eller [[:bold]]Trust Wallet[[/:bold]].\n\nVar noga med att dubbelkolla din plånboksadress för att säkerställa att du kommer att få distributionen."
+  },
+  "social_kyc": {
+    "header": "Verifiering",
+    "verify_with_title": "Verifiera med {{method}}",
+    "select_method_step": {
+      "title": "KYC Steg #2",
+      "description": "Verifiera ditt konto enkelt genom att använda din befintliga X-profil."
+    },
+    "instructions_step": {
+      "show_example": "Visa exempel",
+      "example_title": "Exempel på delning",
+      "x": {
+        "1": "Öppna X och sök efter kontot [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Hitta den fastnålda inlägget, som är det första inlägget på profilen.",
+        "3": "❤️ Gilla & 🔄 Dela det med [[:bold]]Citat[[/:bold]] genom att använda [[:bold]]EXAKT[[/:bold]] text nedan.",
+        "pop_up": {
+          "title": "Bekräftelse",
+          "description": "Har du gillat det fastnålade inlägget och delat det med en citat med exakt text som anges, enligt exemplet?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Tryck för att kopiera texten",
+        "copied": "Kopierat"
+      }
+    },
+    "verification_step": {
+      "title": "Bekräftelse",
+      "description": "För att slutföra din verifiering, klistra in länken till inlägget där du utförde de tidigare stegen. Se till att länken är korrekt.",
+      "placeholder": "Klistra in länken",
+      "instructions_step": {
+        "4": "Klistra in länken till ditt inlägg nedan. 👇"
+      },
+      "action": {
+        "verify": "Verifiera",
+        "wait": "Vänligen vänta",
+        "countdown": "{{countdown}} sekunder kvar"
+      },
+      "pop_up": {
+        "title": "Ogiltig Länk",
+        "description": "Se till att du har kopierat rätt länk.\n\n[[:bold]]Exempel:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Antal försök kvar: {{count}}",
+      "success": {
+        "title": "Verifiering slutförd",
+        "description": "Grattis, du har framgångsrikt slutfört KYC Steg #2. Du är nu verifierad."
+      },
+      "error_try_again": {
+        "title": "Verifieringsfel",
+        "description": "Se till att du har delat rätt inlägg med den angivna texten och att inlägget är offentligt tillgängligt."
+      },
+      "error_try_later": {
+        "title": "Verifieringsfel",
+        "description": "Vi kunde inte slutföra verifieringen. Du kan försöka igen om 7 dagar."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain-distribution",
+      "description": "Ta emot dina ICE-mynt på BNB Smart Chain genom att verifiera ditt konto enkelt med din befintliga X-profil."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klicka på länken [[:bold]]här[[/:bold]] för att öppna vår X-post direkt.",
+        "pop_up": {
+          "description": "Följ instruktionerna och se till att du har klickat på länken i det första steget för att öppna vår X-post direkt.",
+          "description2": "Gillade du rätt inlägg och delade det med ett citat med exakt text som angivits, som i exemplet?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad till BNB Smart Chain-distributionen."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Kontobekräftelse",
+    "description": "För att verifiera din kontoidentitet och säkert koppla din e-postadress, se till att du lyckas passera vårt känslotest under autentiseringsprocessen.",
+    "description2": "Det här steget hjälper oss att säkerställa säkerheten och äktheten av ditt konto. Tack för ditt samarbete!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "På Ice tror vi på att främja en gemenskap av aktiva och informerade medlemmar. Vår mission är att se till att Ice-mynten fördelas till de som verkligen engagerar sig och delar vår vision.",
+      "community_engagement": {
+        "title": "🙌 Aktivt gemenskapsengagemang",
+        "description": "Ditt engagemang inom Ice-ekosystemet påverkar direkt din gruvkapacitet:",
+        "point1": "Håll dig uppdaterad: Engagera dig med våra nyhetsartiklar och videor.",
+        "point2": "Delta aktivt: Gå med i vårt personliga utvecklingsprogram och live-sändningar på YouTube eller Twitter Space.",
+        "point3": "Sociala interaktioner: Öka din närvaro genom att gilla, dela, följa eller posta om Ice.",
+        "bottom_description": "Ju mer engagerade du är, desto högre blir din positiva interaktionspoäng, vilket möjliggör KYC-processen."
+      },
+      "terms_privacy": "Jag förstår och godkänner [[:link]]Användarvillkoren och sekretesspolicyn[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kunskapskontroll",
+        "point2": "För att klara quizen måste du svara rätt på minst 18 frågor.",
+        "point3": "Ett misslyckat quiz indikerar behovet av ett djupare engagemang med vårt material.",
+        "point4": "Det finns en tidsbegränsning för att slutföra quizen. Du kan se hur många dagar som återstår till utgångsdatumet på din startsida under quiz-avsnittet.",
+        "point5": "Du har 3 försök tillgängliga innan utgångsdatumet. Om du misslyckas med quizen 3 gånger eller om utgångsdatumet passerar kommer du inte längre att kunna bryta, och ditt konto kommer att straffas.",
+        "point6": "📚 All information om denna quiz kan läsas [[:link]]här[[/:link]].",
+        "description": "För att säkerställa att vår gemenskap är väl informerad och delar vår vision:",
+        "point1": "Du kommer att presenteras med 21 frågor som härrör från våra omfattande resurser."
+      },
+      "why_quiz": {
+        "title": "💡 Varför Quizen?",
+        "description": "Vårt åtagande för kunskap och förståelse är i framkant av vår gemenskap. Med vår quiz strävar vi efter att säkerställa att Ice når rätt händer, de som verkligen förstår och är i linje med vår projektvision."
+      }
+    },
+    "quiz_failure": {
+      "title": "Misslyckad quiz",
+      "description": "Du har inte svarat korrekt på mer än 18 frågor eller tiden har gått ut, så du kan inte klara testet.",
+      "check_faq": "För att svara rätt nästa gång föreslår vi att du bekantar dig med vår kunskapsbas och vanliga frågor."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Fråga {{current}} av {{total}}",
+      "time_over": "⌛️ Tiden är slut",
+      "correct_answers": "Rätta svar",
+      "wrong_answers": "Fel svar"
+    },
+    "confirmation_popup": {
+      "title": "Bekräftelse",
+      "start_description": "Är du säker på att du vill starta quizen?",
+      "cancel_description": "Genom att hoppa över quizen kommer du att använda en av de 3 tillgängliga försöken. Är du säker på att du vill hoppa över quizen nu?"
+    },
+    "quiz_success": {
+      "title": "Verifiering slutförd",
+      "description": "Grattis, du har framgångsrikt slutfört din KYC. Dina konsekvent rätta svar har bevisat ditt engagemang och din kunskap. Du är nu verifierad."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Brytning Inaktiverad",
+      "description": "Din tillgång till brytning har inaktiverats på grund av tre på varandra följande misslyckade quizar eller utgång av den tilldelade tiden, enligt vårt KYC-process."
+    },
+    "action": "Slutför quizen",
+    "reminder": "Observera att du måste slutföra quizzen för att vara berättigad att fortsätta gruvdriften och undvika nedskärningar.",
+    "days_left": "Dagar kvar: {{days}}",
+    "retries_left": "Återstående försök: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Distribution",
+      "description": "Behåll din månatliga kvalificering för distribution av ICE-mynt från BNB Smart Chain genom att aktivt stödja de senaste utbytens meddelanden på X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad att behålla din månatliga status för distribution av BNB Smart Chain."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Hoppa över"
   }
 }

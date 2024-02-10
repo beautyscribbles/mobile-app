@@ -1,12 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {post} from '@api/client';
-import {FaceAuthKycNumber, MiningSummary} from '@api/tokenomics/types';
+import {
+  FaceAuthKycNumber,
+  MiningSummary,
+  QuizKycStep,
+  SocialKycStepNumber,
+} from '@api/tokenomics/types';
 
 interface Params {
   userId: string;
   resurrect?: boolean | null;
-  skipKYCStep?: FaceAuthKycNumber | null;
+  skipKYCStep?: FaceAuthKycNumber | SocialKycStepNumber | QuizKycStep | null;
 }
 
 export function startMiningSession({userId, resurrect, skipKYCStep}: Params) {
@@ -15,6 +20,6 @@ export function startMiningSession({userId, resurrect, skipKYCStep}: Params) {
     MiningSummary | null
   >(`/tokenomics/${userId}/mining-sessions`, {
     resurrect,
-    skipKYCSteps: skipKYCStep ? [skipKYCStep] : undefined,
+    skipKYCSteps: skipKYCStep != null ? [skipKYCStep] : undefined,
   });
 }

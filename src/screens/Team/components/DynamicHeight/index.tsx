@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import BottomSheet from '@components/BottomSheet';
+import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
-import BottomSheet from '@gorhom/bottom-sheet';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
@@ -43,7 +44,7 @@ export const DynamicHeight = ({
 
   const snapPoints = useMemo(
     () =>
-      isSearchActive
+      isSearchActive || isLightDesign
         ? [positions.search, positions.expanded]
         : [positions.collapsed, positions.expanded],
     [positions, isSearchActive],

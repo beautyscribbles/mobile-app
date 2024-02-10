@@ -68,7 +68,13 @@
     "learn_more": "Daha Fazla Bilgi Edin",
     "back_to_login": "Oturum Açmaya Geri Dön",
     "follow_us": "Bizi Takip Et",
-    "subscribe": "Abone Ol"
+    "subscribe": "Abone Ol",
+    "not_sure": "Emin değilim",
+    "confirm_address": "Adresi Onayla",
+    "remove_address": "Adresi Kaldır",
+    "start": "Başla",
+    "faq": "SSS",
+    "knowledge_base": "Bilgi Tabanı"
   },
   "team": {
     "contacts_tab": "Kişiler",
@@ -190,7 +196,12 @@
     "weak_password": "Zayıf parola.",
     "wrong_password": "Yanlış parola.",
     "no_camera_permissions": "Kamera izinleri verilmemiştir.",
-    "no_library_permissions": "Kitaplık izinleri verilmemiştir."
+    "no_library_permissions": "Kitaplık izinleri verilmemiştir.",
+    "blockchain_address_already_taken": "Adres zaten alınmış",
+    "invalid_blockchain_address": "Geçersiz blockchain adresi",
+    "address_not_eoa": "Adres EOA değil",
+    "same_phone_error": "Aynı numarayı kullanamazsın.",
+    "unable_to_validate_bsc_addr_eoa": "EOA adresi doğrulanamıyor"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +358,22 @@
       "description_part2": "Birbirini takip eden her 6 gün için bir gün izin alırsın.",
       "streak": "KESİNTİSİZLİK",
       "days_off": "İZİN GÜNLERİ"
+    },
+    "roadmap": {
+      "title": "VİZYONUMUZ",
+      "button_title": "Beyaz kağıt",
+      "button_subtitle": "Ice'teki vizyonumuz hakkında daha fazla bilgi edinin."
+    },
+    "join_mainnet": {
+      "title": "Merkezi Olmayan Geleceğe Katılın",
+      "subtitle": "Yaklaşan Mainnet uygulamamızın ve benzersiz özelliklerinin bir önizlemesini alın."
+    },
+    "bsc_address": {
+      "title": "BNB Smart Chain Adresi",
+      "subtitle": "Lütfen BSC adresinizi buraya girin."
+    },
+    "verified_tooltip": {
+      "title": "KYC Onaylandı"
     }
   },
   "settings": {
@@ -522,7 +549,8 @@
     "stake_now": "Şimdi ön hisselendirme yap!",
     "balance_label": "Hisselendirme bakiyesi",
     "confirm_title": "Ön Hisselendirmeyi Onayla",
-    "confirm_subtitle": "Coinlarını ön hisselendirmek istediğinden emin misin? Onayladıktan sonra bu işlem geri alınamaz."
+    "confirm_subtitle": "Coinlarını ön hisselendirmek istediğinden emin misin? Onayladıktan sonra bu işlem geri alınamaz.",
+    "remove_pre_staking": "Ön-Yatırımı Kaldır"
   },
   "stats": {
     "header_title": "İstatistikler",
@@ -532,7 +560,14 @@
     "top_miners": "En popüler kullanıcılar",
     "top_countries": "En popüler ülkeler",
     "online_miners": "Çevrimiçi kullanıcılar",
-    "detailed_information": "Detaylı bilgi"
+    "detailed_information": "Detaylı bilgi",
+    "total_coins": "Toplam Madeni Para",
+    "filter": {
+      "total": "Toplam",
+      "on_app": "Uygulamada Mevcut",
+      "pre_staked": "Önceden Stake Edilen",
+      "on_blockchain": "Blockchain Üzerinde"
+    }
   },
   "update_required": {
     "title": "Lütfen Güncelle",
@@ -579,9 +614,11 @@
     "wallet": "Cüzdan",
     "blockchain": "Blok Zincir",
     "wallet_update_interval": "saatte bir güncellenir",
-    "blockchain_update_interval": "24 saatte bir güncellenir",
+    "blockchain_update_interval": "her 28 günde güncellenir",
     "list_end_label": "bu, bakiye geçmişinin son girişidir.",
-    "no_data": "Belirtilen dönem için görüntülenecek veri yok."
+    "no_data": "Belirtilen dönem için görüntülenecek veri yok.",
+    "you": "sen",
+    "contribution": "katkı"
   },
   "pop_up": {
     "update_now": "Şimdi Güncelle",
@@ -596,7 +633,20 @@
     "resurrection_no_confirm_message": "[[:amount]] coinlarını sonsuza kadar kaybedeceksin. Devam etmek istediğine emin misin?",
     "resurrection_yes_confirm_message": "Sadece bir kez diriltebilirsin! Devam etmek istediğine emin misin? [[:amount]] coinlar, sonraki saat içinde bakiyene geri dönecektir.",
     "delete_account_confirmation_title": "Silme İşlemini Onayla",
-    "delete_account_confirmation_text": "Hesabını silmek, Ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?"
+    "delete_account_confirmation_text": "Hesabını silmek, Ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?",
+    "registration_update_title": "Kayıt Güncellemesi",
+    "registration_update_text": "Telefon numarası kullanarak yeni hesapların oluşturulmasını geçici olarak durdurduk. Devam etmek için ya e-posta adresi seçmelisiniz veya sosyal ağ üzerinden giriş yapmalısınız.",
+    "link_email_title": "E-postanızı Bağlayın",
+    "link_email_text": "Telefon numarasıyla girişi geçici olarak durdurduk. Devam etmek için lütfen e-posta adresinizi bağlayın ve onaylayın.",
+    "account_error_title": "Hesap Hatası",
+    "account_error_text": "Telefon numarası kullanarak girişi geçici olarak durdurduk. Üzgünüz, hesabınız KYC sürecini geçemedi ve kurtarılmaya uygun değil.",
+    "login_via_email_title": "Lütfen E-posta ile Giriş Yapın",
+    "login_via_email_text": "Telefon numarasıyla girişi geçici olarak durdurduk. Lütfen hesabınıza bağlı olan e-posta adresini kullanarak giriş yapın.",
+    "email_in_use_title": "E-posta Zaten Kullanımda",
+    "email_in_use_text_part1": "Bağlamaya çalıştığınız e-posta adresi zaten kullanımda.",
+    "email_in_use_text_part2": "Eğer bu sizin e-posta adresinizse, lütfen önce bununla giriş yapın, kayıt işlemini tamamlayın ve e-postayı kullanılabilir hale getirmek için o hesabı silin, sonra telefon numarasıyla giriş yaparak bağlama işlemini tamamlayın.",
+    "successfully_linked_title": "Başarıyla Bağlandı!",
+    "successfully_linked_text": "E-posta adresi başarıyla hesabınıza bağlandı."
   },
   "periods": {
     "3_days": "3 gün",
@@ -689,8 +739,7 @@
   "confirm_phone": {
     "modify_title": "Telefonu Onayla",
     "modify_description": "Lütfen ülke kodunu onayla ve telefon numaranı gir.",
-    "button": "Ülkeyi ve telefonu onayla",
-    "same_phone_error": "Aynı numarayı kullanamazsın."
+    "button": "Ülkeyi ve telefonu onayla"
   },
   "date_select": {
     "title": "Tarih seç"
@@ -919,6 +968,19 @@
       "title": "Instagram'da bize katıl",
       "description_part1": "Bizi Instagram'da takip etmek, döngüden haberdar olmanın ve aynı zamanda Ice tutkunu olan diğer kullanıcılarla bağlantı kurmanın harika bir yoludur.",
       "description_part2": "Ayrıca, kullanıma sunduğumuz tüm yeni özelliklerden veya promosyonlardan ilk sen haberdar olacaksın."
+    },
+    "reddit": {
+      "title": "Bize Reddit'te Katılın",
+      "description": "Reddit'te Ice topluluğunu keşfedin, benzer düşüncelere sahip bireylerin fikirlerini paylaştığı bir platform.\n\nSohbete katılın, sorular sorun ve Ice madenciliği, özellikler ve daha fazlası hakkında ilgi çekici tartışmaları keşfedin."
+    },
+    "discord": {
+      "title": "Bize Discord'ta Katılın",
+      "description": "Canlı Discord topluluğumuza katılın ve Ice ile ilgili özel içgörüler ve tartışmalara dalın.\n\nCanlı sohbetlere katılın, Ice ile ilgili haberlerden haberdar olun ve tutkunuzu paylaşan bir topluluğun parçası olun."
+    },
+    "ice_founder_twitter": {
+      "title": "Zeus'u X'te Takip Edin",
+      "description": "Zeus'u, vizyoner kurucumuzu X'te takip edin, burada misyonumuz hakkında görüşlerini, güncellemeleri ve düşünceleri paylaşıyor. Sohbete katılın, sorular sorun ve bu heyecan verici yolculuğa birlikte başlarken bizi ilham verici liderimizle bağlı kalın.",
+      "button": "Zeus'u Takip Edin"
     }
   },
   "ping_referrals_pop_up": {
@@ -1086,20 +1148,46 @@
       "title": "Kamera İzni",
       "description": "Devam etmek için lütfen kameraya erişime izin verin.",
       "action": "Erişime izin ver"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Talimatları",
+      "instruction": "Devam etmeden önce, başarılı bir yüz kimlik doğrulama için bu talimatları izleyin:",
+      "check_1": "✅ Yüksek kaliteli bir fotoğrafınız olduğundan emin olun.",
+      "check_2": "✅ Işıklandırmanın iyi olduğundan emin olun.",
+      "check_3": "✅ Temiz bir arka planınız olsun.",
+      "check_4": "✅ Karanlık fotoğraflar olmasın.",
+      "check_5": "✅ Bulanık veya sisli fotoğraflar olmasın.",
+      "check_6": "✅ Kamera lensini temizleyin.",
+      "warning": "Yukarıdaki talimatları izlemezseniz, hesabınıza erişimi kaybedebilirsiniz.",
+      "confirmation": "Kriterleri izleyeceğimi onaylıyorum.",
+      "popup_title": "Onay",
+      "popup_body": "Tüm selfie talimatlarını izlediğinizi onaylıyor musunuz?"
     }
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Lütfen doğru takma adı girdiğinizden emin olun."
+      "dontHaveInvitationCode": "Lütfen doğru takma adı girdiğinizden emin olun.",
+      "description": "Sizi davet eden arkadaşınızın takma adını girin."
     },
     "home": {
       "pioneer": {
-        "description": "İlerlemenizi ve küresel durumu takip edin"
+        "description": "İlerlemenizi ve küresel durumu takip edin",
+        "referrals": "ARKADAŞLAR"
       },
       "tasks": {
         "invite_friends": {
           "description": "Ekibinizi büyütün ve bir topluluk oluşturun"
         }
+      },
+      "team": {
+        "title": "Arkadaşlar",
+        "view_team": "arkadaşları görüntüle"
+      },
+      "roadmap": {
+        "button_subtitle": "Ice'teki geleceğimize dair daha fazla bilgi edinin."
+      },
+      "join_mainnet": {
+        "subtitle": "2024 sonunda piyasaya sürülecek olan gelecekteki Mainnet uygulamamızın bir önizlemesini alın ve benzersiz özelliklerini görün."
       }
     },
     "settings": {
@@ -1128,6 +1216,182 @@
           "description": "Mevcut bakiyeniz her saat güncellenir ve burada gösterilir. Doğrudan ve staked kazançlarınızı içerir."
         }
       }
+    },
+    "claimUsername": {
+      "description": "Arkadaşlarınız [[:ice]]'ye katıldıklarında bu takma adı kullanmalıdır."
+    },
+    "users": {
+      "team": "Arkadaşlar"
+    },
+    "team": {
+      "empty": {
+        "team": "Şu anda hiç arkadaşınız yok!"
+      },
+      "contacts": {
+        "empty_description": "Kişilerinizi senkronize edin ve [[:ice]]'de kimin olduğunu görün."
+      }
     }
+  },
+  "bsc_address": {
+    "title": "BNB Smart Chain Adresi",
+    "enter_address_title": "BNB Smart Chain adresinizi\nburaya girin",
+    "enter_address_description": "Faz 1 sırasında ICE jetonları BNB Smart Chain blockchain üzerinde piyasaya sürülecektir. Mainnet başlatıldıktan sonra, jetonlar BNB Smart Chain'den Ice Open Network (ION) blockchainine değiştirilebilir.",
+    "enter_address_confirmation": "BNB Smart Chain adresinizin doğru olduğundan emin misiniz?",
+    "validators_warning_title": "Adresi Onayla",
+    "validators_warning_text": "Lütfen dikkat: Hesaplarına BNB Smart Chain adresi ekleyen kişiler, ana ağ lansmanımız için whitepaperımızda belirtildiği gibi 300 anahtar doğrulayıcıdan biri olma hakkına sahip değillerdir.",
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] veya [[:bold]]Trust Wallet[[/:bold]] gibi kendi kendini saklayan bir cüzdan kullanmanızı öneririz.\n\nLütfen cüzdan adresinizi iki kez kontrol ederek dağıtımı alacağınızdan emin olun."
+  },
+  "social_kyc": {
+    "header": "Doğrulama",
+    "verify_with_title": "{{method}} ile Doğrula",
+    "select_method_step": {
+      "title": "KYC Adımı #2",
+      "description": "Mevcut X profilinizi kullanarak hesabınızı kolayca doğrulayın."
+    },
+    "instructions_step": {
+      "show_example": "Örnek Göster",
+      "example_title": "Repost Örneği",
+      "x": {
+        "1": "X'i açın ve [[:bold]]@ice_blockchain[[/:bold]] hesabını arayın.",
+        "2": "Profildeki ilk gönderi olan sabitlenmiş gönderiyi bulun.",
+        "3": "❤️ Beğenin ve [[:bold]]Alıntı[[/:bold]] kullanarak aşağıdaki [[:bold]]KESİNLİKLE[[/:bold]] metni kullanarak yeniden paylaşın.",
+        "pop_up": {
+          "title": "Onay",
+          "description": "Sabitlenmiş gönderiyi beğendiniz mi ve tam metni kullanarak alıntıladınız mı, örnekteki gibi?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Metni kopyalamak için dokunun",
+        "copied": "Kopyalandı"
+      }
+    },
+    "verification_step": {
+      "title": "Onay",
+      "description": "Doğrulamanızı tamamlamak için lütfen önceki adımları tamamladığınız gönderinin bağlantısını yapıştırın. Bağlantının doğru olduğundan emin olun.",
+      "placeholder": "Bağlantıyı yapıştırın",
+      "instructions_step": {
+        "4": "Lütfen gönderinizin bağlantısını aşağıya yapıştırın. 👇"
+      },
+      "action": {
+        "verify": "Doğrula",
+        "wait": "Lütfen bekleyin",
+        "countdown": "Kalan süre: {{countdown}} saniye"
+      },
+      "pop_up": {
+        "title": "Geçersiz Bağlantı",
+        "description": "Doğru bağlantıyı kopyaladığınızdan emin olun.\n\n[[:bold]]Örnek:[[/:bold]]\n{{link}}"
+      }
+    },
+    "results_step": {
+      "attempts_left": "Kalan deneme sayısı: {{count}}",
+      "success": {
+        "title": "Doğrulama Tamamlandı",
+        "description": "Tebrikler, KYC Adımı #2'yi başarıyla tamamladınız. Şimdi doğrulandınız."
+      },
+      "error_try_again": {
+        "title": "Doğrulama Hatası",
+        "description": "Lütfen doğru gönderiyi paylaştığınızdan, verilen metni kullandığınızdan ve gönderinin kamuya açık olduğundan emin olun."
+      },
+      "error_try_later": {
+        "title": "Doğrulama Hatası",
+        "description": "Doğrulamayı tamamlayamadık. 7 gün sonra tekrar deneyebilirsiniz."
+      }
+    }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Dağıtımı",
+      "description": "Mevcut X profilinizi kullanarak hesabınızı kolayca doğrulayarak BNB Smart Chain üzerindeki ICE jetonlarınızı alın."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "X gönderimimizi doğrudan açmak için [[:bold]]burayı[[/:bold]] tıklayın.",
+        "pop_up": {
+          "description": "Talimatları izleyin ve ilk adımda bağlantıyı tıkladığınızdan emin olun.",
+          "description2": "Doğru gönderiyi beğendiniz ve örnekte olduğu gibi tam metni kullanarak alıntı yaparak yeniden paylaştınız mı?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Tebrikler, doğrulamanızı başarıyla tamamladınız. Şimdi BNB Smart Chain dağıtımına hak kazandınız."
+      }
+    }
+  },
+  "account_confirmation": {
+    "title": "Hesap Onayı",
+    "description": "Hesabınızın kimliğini doğrulamak ve e-posta adresinizi güvenli bir şekilde bağlamak için lütfen kimlik doğrulama sürecimiz sırasında duygusal bir kontrolü başarıyla geçtiğinizden emin olun.",
+    "description2": "Bu adım, hesabınızın güvenliği ve gerçekliğini sağlamamıza yardımcı olur. İşbirliğiniz için teşekkür ederiz!"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "intro": {
+      "description": "Ice'de, aktif ve bilgili üyelerin bir topluluğunu teşvik etmeye inanıyoruz. Misyonumuz, Ice coin'lerin, gerçekten bağlı ve vizyonumuzla uyumlu olanlara dağıtılmasını sağlamaktır.",
+      "community_engagement": {
+        "title": "🙌 Aktif Topluluk Katılımı",
+        "description": "Ice Ekosistemi içindeki katılımınız, madencilik yeteneklerinizi doğrudan etkiler:",
+        "point1": "Güncel Kalın: Haber makalelerimiz ve videolarımızla etkileşimde bulunun.",
+        "point2": "Aktif Katılım: Kişisel Gelişim Programımıza katılın ve YouTube veya Twitter Space'deki canlı oturumlara katılın.",
+        "point3": "Sosyal Etkileşimler: Ice hakkında beğenme, paylaşma, takip etme veya paylaşma yaparak varlığınızı artırın.",
+        "bottom_description": "Daha fazla katıldıkça, pozitif etkileşim puanınız o kadar yüksek olur ve KYC sürecini geçmenizi sağlar."
+      },
+      "terms_privacy": "[[:link]]Kullanım Koşulları ve Gizlilik Politikamızı[[/:link]] anladım ve kabul ediyorum.",
+      "knowledge_check": {
+        "title": "🧠 Bilgi Kontrolü",
+        "point2": "Quiz'i geçmek için en az 18 soruyu doğru cevaplamalısınız.",
+        "point3": "Başarısız bir quiz, materyallerimizle daha fazla ilgilenme gerekliliğini işaret eder.",
+        "point4": "Quiz'i tamamlamak için bir süre sınırlaması vardır. Ana sayfanızda quiz bölümünde son kullanma tarihine ne kadar süre kaldığınızı görebilirsiniz.",
+        "point5": "Son kullanma tarihinden önce 3 deneme hakkınız vardır. Quiz'i 3 kez başaramazsanız veya son kullanma tarihi geçerse, madencilik yapamayacak ve hesabınız kesintiye uğrayacaktır.",
+        "point6": "📚 Bu quiz hakkındaki tüm bilgilere [[:link]]buradan[[/:link]] ulaşabilirsiniz.",
+        "description": "Topluluğumuzun iyi bilgilendirilmiş ve vizyonumuzla uyumlu olduğundan emin olmak için:",
+        "point1": "Kapsamlı kaynaklarımızdan türetilen 21 soru ile karşılaşacaksınız."
+      },
+      "why_quiz": {
+        "title": "💡 Neden Quiz?",
+        "description": "Bilgi ve anlayışa olan bağlılığımız, topluluğumuzun en önündedir. Quiz ile Ice'ın doğru ellerde, projemizin vizyonuyla gerçekten uyum sağlayan kişilere ulaşmasını amaçlıyoruz."
+      }
+    },
+    "quiz_failure": {
+      "title": "Başarısız Sınav",
+      "description": "18'den fazla soruya doğru cevap vermediniz veya süre doldu, bu nedenle sınavı geçemezsiniz.",
+      "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Soru {{current}} / {{total}}",
+      "time_over": "⌛️ Süre doldu",
+      "correct_answers": "Doğru Cevaplar",
+      "wrong_answers": "Yanlış Cevaplar"
+    },
+    "confirmation_popup": {
+      "title": "Onay",
+      "start_description": "Sınavı başlatmak istediğinizden emin misiniz?",
+      "cancel_description": "Quiz'i atlayarak kullanabileceğiniz 3 denemeden birini kullanacaksınız. Quiz'i şimdi atlamak istediğinizden emin misiniz?"
+    },
+    "quiz_success": {
+      "title": "Doğrulama Tamamlandı",
+      "description": "Tebrikler, KYC'nizi başarıyla tamamladınız. Sürekli doğru cevaplarınız bağlılığınızı ve bilginizi kanıtladı. Şimdi doğrulandınız."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Madencilik Devre Dışı Bırakıldı",
+      "description": "KYC sürecimiz gereği üç ardışık quiz başarısızlığı veya tahsis edilen sürenin sona ermesi nedeniyle madencilik erişiminiz devre dışı bırakılmıştır."
+    },
+    "action": "Quiz'i Tamamlayın",
+    "reminder": "Lütfen madenciliğe devam etmek ve kesmeyi önlemek için sınavı tamamlamanız gerektiğini unutmayın.",
+    "days_left": "Kalan Gün: {{days}}",
+    "retries_left": "Kalan deneme sayısı: {{number}}"
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Akıllı Zincir Dağıtımı",
+      "description": "X üzerindeki en son Borsa duyurularını aktif olarak destekleyerek aylık BNB Akıllı Zincir ICE coin dağıtım uygunluğunuzu sürdürün."
+    },
+    "results_step": {
+      "success": {
+        "description": "Tebrikler, başarıyla doğrulamanızı tamamladınız. Artık aylık BNB Akıllı Zincir dağıtım durumunuzu sürdürme hakkına sahipsiniz."
+      }
+    }
+  },
+  "buttons": {
+    "skip": "Atla"
   }
 }

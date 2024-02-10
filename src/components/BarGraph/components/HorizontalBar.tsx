@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BarLabel} from '@components/BarGraph/components/BarLabel';
+import {BarLabel, StatsType} from '@components/BarGraph/components/BarLabel';
 import {COLORS} from '@constants/colors';
 import {isRTL} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
@@ -19,6 +19,7 @@ type Props = {
   maxWidth: number;
   sharedValue: SharedValue<number>;
   doAnimate: boolean;
+  type: StatsType;
 };
 
 export const HorizontalBar = ({
@@ -27,6 +28,7 @@ export const HorizontalBar = ({
   value,
   sharedValue,
   doAnimate,
+  type,
 }: Props) => {
   const isLabelOutside = value / maxValue < 0.2;
   const width = useMemo(
@@ -59,11 +61,7 @@ export const HorizontalBar = ({
     return null;
   }
 
-  const barLabel = formatNumber(value, {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 1,
-    notation: 'compact',
-  });
+  const barLabel = formatBarValue(value, type);
 
   return (
     <View style={styles.container}>
@@ -74,13 +72,33 @@ export const HorizontalBar = ({
           doAnimate && animatedStyle,
           {width},
         ]}>
-        {!isLabelOutside && <BarLabel value={barLabel} color={COLORS.white} />}
+        {!isLabelOutside && (
+          <BarLabel value={barLabel} color={COLORS.white} type={type} />
+        )}
       </Animated.View>
       {isLabelOutside && (
-        <BarLabel value={barLabel} color={COLORS.primaryLight} />
+        <BarLabel value={barLabel} color={COLORS.primaryLight} type={type} />
       )}
     </View>
   );
+};
+
+const formatBarValue = (value: number, type: StatsType): string => {
+  switch (type) {
+    case 'active_users':
+      return formatNumber(value, {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 1,
+        notation: 'compact',
+      });
+    case 'total_coins': {
+      return formatNumber(value, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        notation: 'compact',
+      });
+    }
+  }
 };
 
 const styles = StyleSheet.create({
