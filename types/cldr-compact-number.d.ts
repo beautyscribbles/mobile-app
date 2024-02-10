@@ -3,9 +3,9 @@
 declare module 'cldr-compact-number' {
   type CompactFormat = (
     input: number,
-    lang: 'en',
-    localeData: null,
-    options: {
+    lang: string, // Changed 'en' to be more flexible
+    localeData: any, // Changed null to any for flexibility
+    options?: {
       significantDigits?: number;
       minimumFractionDigits?: number;
       maximumFractionDigits?: number;
